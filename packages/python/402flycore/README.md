@@ -1,0 +1,97 @@
+# 402fly-core
+
+Core Python implementation of the X402 payment protocol for autonomous AI agent payments.
+
+## Overview
+
+The `402fly-core` package provides the fundamental building blocks for implementing the X402 payment protocol. This package handles payment processing on the Solana blockchain, including transaction creation, verification, and error handling.
+
+## Features
+
+- Payment request and authorization models
+- Solana blockchain payment processing
+- Comprehensive error handling for payment workflows
+- Protocol primitives and data structures
+- Transaction verification and validation
+
+## Installation
+
+```bash
+pip install 402fly-core
+```
+
+## Core Components
+
+### Payment Models
+
+```python
+from 402fly_core import PaymentRequest, PaymentAuthorization
+
+# PaymentRequest: Represents a payment requirement
+# PaymentAuthorization: Represents completed payment details
+```
+
+### Payment Processor
+
+```python
+from 402fly_core import SolanaPaymentProcessor
+from solders.keypair import Keypair
+
+# Initialize payment processor
+keypair = Keypair()  # Your wallet keypair
+processor = SolanaPaymentProcessor(
+    wallet_keypair=keypair,
+    rpc_url="https://api.devnet.solana.com"
+)
+
+# Process payments (typically used by higher-level packages)
+```
+
+### Error Handling
+
+```python
+from 402fly_core import (
+    Fly402Error,
+    PaymentRequiredError,
+    PaymentExpiredError,
+    InsufficientFundsError,
+    PaymentVerificationError,
+    TransactionBroadcastError,
+    InvalidPaymentRequestError,
+)
+
+try:
+    # Payment operations
+    pass
+except PaymentRequiredError as e:
+    print(f"Payment required: {e}")
+except InsufficientFundsError as e:
+    print(f"Insufficient funds: {e}")
+```
+
+## Usage
+
+This package is typically used as a dependency by higher-level packages like:
+
+- **402fly-client**: HTTP client with automatic payment handling
+- **402fly-fastapi**: FastAPI middleware for payment-required endpoints
+- **402fly-langchain**: LangChain agent integration
+- **402fly-langgraph**: LangGraph workflow integration
+
+For most use cases, you'll want to use one of these higher-level packages rather than using `402fly-core` directly.
+
+## Documentation
+
+For complete API reference and guides, see:
+- [Documentation](https://402fly.github.io/docs)
+- [GitHub Repository](https://github.com/402fly/402fly)
+
+## Testing
+
+```bash
+pytest tests/
+```
+
+## License
+
+MIT License - See [LICENSE](LICENSE) file for details.

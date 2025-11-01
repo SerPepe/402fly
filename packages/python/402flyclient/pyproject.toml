@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fly402client"
+version = "0.1.1"
+description = "HTTP client library for X402 payment protocol with automatic payment handling"
+authors = [
+    {name = "OpenLibx402 Contributors", email = "hello@openlibx402.org"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "fly402core>=0.1.0,<0.2.0",
+    "httpx>=0.24.0",
+    "solders>=0.18.0",
+]
+keywords = [
+    "openlibx402",
+    "x402",
+    "client",
+    "http",
+    "payments",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://openlib.xyz"
+Documentation = "https://openlibx402.github.io/docs/"
+Repository = "https://github.com/openlibx402/openlibx402"
+
+[tool.hatch.version]
+path = "fly402client/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["fly402client"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "fly402client",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]

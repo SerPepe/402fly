@@ -1,0 +1,47 @@
+{
+  "name": "@402fly/core",
+  "version": "0.1.2",
+  "description": "Core TypeScript library for X402 payment protocol",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "x402",
+    "payment",
+    "solana",
+    "blockchain",
+    "http-402"
+  ],
+  "author": "402fly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/402fly/402fly.git",
+    "directory": "packages/typescript/402fly-core"
+  },
+  "homepage": "https://openlib.xyz",
+  "bugs": {
+    "url": "https://github.com/402fly/402fly/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@402fly/express",
+  "version": "0.1.2",
+  "description": "Express.js middleware and decorators for X402 payment protocol",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "x402",
+    "payment",
+    "express",
+    "middleware"
+  ],
+  "author": "402fly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/402fly/402fly.git",
+    "directory": "packages/typescript/402fly-express"
+  },
+  "homepage": "https://openlib.xyz",
+  "bugs": {
+    "url": "https://github.com/402fly/402fly/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@402fly/core": "^0.1.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}

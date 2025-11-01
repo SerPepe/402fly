@@ -1,0 +1,142 @@
+# @402fly/core
+
+Core TypeScript implementation of the X402 payment protocol for autonomous AI agent payments on Solana.
+
+## Overview
+
+The core package provides fundamental primitives and utilities for implementing the X402 payment protocol. It includes payment request/authorization models, Solana payment processing, error handling, and serialization utilities.
+
+## Features
+
+- **Payment Models**: PaymentRequest and PaymentAuthorization classes with full serialization support
+- **Solana Integration**: SolanaPaymentProcessor for handling on-chain payment verification
+- **Error Handling**: Comprehensive error types for payment lifecycle management
+- **Type Safety**: Full TypeScript support with exported types and interfaces
+
+## Installation
+
+```bash
+npm install @402fly/core
+# or
+pnpm add @402fly/core
+# or
+yarn add @402fly/core
+```
+
+## Usage
+
+### Payment Request
+
+```typescript
+import { PaymentRequest } from '@402fly/core';
+
+// Create a payment request
+const paymentRequest = new PaymentRequest({
+  max_amount_required: '1000000',
+  asset_type: 'spl-token',
+  asset_address: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  payment_address: 'YourWalletAddress',
+  network: 'solana-devnet',
+  expires_at: new Date(Date.now() + 3600000),
+  nonce: 'unique-nonce',
+  payment_id: 'payment-123',
+  resource: '/api/data',
+  description: 'Access to premium API endpoint'
+});
+
+// Check if expired
+if (paymentRequest.isExpired()) {
+  console.log('Payment request has expired');
+}
+
+// Serialize to JSON
+const json = paymentRequest.toJSON();
+```
+
+### Payment Authorization
+
+```typescript
+import { PaymentAuthorization } from '@402fly/core';
+
+// Create payment authorization
+const authorization = new PaymentAuthorization({
+  payment_id: 'payment-123',
+  actual_amount: '1000000',
+  payment_address: 'WalletAddress',
+  asset_address: 'TokenMintAddress',
+  network: 'solana-devnet',
+  timestamp: new Date(),
+  signature: 'base58-signature',
+  public_key: 'base58-public-key',
+  transaction_hash: 'transaction-signature'
+});
+
+// Convert to HTTP header value
+const headerValue = authorization.toHeaderValue();
+```
+
+### Solana Payment Processing
+
+```typescript
+import { SolanaPaymentProcessor } from '@402fly/core';
+import { Connection } from '@solana/web3.js';
+
+const connection = new Connection('https://api.devnet.solana.com');
+const processor = new SolanaPaymentProcessor(connection);
+
+// Verify a payment
+const isValid = await processor.verifyPayment(
+  paymentRequest,
+  paymentAuthorization
+);
+```
+
+### Error Handling
+
+```typescript
+import {
+  PaymentRequiredError,
+  PaymentExpiredError,
+  InsufficientFundsError,
+  PaymentVerificationError,
+  ERROR_CODES
+} from '@402fly/core';
+
+try {
+  // Payment operations
+} catch (error) {
+  if (error instanceof PaymentExpiredError) {
+    console.error('Payment has expired');
+  } else if (error instanceof InsufficientFundsError) {
+    console.error('Insufficient funds');
+  }
+}
+```
+
+## API Reference
+
+### Exports
+
+- `PaymentRequest` - Payment request model class
+- `PaymentAuthorization` - Payment authorization model class
+- `SolanaPaymentProcessor` - Solana blockchain payment processor
+- Error classes: `Fly402Error`, `PaymentRequiredError`, `PaymentExpiredError`, `InsufficientFundsError`, `PaymentVerificationError`, `TransactionBroadcastError`, `InvalidPaymentRequestError`
+- `ERROR_CODES` - Error code constants
+
+## Documentation
+
+For complete API documentation and guides, visit [402fly.github.io](https://402fly.github.io/docs/packages/typescript/402fly-core/)
+
+## Testing
+
+```bash
+pnpm test
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/402fly/402fly/blob/main/CONTRIBUTING.md)
+
+## License
+
+MIT - See [LICENSE](https://github.com/402fly/402fly/blob/main/LICENSE)

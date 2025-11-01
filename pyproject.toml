@@ -1,0 +1,30 @@
+[project]
+name = "402fly"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14.0"
+dependencies = [
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "examples/python/fastapi-server",
+    "examples/python/langchain-agent",
+    "examples/python/langgraph-workflow",
+    "packages/python/402flyclient",
+    "packages/python/402flycore",
+    "packages/python/402flyfastapi",
+    "packages/python/402flylangchain",
+    "packages/python/402flylanggraph",
+    "docs",
+]
+
+[tool.uv.sources]
+fly402core = { workspace = true }
+fly402client = { workspace = true }
+fly402fastapi = { workspace = true }
+fly402langchain = { workspace = true }
+fly402langgraph = { workspace = true }

@@ -1,0 +1,50 @@
+{
+  "name": "@402fly/langchain",
+  "version": "0.1.2",
+  "description": "LangChain.js integration for X402 payment protocol",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "x402",
+    "payment",
+    "langchain",
+    "ai-agents"
+  ],
+  "author": "402fly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/402fly/402fly.git",
+    "directory": "packages/typescript/402fly-langchain"
+  },
+  "homepage": "https://openlib.xyz",
+  "bugs": {
+    "url": "https://github.com/402fly/402fly/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@402fly/core": "^0.1.0",
+    "@402fly/client": "^0.1.0",
+    "@solana/web3.js": "^1.87.6",
+    "@langchain/core": "^0.1.17",
+    "langchain": "^0.1.17",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}
