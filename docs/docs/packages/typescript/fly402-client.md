@@ -1,11 +1,11 @@
-# @402fly/client
+# @x402fly/client
 
 TypeScript HTTP client for 402fly payment protocol.
 
 ## Installation
 
 ```bash
-npm install @402fly/client
+npm install @x402fly/client
 ```
 
 ## Features
@@ -23,7 +23,7 @@ npm install @402fly/client
 ### Explicit Client (Manual Control)
 
 ```typescript
-import { Fly402Client } from '@402fly/client';
+import { Fly402Client } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 // Load wallet
@@ -74,7 +74,7 @@ await client.close();
 ### Implicit Client (Auto-Payment)
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 // Create auto-client with safety limits

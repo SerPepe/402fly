@@ -33,7 +33,7 @@ The auto client automatically handles the complete payment flow.
 ### Creating an Auto Client
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signature::Keypair;
 
 // With default options
@@ -79,7 +79,7 @@ Default values:
 #### GET Request
 
 ```rust
-use 402fly_client::Fly402AutoClient;
+use fly402client::Fly402AutoClient;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -139,7 +139,7 @@ The explicit client gives you full control over the payment flow.
 ### Creating an Explicit Client
 
 ```rust
-use 402fly_client::Fly402Client;
+use fly402client::Fly402Client;
 use solana_sdk::signature::Keypair;
 
 let keypair = Keypair::new();
@@ -244,7 +244,7 @@ Both clients return `X402Result<T>` or standard `Result` types.
 ### Handling X402 Errors
 
 ```rust
-use 402fly_core::Fly402Error;
+use fly402core::Fly402Error;
 
 match client.get(url).await {
     Ok(response) => {
@@ -402,8 +402,8 @@ let client = Fly402AutoClient::new(
 ### Auto Client with Error Handling
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
-use 402fly_core::Fly402Error;
+use fly402client::{Fly402AutoClient, AutoClientOptions};
+use fly402core::Fly402Error;
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]
@@ -449,7 +449,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Explicit Client with Full Control
 
 ```rust
-use 402fly_client::Fly402Client;
+use fly402client::Fly402Client;
 use solana_sdk::signature::read_keypair_file;
 
 #[tokio::main]

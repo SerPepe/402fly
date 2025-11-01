@@ -24,7 +24,7 @@ Add to your `Cargo.toml`:
 ### Create a Payment Request
 
 ```rust
-use 402fly_core::{PaymentRequest, Fly402Config};
+use fly402core::{PaymentRequest, Fly402Config};
 
 let request = PaymentRequest::new(
     "0.10",  // amount in USDC
@@ -40,7 +40,7 @@ let json = request.to_json()?;
 ### Process a Payment
 
 ```rust
-use 402fly_core::SolanaPaymentProcessor;
+use fly402core::SolanaPaymentProcessor;
 use solana_sdk::signer::keypair::Keypair;
 
 let processor = SolanaPaymentProcessor::new(

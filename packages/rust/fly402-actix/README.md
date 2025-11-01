@@ -28,7 +28,7 @@ tokio = "1.35"
 
 ```rust
 use actix_web::{get, web, App, HttpServer, HttpResponse};
-use 402fly_actix::{
+use fly402actix::{
     Fly402Config, X402State, PaymentExtractor, PaymentRequirement,
     create_payment_request, payment_required_response
 };

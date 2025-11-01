@@ -17,7 +17,7 @@ The `402fly-fastapi` package makes it easy to add payment requirements to your F
 ## Installation
 
 ```bash
-pip install 402fly-fastapi
+pip install fly402fastapi
 ```
 
 ## Quick Start
@@ -26,7 +26,7 @@ pip install 402fly-fastapi
 
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import Fly402Config, init_fly402
+from fly402fastapi import Fly402Config, init_fly402
 import os
 
 # Initialize 402 configuration
@@ -45,7 +45,7 @@ app = FastAPI()
 
 ```python
 from fastapi import Request
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 @app.get("/premium-data")
 @payment_required(
@@ -64,8 +64,8 @@ async def get_premium_data(request: Request):
 
 ```python
 from fastapi import Depends
-from 402fly_fastapi import verify_payment_factory
-from 402fly_core import PaymentAuthorization
+from fly402fastapi import verify_payment_factory
+from fly402core import PaymentAuthorization
 
 @app.get("/expensive-data")
 async def get_expensive_data(
@@ -136,13 +136,13 @@ async def get_tiered_data(request: Request, tier: str):
 
 ```python
 from fastapi import FastAPI, Depends, Request
-from 402fly_fastapi import (
+from fly402fastapi import (
     payment_required,
     verify_payment_factory,
     Fly402Config,
     init_fly402
 )
-from 402fly_core import PaymentAuthorization
+from fly402core import PaymentAuthorization
 import os
 
 # Initialize 402 config

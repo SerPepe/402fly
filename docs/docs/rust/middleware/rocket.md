@@ -22,7 +22,7 @@ Rocket integration provides:
 ## Quick Start
 
 ```rust
-use 402fly_rocket::{
+use fly402rocket::{
     create_payment_request, PaymentGuard, PaymentRequirement,
     PaymentRequiredResponse, Fly402Config,
 };
@@ -218,7 +218,7 @@ Automatically sets status to 402 and serializes payment request as JSON.
 ### Multiple Pricing Tiers
 
 ```rust
-use 402fly_rocket::*;
+use fly402rocket::*;
 use rocket::{get, routes, serde::json::Json, State};
 use serde::Serialize;
 

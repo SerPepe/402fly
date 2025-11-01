@@ -1,5 +1,5 @@
 {
-  "name": "@402fly/express",
+  "name": "@x402fly/express",
   "version": "0.1.2",
   "description": "Express.js middleware and decorators for 402fly payment protocol",
   "main": "dist/index.js",
@@ -36,7 +36,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@402fly/core": "^0.1.0",
+    "@x402fly/core": "^0.1.0",
     "express": "^4.18.2"
   },
   "devDependencies": {

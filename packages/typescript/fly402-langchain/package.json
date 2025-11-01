@@ -1,5 +1,5 @@
 {
-  "name": "@402fly/langchain",
+  "name": "@x402fly/langchain",
   "version": "0.1.2",
   "description": "LangChain.js integration for 402fly payment protocol",
   "main": "dist/index.js",
@@ -36,8 +36,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@402fly/core": "^0.1.0",
-    "@402fly/client": "^0.1.0",
+    "@x402fly/core": "^0.1.0",
+    "@x402fly/client": "^0.1.0",
     "@solana/web3.js": "^1.87.6",
     "@langchain/core": "^0.1.17",
     "langchain": "^0.1.17",

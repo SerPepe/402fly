@@ -1,4 +1,4 @@
-# @402fly/express
+# @x402fly/express
 
 Express.js middleware and utilities for implementing the X402 payment protocol in your web applications.
 
@@ -17,11 +17,11 @@ The Express package provides middleware and helper functions to easily add X402 
 ## Installation
 
 ```bash
-npm install @402fly/express
+npm install @x402fly/express
 # or
-pnpm add @402fly/express
+pnpm add @x402fly/express
 # or
-yarn add @402fly/express
+yarn add @x402fly/express
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ yarn add @402fly/express
 
 ```typescript
 import express from 'express';
-import { initFly402, paymentRequired } from '@402fly/express';
+import { initFly402, paymentRequired } from '@x402fly/express';
 
 const app = express();
 
@@ -63,7 +63,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 ### Per-Route Configuration
 
 ```typescript
-import { paymentRequired } from '@402fly/express';
+import { paymentRequired } from '@x402fly/express';
 
 // Override global config for specific routes
 app.get('/api/data',
@@ -85,8 +85,8 @@ app.get('/api/data',
 ### Manual Payment Verification
 
 ```typescript
-import { paymentRequired } from '@402fly/express';
-import { Fly402Request } from '@402fly/express';
+import { paymentRequired } from '@x402fly/express';
+import { Fly402Request } from '@x402fly/express';
 
 app.post('/custom-endpoint',
   paymentRequired({
@@ -110,7 +110,7 @@ app.post('/custom-endpoint',
 ### Building 402 Responses Manually
 
 ```typescript
-import { build402Response } from '@402fly/express';
+import { build402Response } from '@x402fly/express';
 
 app.get('/custom-protected', (req, res) => {
   // Check some condition
@@ -134,7 +134,7 @@ app.get('/custom-protected', (req, res) => {
 ### Configuration Options
 
 ```typescript
-import { initFly402, Fly402ConfigOptions } from '@402fly/express';
+import { initFly402, Fly402ConfigOptions } from '@x402fly/express';
 
 const config: Fly402ConfigOptions = {
   paymentAddress: string;      // Your Solana wallet address
@@ -151,7 +151,7 @@ initFly402(config);
 ### Accessing Payment Information
 
 ```typescript
-import { Fly402Request } from '@402fly/express';
+import { Fly402Request } from '@x402fly/express';
 
 app.get('/payment-info',
   paymentRequired({ amount: '1000000' }),

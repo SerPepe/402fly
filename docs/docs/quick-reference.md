@@ -4,12 +4,12 @@
 
 ```bash
 # Python
-pip install 402fly-core 402fly-fastapi 402fly-client
-pip install 402fly-langchain 402fly-langgraph
+pip install fly402core 402fly-fastapi 402fly-client
+pip install fly402langchain 402fly-langgraph
 
 # TypeScript
-npm install @402fly/core @402fly/fastapi @402fly/client
-npm install @402fly/langchain @402fly/langgraph
+npm install @x402fly/core @x402fly/fastapi @x402fly/client
+npm install @x402fly/langchain @x402fly/langgraph
 ```
 
 ---
@@ -19,7 +19,7 @@ npm install @402fly/langchain @402fly/langgraph
 ### Simple Decorator Approach
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 app = FastAPI()
 
@@ -38,7 +38,7 @@ async def get_premium_data():
 ### Dependency Injection Approach
 ```python
 from fastapi import FastAPI, Depends
-from 402fly_fastapi import verify_payment_factory, PaymentAuthorization
+from fly402fastapi import verify_payment_factory, PaymentAuthorization
 
 app = FastAPI()
 
@@ -61,7 +61,7 @@ async def get_expensive_data(
 
 ### Global Configuration
 ```python
-from 402fly_fastapi import Fly402Config, init_fly402
+from fly402fastapi import Fly402Config, init_fly402
 
 config = Fly402Config(
     payment_address="YOUR_WALLET_ADDRESS",
@@ -83,7 +83,7 @@ async def get_data():
 
 ### Explicit Client (Manual Control)
 ```python
-from 402fly_client import Fly402Client
+from fly402client import Fly402Client
 from solders.keypair import Keypair
 
 # Load wallet
@@ -119,7 +119,7 @@ print(data)
 
 ### Implicit Client (Auto-Payment)
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 # Load wallet
@@ -151,7 +151,7 @@ response = await client.fetch(
 ```python
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import initialize_agent, AgentType
-from 402fly_langchain import X402PaymentTool
+from fly402langchain import X402PaymentTool
 from solders.keypair import Keypair
 
 # Load wallet
@@ -184,7 +184,7 @@ print(response)
 ```python
 from langchain.agents import load_tools, initialize_agent, AgentType
 from langchain.chat_models import ChatOpenAI
-from 402fly_langchain import X402RequestsWrapper
+from fly402langchain import X402RequestsWrapper
 from solders.keypair import Keypair
 
 # Load wallet
@@ -217,7 +217,7 @@ response = agent.run("Fetch data from https://api.example.com/premium-data")
 
 ### Convenience Function
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from langchain.chat_models import ChatOpenAI
 from solders.keypair import Keypair
 
@@ -242,8 +242,8 @@ response = agent.run("Get premium data from API")
 ```python
 from typing import TypedDict
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import payment_node, check_payment_required
-from 402fly_client import Fly402AutoClient
+from fly402langgraph import payment_node, check_payment_required
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 # Define state
@@ -291,7 +291,7 @@ result = app.invoke({
 
 ### Combined Fetch-and-Pay Node
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 
 async def fetch_with_payment_node(state: AgentState) -> AgentState:
     """Node that fetches API and handles payment automatically"""
@@ -319,13 +319,13 @@ workflow.add_node("fetch", fetch_with_payment_node)
 
 ### Catching Specific Errors
 ```python
-from 402fly_core import (
+from fly402core import (
     InsufficientFundsError,
     PaymentExpiredError,
     PaymentVerificationError,
     TransactionBroadcastError
 )
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 
 client = Fly402AutoClient(wallet_keypair=keypair)
 
@@ -351,7 +351,7 @@ except PaymentVerificationError as e:
 
 ### Handling All X402 Errors
 ```python
-from 402fly_core import Fly402Error
+from fly402core import Fly402Error
 
 try:
     response = await client.fetch("https://api.example.com/data")
@@ -376,7 +376,7 @@ FLY402_DEFAULT_AMOUNT=0.01
 ```
 
 ```python
-from 402fly_fastapi import Fly402Config, init_fly402
+from fly402fastapi import Fly402Config, init_fly402
 import os
 from dotenv import load_dotenv
 
@@ -398,7 +398,7 @@ init_fly402(config)
 
 ### Mock Payment Processor
 ```python
-from 402fly_core.testing import MockSolanaPaymentProcessor
+from fly402core.testing import MockSolanaPaymentProcessor
 
 # Use in tests
 processor = MockSolanaPaymentProcessor()
@@ -416,7 +416,7 @@ assert len(processor.transactions) == 1
 
 ### Test Server
 ```python
-from 402fly_core.testing import TestServer
+from fly402core.testing import TestServer
 
 # Create test server
 server = TestServer(
@@ -484,7 +484,7 @@ solana airdrop 1 YOUR_WALLET_ADDRESS --url devnet
 
 ### Retry Configuration
 ```python
-from 402fly_client import Fly402AutoClient, RetryConfig
+from fly402client import Fly402AutoClient, RetryConfig
 
 config = RetryConfig(
     enabled=True,
@@ -533,7 +533,7 @@ data3 = await client.fetch("https://api3.example.com/data")
 
 ```bash
 # 1. Install packages
-pip install 402fly-core 402fly-fastapi 402fly-client
+pip install fly402core 402fly-fastapi 402fly-client
 
 # 2. Create wallet
 python -c "from solders.keypair import Keypair; import json; kp = Keypair(); \

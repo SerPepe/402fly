@@ -18,7 +18,7 @@ The `402fly-langgraph` package provides LangGraph nodes and utilities for buildi
 ## Installation
 
 ```bash
-pip install 402fly-langgraph
+pip install fly402langgraph
 ```
 
 ## Quick Start
@@ -28,7 +28,7 @@ pip install 402fly-langgraph
 The easiest way to create a payment-enabled workflow:
 
 ```python
-from 402fly_langgraph import create_simple_payment_workflow
+from fly402langgraph import create_simple_payment_workflow
 from solders.keypair import Keypair
 import json
 
@@ -57,7 +57,7 @@ print(f"Response: {result.get('api_response')}")
 Best for single API access with payment:
 
 ```python
-from 402fly_langgraph import create_simple_payment_workflow
+from fly402langgraph import create_simple_payment_workflow
 from solders.keypair import Keypair
 
 keypair = Keypair()  # Your wallet
@@ -78,7 +78,7 @@ For more complex workflows with custom logic:
 ```python
 from typing import TypedDict, Optional
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import (
+from fly402langgraph import (
     payment_node,
     fetch_with_payment_node,
     check_payment_required,
@@ -136,7 +136,7 @@ Build workflows that access multiple paid APIs:
 ```python
 from typing import TypedDict, Optional, List
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import fetch_with_payment_node
+from fly402langgraph import fetch_with_payment_node
 from solders.keypair import Keypair
 
 # Define state with multiple APIs
@@ -214,7 +214,7 @@ print(f"APIs processed: {len(result.get('results', []))}")
 ## Complete Example
 
 ```python
-from 402fly_langgraph import create_simple_payment_workflow
+from fly402langgraph import create_simple_payment_workflow
 from solders.keypair import Keypair
 import json
 

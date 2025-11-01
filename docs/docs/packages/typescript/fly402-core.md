@@ -1,11 +1,11 @@
-# @402fly/core
+# @x402fly/core
 
 Core TypeScript library for 402fly payment protocol.
 
 ## Installation
 
 ```bash
-npm install @402fly/core
+npm install @x402fly/core
 ```
 
 ## Features
@@ -18,7 +18,7 @@ npm install @402fly/core
 ## Usage
 
 ```typescript
-import { PaymentRequest, SolanaPaymentProcessor } from '@402fly/core';
+import { PaymentRequest, SolanaPaymentProcessor } from '@x402fly/core';
 import { Keypair } from '@solana/web3.js';
 
 const processor = new SolanaPaymentProcessor('https://api.devnet.solana.com');

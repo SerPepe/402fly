@@ -17,7 +17,7 @@ The `402fly-client` package provides HTTP client libraries that automatically ha
 ## Installation
 
 ```bash
-pip install 402fly-client
+pip install fly402client
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ pip install 402fly-client
 The `Fly402AutoClient` automatically handles payment requirements transparently:
 
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 import asyncio
 
@@ -56,7 +56,7 @@ asyncio.run(fetch_data())
 For more control over the payment process:
 
 ```python
-from 402fly_client import Fly402Client
+from fly402client import Fly402Client
 from solders.keypair import Keypair
 import asyncio
 
@@ -104,7 +104,7 @@ Key parameters for `Fly402AutoClient`:
 ## Example: Integration with Existing Code
 
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 # Minimal changes to add payment support

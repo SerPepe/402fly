@@ -190,11 +190,11 @@ Create a simple test file:
 
 ```rust
 // test_installation.rs
-use 402fly_core::{PaymentRequest, Fly402Error};
+use fly402core::{PaymentRequest, Fly402Error};
 
 fn main() -> Result<(), Fly402Error> {
     println!("402fly Rust SDK installed successfully!");
-    println!("Version: {}", 402fly_core::VERSION);
+    println!("Version: {}", fly402core::VERSION);
     Ok(())
 }
 ```

@@ -1,10 +1,10 @@
-# @402fly/langchain
+# @x402fly/langchain
 
 LangChain.js integration for the X402 payment protocol, enabling AI agents to autonomously access paid resources.
 
 ## Overview
 
-This package provides LangChain tools that allow AI agents to make HTTP requests to X402-protected resources with automatic payment handling. Built on top of `@402fly/client`, it seamlessly integrates blockchain payments into LangChain workflows.
+This package provides LangChain tools that allow AI agents to make HTTP requests to X402-protected resources with automatic payment handling. Built on top of `@x402fly/client`, it seamlessly integrates blockchain payments into LangChain workflows.
 
 ## Features
 
@@ -17,11 +17,11 @@ This package provides LangChain tools that allow AI agents to make HTTP requests
 ## Installation
 
 ```bash
-npm install @402fly/langchain
+npm install @x402fly/langchain
 # or
-pnpm add @402fly/langchain
+pnpm add @x402fly/langchain
 # or
-yarn add @402fly/langchain
+yarn add @x402fly/langchain
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ yarn add @402fly/langchain
 ### Basic Tool Setup
 
 ```typescript
-import { createX402PaymentTool } from '@402fly/langchain';
+import { createX402PaymentTool } from '@x402fly/langchain';
 import { Keypair } from '@solana/web3.js';
 
 // Load your AI agent's wallet
@@ -52,7 +52,7 @@ const tools = [paymentTool, /* other tools */];
 import { ChatOpenAI } from '@langchain/openai';
 import { AgentExecutor, createOpenAIFunctionsAgent } from 'langchain/agents';
 import { pull } from 'langchain/hub';
-import { createX402PaymentTool } from '@402fly/langchain';
+import { createX402PaymentTool } from '@x402fly/langchain';
 import { Keypair } from '@solana/web3.js';
 
 // Setup
@@ -90,7 +90,7 @@ console.log(result.output);
 ### Custom Tool Configuration
 
 ```typescript
-import { X402PaymentTool } from '@402fly/langchain';
+import { X402PaymentTool } from '@x402fly/langchain';
 import { Keypair } from '@solana/web3.js';
 
 const walletKeypair = Keypair.fromSecretKey(secretKeyBytes);
@@ -142,7 +142,7 @@ The X402PaymentTool accepts inputs with the following schema:
 ### Safety Features
 
 ```typescript
-import { createX402PaymentTool } from '@402fly/langchain';
+import { createX402PaymentTool } from '@x402fly/langchain';
 
 const tool = createX402PaymentTool({
   walletKeypair,
@@ -189,14 +189,14 @@ Methods:
 
 ### Re-exports
 
-- `Fly402AutoClient` - Re-exported from `@402fly/client` for convenience
+- `Fly402AutoClient` - Re-exported from `@x402fly/client` for convenience
 
 ## Example: Multi-Tool Agent
 
 ```typescript
 import { ChatOpenAI } from '@langchain/openai';
 import { Calculator } from 'langchain/tools/calculator';
-import { createX402PaymentTool } from '@402fly/langchain';
+import { createX402PaymentTool } from '@x402fly/langchain';
 import { AgentExecutor, createOpenAIFunctionsAgent } from 'langchain/agents';
 
 const walletKeypair = Keypair.fromSecretKey(secretKeyBytes);

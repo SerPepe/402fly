@@ -1,11 +1,11 @@
-# @402fly/langchain
+# @x402fly/langchain
 
 LangChain.js integration for 402fly payment protocol.
 
 ## Installation
 
 ```bash
-npm install @402fly/langchain
+npm install @x402fly/langchain
 ```
 
 ## Features
@@ -18,7 +18,7 @@ npm install @402fly/langchain
 ## Usage
 
 ```typescript
-import { 402flyPaymentTool } from '@402fly/langchain';
+import { 402flyPaymentTool } from '@x402fly/langchain';
 import { ChatOpenAI } from 'langchain/chat_models/openai';
 import { initializeAgent } from 'langchain/agents';
 

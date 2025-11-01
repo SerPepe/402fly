@@ -40,7 +40,7 @@ All implementations provide both server and client libraries with comprehensive 
 
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 app = FastAPI()
 
@@ -58,7 +58,7 @@ async def get_premium_data():
 
 ```typescript
 import express from 'express';
-import { paymentRequired, initFly402, Fly402Config } from '@402fly/express';
+import { paymentRequired, initFly402, Fly402Config } from '@x402fly/express';
 
 const app = express();
 initFly402(new Fly402Config({
@@ -77,7 +77,7 @@ app.listen(3000);
 ### Client (Python - Auto-Payment)
 
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 client = Fly402AutoClient(wallet_keypair=keypair)
@@ -90,7 +90,7 @@ data = response.json()
 ### Client (TypeScript - Auto-Payment)
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const client = new Fly402AutoClient(keypair);
@@ -103,7 +103,7 @@ const data = response.data;
 ### LangChain Agent
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 
 agent = create_x402_agent(
     wallet_keypair=keypair,
@@ -119,7 +119,7 @@ response = agent.run("Get premium market data from the API")
 
 ```bash
 # Using pip
-pip install 402fly-core 402fly-fastapi 402fly-client
+pip install fly402core fly402client fly402fastapi
 
 # Or using uv (recommended)
 uv sync
@@ -132,7 +132,7 @@ uv sync
 pnpm install
 
 # Or using npm
-npm install @402fly/core @402fly/express @402fly/client
+npm install @x402fly/core @x402fly/express @x402fly/client
 ```
 
 ### Development Installation
@@ -361,7 +361,7 @@ FLY402_RPC_URL=https://api.devnet.solana.com
 ### Code Configuration
 
 ```python
-from 402fly_fastapi import Fly402Config, init_fly402
+from fly402fastapi import Fly402Config, init_fly402
 
 config = Fly402Config(
     payment_address="YOUR_WALLET",
@@ -392,7 +392,7 @@ init_fly402(config)
 ## Testing
 
 ```python
-from 402fly_core.testing import MockSolanaPaymentProcessor
+from fly402core.testing import MockSolanaPaymentProcessor
 
 processor = MockSolanaPaymentProcessor()
 processor.balance = 100.0
@@ -420,9 +420,9 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install development dependencies
-pip install -e "packages/python/402fly-core[dev]"
-pip install -e "packages/python/402fly-fastapi[dev]"
-pip install -e "packages/python/402fly-client[dev]"
+pip install -e "packages/python/402flycore[dev]"
+pip install -e "packages/python/402flyfastapi[dev]"
+pip install -e "packages/python/402flyclient[dev]"
 
 # Run tests
 pytest packages/python/*/tests

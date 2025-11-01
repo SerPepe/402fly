@@ -79,7 +79,7 @@ Shows customization options:
 To use this tool with a LangChain agent:
 
 ```typescript
-import { createX402PaymentTool } from '@402fly/langchain';
+import { createX402PaymentTool } from '@x402fly/langchain';
 import { ChatOpenAI } from '@langchain/openai';
 
 // Create the payment tool

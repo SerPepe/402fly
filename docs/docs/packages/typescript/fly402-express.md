@@ -1,11 +1,11 @@
-# @402fly/express
+# @x402fly/express
 
 Express.js middleware and decorators for 402fly payment protocol.
 
 ## Installation
 
 ```bash
-npm install @402fly/express
+npm install @x402fly/express
 ```
 
 ## Features
@@ -19,7 +19,7 @@ npm install @402fly/express
 
 ```typescript
 import express from 'express';
-import { paymentRequired } from '@402fly/express';
+import { paymentRequired } from '@x402fly/express';
 
 const app = express();
 

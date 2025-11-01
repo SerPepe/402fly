@@ -12,7 +12,7 @@ categories = ["web-programming", "network-programming"]
 readme = "README.md"
 
 [dependencies]
-fly402-core = { path = "../fly402-core" }
+fly402-core = { version = "0.0.3", path = "../fly402-core" }
 serde.workspace = true
 serde_json.workspace = true
 tokio.workspace = true

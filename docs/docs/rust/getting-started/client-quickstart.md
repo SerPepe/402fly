@@ -51,7 +51,7 @@ fn load_keypair() -> Result<Keypair, Box<dyn Error>> {
 ### Step 4: Create Auto Client
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -108,7 +108,7 @@ Same as auto client.
 ### Step 3: Create Explicit Client
 
 ```rust
-use 402fly_client::Fly402Client;
+use fly402client::Fly402Client;
 use solana_sdk::signature::{read_keypair_file, Keypair};
 
 #[tokio::main]
@@ -213,7 +213,7 @@ if client.is_payment_required(&response) {
 Handle X402-specific errors:
 
 ```rust
-use 402fly_core::Fly402Error;
+use fly402core::Fly402Error;
 
 match client.get(url).await {
     Ok(response) => {
@@ -345,7 +345,7 @@ mod tests {
 ## Complete Example
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signature::read_keypair_file;
 use std::error::Error;
 

@@ -1,5 +1,5 @@
 {
-  "name": "@402fly/core",
+  "name": "@x402fly/core",
   "version": "0.1.2",
   "description": "Core TypeScript library for 402fly payment protocol",
   "main": "dist/index.js",

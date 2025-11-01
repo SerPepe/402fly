@@ -100,7 +100,7 @@ Create a test script:
 # test_client.py
 import asyncio
 from solders.keypair import Keypair
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 import json
 
 async def main():
@@ -161,7 +161,7 @@ The agent will autonomously pay for API access!
 
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 app = FastAPI()
 
@@ -178,7 +178,7 @@ async def premium_endpoint():
 ### 2. Python Client - Auto Payment
 
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 
 client = Fly402AutoClient(wallet_keypair=keypair)
 
@@ -189,7 +189,7 @@ response = await client.fetch("https://api.example.com/data")
 ### 3. LangChain Agent - Create X402 Agent
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 
 agent = create_x402_agent(
     wallet_keypair=keypair,
@@ -203,7 +203,7 @@ response = agent.run("Get data from paid API")
 
 ```python
 from langgraph.graph import StateGraph
-from 402fly_langgraph import payment_node, check_payment_required
+from fly402langgraph import payment_node, check_payment_required
 
 workflow = StateGraph(YourState)
 workflow.add_node("fetch", fetch_node)

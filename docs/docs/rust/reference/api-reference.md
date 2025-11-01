@@ -414,7 +414,7 @@ pub fn payment_required_response(payment_request: PaymentRequest) -> HttpRespons
 ### Core
 
 ```rust
-use 402fly_core::{PaymentRequest, PaymentAuthorization, SolanaPaymentProcessor};
+use fly402core::{PaymentRequest, PaymentAuthorization, SolanaPaymentProcessor};
 
 // Create payment processor
 let processor = SolanaPaymentProcessor::new("https://api.devnet.solana.com", None);
@@ -429,7 +429,7 @@ let verified = processor.verify_payment(&authorization, "0.10").await?;
 ### Client
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 
 let options = AutoClientOptions {
     max_payment_amount: "5.0".to_string(),
@@ -444,7 +444,7 @@ let response = client.get("http://localhost:8000/premium").await?;
 ### Rocket
 
 ```rust
-use 402fly_rocket::{PaymentGuard, Fly402Config};
+use fly402rocket::{PaymentGuard, Fly402Config};
 
 #[get("/premium")]
 fn premium(auth: PaymentGuard) -> String {
@@ -455,7 +455,7 @@ fn premium(auth: PaymentGuard) -> String {
 ### Actix Web
 
 ```rust
-use 402fly_actix::{PaymentExtractor, X402State};
+use fly402actix::{PaymentExtractor, X402State};
 
 #[get("/premium")]
 async fn premium(auth: PaymentExtractor) -> HttpResponse {

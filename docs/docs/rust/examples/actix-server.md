@@ -74,7 +74,7 @@ Response (402 Payment Required):
 
 ```rust
 use actix_web::{get, web, App, HttpResponse, HttpServer};
-use 402fly_actix::{
+use fly402actix::{
     create_payment_request, payment_required_response, PaymentExtractor, PaymentRequirement,
     Fly402Config, X402State,
 };
@@ -254,7 +254,7 @@ let config = Fly402Config {
 Test with the auto client:
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]

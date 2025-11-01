@@ -1,4 +1,4 @@
-# @402fly/nextjs
+# @x402fly/nextjs
 
 Next.js middleware and utilities for the X402 payment protocol. This package provides seamless integration of blockchain-based micropayments into your Next.js applications.
 
@@ -13,7 +13,7 @@ Next.js middleware and utilities for the X402 payment protocol. This package pro
 ## Installation
 
 ```bash
-npm install @402fly/nextjs @402fly/core @solana/web3.js
+npm install @x402fly/nextjs @x402fly/core @solana/web3.js
 ```
 
 ## Quick Start
@@ -24,7 +24,7 @@ Create a configuration file for your API routes:
 
 ```typescript
 // app/api/config.ts
-import { Fly402Config, initFly402 } from "@402fly/nextjs";
+import { Fly402Config, initFly402 } from "@x402fly/nextjs";
 
 const config = new Fly402Config({
   paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
@@ -45,7 +45,7 @@ Use the `withPayment` higher-order function to add payment requirements:
 ```typescript
 // app/api/premium-data/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { withPayment } from "@402fly/nextjs";
+import { withPayment } from "@x402fly/nextjs";
 import "../config"; // Initialize config
 
 export const GET = withPayment(
@@ -67,7 +67,7 @@ export const GET = withPayment(
 Use the X402 client to make requests from your frontend:
 
 ```typescript
-import { Fly402AutoClient } from "@402fly/client";
+import { Fly402AutoClient } from "@x402fly/client";
 import { Keypair } from "@solana/web3.js";
 
 const keypair = Keypair.generate(); // Or use browser wallet
@@ -105,7 +105,7 @@ const config = new Fly402Config(options);
 Initialize global X402 configuration.
 
 ```typescript
-import { initFly402 } from "@402fly/nextjs";
+import { initFly402 } from "@x402fly/nextjs";
 
 initFly402(config);
 ```
@@ -174,7 +174,7 @@ const response = build402Response(options);
 
 ```typescript
 // app/api/data/route.ts
-import { withPayment } from "@402fly/nextjs";
+import { withPayment } from "@x402fly/nextjs";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = withPayment(
@@ -286,7 +286,7 @@ import type {
   X402HandlerContext,
   PaymentRequest,
   PaymentAuthorization,
-} from "@402fly/nextjs";
+} from "@x402fly/nextjs";
 ```
 
 ## Error Handling
@@ -325,9 +325,9 @@ See the [Next.js example](../../examples/typescript/nextjs-app) for a complete w
 
 ## Related Packages
 
-- [@402fly/core](../402fly-core) - Core X402 protocol implementation
-- [@402fly/client](../402fly-client) - Client library for making payments
-- [@402fly/express](../402fly-express) - Express.js middleware
+- [@x402fly/core](../402fly-core) - Core X402 protocol implementation
+- [@x402fly/client](../402fly-client) - Client library for making payments
+- [@x402fly/express](../402fly-express) - Express.js middleware
 
 ## License
 

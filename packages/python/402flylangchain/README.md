@@ -17,7 +17,7 @@ The `402fly-langchain` package provides LangChain tools and utilities that enabl
 ## Installation
 
 ```bash
-pip install 402fly-langchain
+pip install fly402langchain
 ```
 
 ## Quick Start
@@ -27,7 +27,7 @@ pip install 402fly-langchain
 The easiest way to create an X402-enabled agent:
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from langchain_openai import ChatOpenAI
 from solders.keypair import Keypair
 import json
@@ -71,7 +71,7 @@ if result and "messages" in result:
 Best for most use cases - creates a fully configured agent:
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from langchain_openai import ChatOpenAI
 from solders.keypair import Keypair
 
@@ -97,7 +97,7 @@ result = agent.invoke({
 For custom agent configurations:
 
 ```python
-from 402fly_langchain import X402PaymentTool
+from fly402langchain import X402PaymentTool
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 from solders.keypair import Keypair
@@ -125,7 +125,7 @@ agent = create_agent(
 Agent accessing multiple paid APIs:
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from langchain_openai import ChatOpenAI
 from solders.keypair import Keypair
 
@@ -153,7 +153,7 @@ result = agent.invoke(inputs)
 ## Complete Example
 
 ```python
-from 402fly_langchain import (
+from fly402langchain import (
     create_x402_agent,
     X402PaymentTool,
 )

@@ -6,14 +6,14 @@ TypeScript/JavaScript implementation of the X402 payment protocol for autonomous
 
 ### Core Packages
 
-- **[@402fly/core](./402fly-core)** - Core models, errors, and Solana payment processor
-- **[@402fly/client](./402fly-client)** - HTTP client with automatic payment handling
-- **[@402fly/express](./402fly-express)** - Express.js middleware and utilities
+- **[@x402fly/core](./402fly-core)** - Core models, errors, and Solana payment processor
+- **[@x402fly/client](./402fly-client)** - HTTP client with automatic payment handling
+- **[@x402fly/express](./402fly-express)** - Express.js middleware and utilities
 
 ### AI Agent Integration
 
-- **[@402fly/langchain](./402fly-langchain)** - LangChain.js tools for autonomous payments
-- **[@402fly/langgraph](./402fly-langgraph)** - LangGraph.js workflow nodes
+- **[@x402fly/langchain](./402fly-langchain)** - LangChain.js tools for autonomous payments
+- **[@x402fly/langgraph](./402fly-langgraph)** - LangGraph.js workflow nodes
 
 ## Quick Start
 
@@ -54,7 +54,7 @@ npm start
 
 ```typescript
 import { Keypair } from '@solana/web3.js';
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 
 // Load your wallet keypair
 const keypair = Keypair.fromSecretKey(/* your secret key */);
@@ -71,7 +71,7 @@ await client.close();
 
 ## Package Architecture
 
-### @402fly/core
+### @x402fly/core
 
 Core payment protocol implementation:
 
@@ -79,14 +79,14 @@ Core payment protocol implementation:
 - **Errors**: `Fly402Error`, `PaymentRequiredError`, etc.
 - **Processor**: `SolanaPaymentProcessor` for blockchain operations
 
-### @402fly/client
+### @x402fly/client
 
 HTTP clients with payment support:
 
 - **Fly402Client**: Manual payment control
 - **Fly402AutoClient**: Automatic payment handling
 
-### @402fly/express
+### @x402fly/express
 
 Express.js integration:
 
@@ -94,14 +94,14 @@ Express.js integration:
 - **Config**: Global configuration management
 - **Responses**: Helper functions for 402 responses
 
-### @402fly/langchain
+### @x402fly/langchain
 
 LangChain.js integration:
 
 - **X402PaymentTool**: Tool for agents to make payments
 - Automatic payment handling in agent workflows
 
-### @402fly/langgraph
+### @x402fly/langgraph
 
 LangGraph.js workflow integration:
 

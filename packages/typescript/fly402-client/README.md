@@ -1,4 +1,4 @@
-# @402fly/client
+# @x402fly/client
 
 TypeScript HTTP client library for the X402 payment protocol with both manual and automatic payment handling.
 
@@ -19,11 +19,11 @@ The client package provides HTTP client implementations for making requests to X
 ## Installation
 
 ```bash
-npm install @402fly/client
+npm install @x402fly/client
 # or
-pnpm add @402fly/client
+pnpm add @x402fly/client
 # or
-yarn add @402fly/client
+yarn add @x402fly/client
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ yarn add @402fly/client
 The `Fly402AutoClient` automatically handles payment flow when encountering 402 responses:
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 // Load your wallet keypair
@@ -63,7 +63,7 @@ await client.close();
 The `Fly402Client` gives you full control over the payment flow:
 
 ```typescript
-import { Fly402Client } from '@402fly/client';
+import { Fly402Client } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const walletKeypair = Keypair.fromSecretKey(secretKeyBytes);
@@ -120,7 +120,7 @@ const response = await client.fetch(
 ### Custom Configuration
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 
 const client = new Fly402AutoClient(
   walletKeypair,

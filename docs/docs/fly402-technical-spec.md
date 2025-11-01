@@ -23,29 +23,29 @@
 │   │   ├── python/
 │   │   │   └── 402fly-core/
 │   │   └── typescript/
-│   │       └── @402fly/core
+│   │       └── @x402fly/core
 │   │
 │   ├── server/                    # Server-side libraries
 │   │   ├── python/
 │   │   │   └── 402fly-fastapi/
 │   │   └── typescript/
-│   │       ├── @402fly/express
-│   │       ├── @402fly/nextjs
-│   │       └── @402fly/hono
+│   │       ├── @x402fly/express
+│   │       ├── @x402fly/nextjs
+│   │       └── @x402fly/hono
 │   │
 │   ├── client/                    # Client-side libraries
 │   │   ├── python/
 │   │   │   └── 402fly-client/
 │   │   └── typescript/
-│   │       └── @402fly/client
+│   │       └── @x402fly/client
 │   │
 │   └── integrations/              # Framework integrations
 │       ├── python/
 │       │   ├── 402fly-langchain/
 │       │   └── 402fly-langgraph/
 │       └── typescript/
-│           ├── @402fly/langchain
-│           └── @402fly/langgraph
+│           ├── @x402fly/langchain
+│           └── @x402fly/langgraph
 │
 ├── examples/                      # Example implementations
 │   ├── fastapi-server/
@@ -63,7 +63,7 @@
 
 ## 1. Core Protocol Implementation
 
-### Package: `402fly-core` (Python) / `@402fly/core` (TypeScript)
+### Package: `402fly-core` (Python) / `@x402fly/core` (TypeScript)
 
 #### Purpose
 Core protocol logic for X402 payment flow, independent of any framework.
@@ -527,7 +527,7 @@ def build_402_response(
 
 ## 3. Client-Side Implementation
 
-### Package: `402fly-client` (Python) / `@402fly/client` (TypeScript)
+### Package: `402fly-client` (Python) / `@x402fly/client` (TypeScript)
 
 #### Purpose
 Client libraries for making X402-enabled API calls with automatic payment handling.
@@ -788,7 +788,7 @@ export class Fly402AutoClient {
 
 ## 4. LangChain Integration
 
-### Package: `402fly-langchain` (Python) / `@402fly/langchain` (TypeScript)
+### Package: `402fly-langchain` (Python) / `@x402fly/langchain` (TypeScript)
 
 #### Purpose
 Integrate X402 payments into LangChain agents via Tools and HTTP request middleware.
@@ -999,7 +999,7 @@ def create_x402_agent(
 
 ## 5. LangGraph Integration
 
-### Package: `402fly-langgraph` (Python) / `@402fly/langgraph` (TypeScript)
+### Package: `402fly-langgraph` (Python) / `@x402fly/langgraph` (TypeScript)
 
 #### Purpose
 Integrate X402 payments into LangGraph workflows as nodes and conditional edges.
@@ -1302,7 +1302,7 @@ class TestServer:
 
 ```python
 import pytest
-from 402fly_core.testing import MockSolanaPaymentProcessor, TestServer
+from fly402core.testing import MockSolanaPaymentProcessor, TestServer
 
 @pytest.mark.asyncio
 async def test_payment_flow():
@@ -1340,7 +1340,7 @@ async def test_payment_flow():
 # examples/fastapi-server/main.py
 
 from fastapi import FastAPI, Depends
-from 402fly_fastapi import payment_required, Fly402Config, init_fly402
+from fly402fastapi import payment_required, Fly402Config, init_fly402
 from solders.keypair import Keypair
 import os
 
@@ -1370,7 +1370,7 @@ async def get_premium_data():
     }
 
 # Dependency injection approach
-from 402fly_fastapi import verify_payment_factory
+from fly402fastapi import verify_payment_factory
 
 @app.get("/expensive-data")
 async def get_expensive_data(
@@ -1400,7 +1400,7 @@ if __name__ == "__main__":
 
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import initialize_agent, AgentType
-from 402fly_langchain import X402PaymentTool, X402RequestsWrapper
+from fly402langchain import X402PaymentTool, X402RequestsWrapper
 from solders.keypair import Keypair
 import os
 import json
@@ -1456,8 +1456,8 @@ print(response)
 
 from typing import TypedDict, Annotated, Optional
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import payment_node, check_payment_required
-from 402fly_client import Fly402AutoClient
+from fly402langgraph import payment_node, check_payment_required
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 import json
 import asyncio
@@ -1594,10 +1594,10 @@ Repository = "https://github.com/SerPepe/402fly"
 ### TypeScript Packages (npm)
 
 ```json
-// package.json example for @402fly/core
+// package.json example for @x402fly/core
 
 {
-  "name": "@402fly/core",
+  "name": "@x402fly/core",
   "version": "0.1.0",
   "description": "Core implementation of X402 payment protocol",
   "main": "dist/index.js",

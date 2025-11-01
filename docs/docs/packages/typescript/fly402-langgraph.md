@@ -1,11 +1,11 @@
-# @402fly/langgraph
+# @x402fly/langgraph
 
 LangGraph.js integration for 402fly payment protocol.
 
 ## Installation
 
 ```bash
-npm install @402fly/langgraph
+npm install @x402fly/langgraph
 ```
 
 ## Features
@@ -18,7 +18,7 @@ npm install @402fly/langgraph
 ## Usage
 
 ```typescript
-import { paymentNode } from '@402fly/langgraph';
+import { paymentNode } from '@x402fly/langgraph';
 import { StateGraph } from '@langchain/langgraph';
 
 const workflow = new StateGraph();

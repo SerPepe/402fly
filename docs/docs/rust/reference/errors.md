@@ -280,7 +280,7 @@ match payment_request.to_json() {
 ### Basic Error Handling
 
 ```rust
-use 402fly_core::Fly402Error;
+use fly402core::Fly402Error;
 
 match client.get(url).await {
     Ok(response) => {

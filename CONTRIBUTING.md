@@ -92,7 +92,7 @@ pytest
 pytest packages/python/402fly-core/tests
 
 # Run with coverage
-pytest --cov=402fly_core
+pytest --cov=fly402core
 
 # Run async tests
 pytest -v tests/test_async.py
@@ -110,7 +110,7 @@ Example test:
 
 ```python
 import pytest
-from 402fly_core.testing import MockSolanaPaymentProcessor, create_mock_payment_request
+from fly402core.testing import MockSolanaPaymentProcessor, create_mock_payment_request
 
 @pytest.mark.asyncio
 async def test_payment_flow():

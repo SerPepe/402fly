@@ -218,7 +218,7 @@ curl http://localhost:8000/premium-data  # Returns 402 Payment Required
 
 **Python:**
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 keypair = Keypair.from_bytes(bytes([...]))
@@ -376,7 +376,7 @@ pnpm run build
 **Python (FastAPI):**
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required, init_fly402, Fly402Config
+from fly402fastapi import payment_required, init_fly402, Fly402Config
 
 app = FastAPI()
 init_fly402(Fly402Config(...))
@@ -405,7 +405,7 @@ app.get('/premium',
 
 **Python:**
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 
 client = Fly402AutoClient(keypair)
 response = await client.get(url)

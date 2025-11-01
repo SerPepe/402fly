@@ -73,7 +73,7 @@ Response (402 Payment Required):
 ## Complete Code
 
 ```rust
-use 402fly_rocket::{
+use fly402rocket::{
     create_payment_request, PaymentGuard, PaymentRequirement,
     PaymentRequiredResponse, Fly402Config,
 };
@@ -243,7 +243,7 @@ let config = Fly402Config {
 Test with the auto client:
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]

@@ -57,11 +57,11 @@ Rename directories and update package names:
 ### 2.2 Python Module/Import Renaming
 
 - Rename internal modules:
-- `402fly_core` → `fly402core`
-- `402fly_client` → `fly402client`
-- `402fly_fastapi` → `fly402fastapi`
-- `402fly_langchain` → `fly402langchain`
-- `402fly_langgraph` → `fly402langgraph`
+- `fly402core` → `fly402core`
+- `fly402client` → `fly402client`
+- `fly402fastapi` → `fly402fastapi`
+- `fly402langchain` → `fly402langchain`
+- `fly402langgraph` → `fly402langgraph`
 
 ### 2.3 Python Class/Function Renaming
 

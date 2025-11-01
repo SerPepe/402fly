@@ -24,7 +24,7 @@ Actix Web integration provides:
 
 ```rust
 use actix_web::{get, web, App, HttpResponse, HttpServer};
-use 402fly_actix::{
+use fly402actix::{
     create_payment_request, payment_required_response,
     PaymentExtractor, PaymentRequirement, Fly402Config, X402State,
 };
@@ -258,7 +258,7 @@ Automatically converts to appropriate HTTP responses:
 
 ```rust
 use actix_web::{get, web, App, HttpResponse, HttpServer};
-use 402fly_actix::*;
+use fly402actix::*;
 use serde::Serialize;
 
 #[derive(Serialize)]

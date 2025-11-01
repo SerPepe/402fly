@@ -36,7 +36,7 @@ Add the required packages to your `Cargo.toml`:
 The auto client automatically handles 402 responses and payment flow:
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]
@@ -67,7 +67,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 For full control over the payment flow:
 
 ```rust
-use 402fly_client::Fly402Client;
+use fly402client::Fly402Client;
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]
@@ -107,7 +107,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 Protect endpoints with payment requirements using Rocket:
 
 ```rust
-use 402fly_rocket::{
+use fly402rocket::{
     create_payment_request, PaymentGuard, PaymentRequirement,
     PaymentRequiredResponse, Fly402Config,
 };
@@ -164,7 +164,7 @@ Protect endpoints with payment requirements using Actix Web:
 
 ```rust
 use actix_web::{get, web, App, HttpResponse, HttpServer};
-use 402fly_actix::{
+use fly402actix::{
     create_payment_request, payment_required_response,
     PaymentExtractor, PaymentRequirement, Fly402Config, X402State,
 };
@@ -225,7 +225,7 @@ async fn main() -> std::io::Result<()> {
 When a server requires payment, it returns a 402 status code with a `PaymentRequest`:
 
 ```rust
-use 402fly_core::PaymentRequest;
+use fly402core::PaymentRequest;
 
 // Example PaymentRequest structure
 let payment_request = PaymentRequest {
@@ -247,7 +247,7 @@ let payment_request = PaymentRequest {
 After processing payment, the client sends a `PaymentAuthorization` header:
 
 ```rust
-use 402fly_core::PaymentAuthorization;
+use fly402core::PaymentAuthorization;
 
 // Example PaymentAuthorization structure
 let authorization = PaymentAuthorization {
@@ -271,7 +271,7 @@ let header_value = authorization.to_header_value()?;
 The core library provides a `SolanaPaymentProcessor` for blockchain operations:
 
 ```rust
-use 402fly_core::{SolanaPaymentProcessor, PaymentRequest};
+use fly402core::{SolanaPaymentProcessor, PaymentRequest};
 use solana_sdk::signature::Keypair;
 
 #[tokio::main]
@@ -300,7 +300,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Client Configuration
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 
 let options = AutoClientOptions {
     max_payment_amount: "10.0".to_string(),  // Maximum USDC to pay automatically
@@ -314,7 +314,7 @@ let client = Fly402AutoClient::new(keypair, rpc_url, Some(options));
 ### Server Configuration
 
 ```rust
-use 402fly_rocket::Fly402Config;
+use fly402rocket::Fly402Config;
 
 let config = Fly402Config {
     payment_address: "YOUR_WALLET".to_string(),     // Your Solana wallet
@@ -328,7 +328,7 @@ let config = Fly402Config {
 ### Payment Requirements
 
 ```rust
-use 402fly_rocket::PaymentRequirement;
+use fly402rocket::PaymentRequirement;
 
 let requirement = PaymentRequirement::new("0.10")
     .with_description("Access to premium API endpoint")
@@ -470,7 +470,7 @@ The Rust SDK is designed for high performance:
 All operations return `Result<T, Fly402Error>`:
 
 ```rust
-use 402fly_core::{Fly402Error, X402Result};
+use fly402core::{Fly402Error, X402Result};
 
 async fn handle_payment() -> X402Result<String> {
     // ... operation that might fail

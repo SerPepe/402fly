@@ -1,4 +1,4 @@
-# @402fly/langgraph
+# @x402fly/langgraph
 
 LangGraph.js integration for the X402 payment protocol, enabling complex AI agent workflows with autonomous payment capabilities.
 
@@ -17,11 +17,11 @@ This package provides LangGraph nodes and utilities for building stateful AI age
 ## Installation
 
 ```bash
-npm install @402fly/langgraph
+npm install @x402fly/langgraph
 # or
-pnpm add @402fly/langgraph
+pnpm add @x402fly/langgraph
 # or
-yarn add @402fly/langgraph
+yarn add @x402fly/langgraph
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ import {
   checkPaymentRequired,
   checkPaymentCompleted,
   PaymentState
-} from '@402fly/langgraph';
+} from '@x402fly/langgraph';
 import { Keypair } from '@solana/web3.js';
 
 // Define your graph state
@@ -97,7 +97,7 @@ import {
   paymentNode,
   checkPaymentRequired,
   PaymentState
-} from '@402fly/langgraph';
+} from '@x402fly/langgraph';
 import { Keypair } from '@solana/web3.js';
 
 interface AgentState extends PaymentState {
@@ -167,7 +167,7 @@ import {
   fetchWithPaymentNode,
   checkPaymentCompleted,
   PaymentState
-} from '@402fly/langgraph';
+} from '@x402fly/langgraph';
 import { Keypair } from '@solana/web3.js';
 
 interface MultiStepState extends PaymentState {
@@ -300,7 +300,7 @@ Returns routing key based on payment completion status:
 
 ### Re-exports
 
-- `Fly402AutoClient` - Re-exported from `@402fly/client` for convenience
+- `Fly402AutoClient` - Re-exported from `@x402fly/client` for convenience
 
 ## Advanced Examples
 
@@ -308,7 +308,7 @@ Returns routing key based on payment completion status:
 
 ```typescript
 import { StateGraph } from '@langchain/langgraph';
-import { fetchWithPaymentNode, PaymentState } from '@402fly/langgraph';
+import { fetchWithPaymentNode, PaymentState } from '@x402fly/langgraph';
 
 interface ErrorHandlingState extends PaymentState {
   url: string;

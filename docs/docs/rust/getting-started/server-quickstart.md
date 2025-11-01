@@ -33,7 +33,7 @@ serde_json = "1.0"
 ### Step 3: Write Server Code
 
 ```rust
-use 402fly_rocket::{
+use fly402rocket::{
     create_payment_request, PaymentGuard, PaymentRequirement,
     PaymentRequiredResponse, Fly402Config,
 };
@@ -139,7 +139,7 @@ serde_json = "1.0"
 
 ```rust
 use actix_web::{get, web, App, HttpResponse, HttpServer};
-use 402fly_actix::{
+use fly402actix::{
     create_payment_request, payment_required_response,
     PaymentExtractor, PaymentRequirement, Fly402Config, X402State,
 };

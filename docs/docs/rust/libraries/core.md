@@ -25,7 +25,7 @@ The core library includes:
 Represents a payment requirement from a server.
 
 ```rust
-use 402fly_core::PaymentRequest;
+use fly402core::PaymentRequest;
 use chrono::{Utc, Duration};
 
 let payment_request = PaymentRequest::new(
@@ -79,7 +79,7 @@ let request = PaymentRequest::from_base64(&encoded)?;
 Represents proof of payment sent with retry requests.
 
 ```rust
-use 402fly_core::PaymentAuthorization;
+use fly402core::PaymentAuthorization;
 
 let authorization = PaymentAuthorization::new(
     "payment123".to_string(),                                       // payment_id
@@ -125,7 +125,7 @@ let auth = PaymentAuthorization::from_header_value(&header_value)?;
 The `Fly402Error` enum covers all error cases:
 
 ```rust
-use 402fly_core::Fly402Error;
+use fly402core::Fly402Error;
 
 pub enum Fly402Error {
     PaymentRequired(String),
@@ -155,7 +155,7 @@ println!("Message: {}", error.message());
 ### Error Handling
 
 ```rust
-use 402fly_core::{Fly402Error, X402Result};
+use fly402core::{Fly402Error, X402Result};
 
 fn process_payment() -> X402Result<String> {
     // ... operation that might fail
@@ -196,7 +196,7 @@ The `SolanaPaymentProcessor` handles blockchain operations.
 ### Creating a Processor
 
 ```rust
-use 402fly_core::SolanaPaymentProcessor;
+use fly402core::SolanaPaymentProcessor;
 
 // Use default RPC URL
 let processor = SolanaPaymentProcessor::new(
@@ -281,7 +281,7 @@ let url = SolanaPaymentProcessor::default_rpc_url("solana-mainnet");
 ### Library Version
 
 ```rust
-use 402fly_core::VERSION;
+use fly402core::VERSION;
 
 println!("402fly-core version: {}", VERSION);
 ```
@@ -309,7 +309,7 @@ The core library supports:
 ### Complete Payment Flow
 
 ```rust
-use 402fly_core::{
+use fly402core::{
     PaymentRequest, SolanaPaymentProcessor, X402Result
 };
 use solana_sdk::signature::Keypair;

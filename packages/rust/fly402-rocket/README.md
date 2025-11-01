@@ -27,7 +27,7 @@ tokio = "1.35"
 
 ```rust
 use rocket::{get, routes, State};
-use 402fly_rocket::{
+use fly402rocket::{
     Fly402Config, PaymentGuard, PaymentRequirement,
     create_payment_request, PaymentRequiredResponse
 };

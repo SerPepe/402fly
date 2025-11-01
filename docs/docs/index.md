@@ -25,7 +25,7 @@
 ### Server (FastAPI)
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 app = FastAPI()
 
@@ -41,7 +41,7 @@ async def get_premium_data():
 
 ### Client (Auto-Payment)
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 client = Fly402AutoClient(wallet_keypair=keypair)
@@ -53,7 +53,7 @@ data = response.json()
 
 ### LangChain Agent
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from langchain.chat_models import ChatOpenAI
 
 agent = create_x402_agent(
@@ -105,23 +105,23 @@ response = agent.run("Get premium market data from the API")
 
 ### Core
 - **`402fly-core`** - Core protocol implementation
-- **`@402fly/core`** - TypeScript equivalent
+- **`@x402fly/core`** - TypeScript equivalent
 
 ### Server Frameworks
 - **`402fly-fastapi`** - FastAPI middleware (Python)
-- **`@402fly/express`** - Express.js middleware (TypeScript)
-- **`@402fly/nextjs`** - Next.js API routes (TypeScript)
-- **`@402fly/hono`** - Hono middleware (TypeScript)
+- **`@x402fly/express`** - Express.js middleware (TypeScript)
+- **`@x402fly/nextjs`** - Next.js API routes (TypeScript)
+- **`@x402fly/hono`** - Hono middleware (TypeScript)
 
 ### Client Libraries
 - **`402fly-client`** - HTTP client with payment support (Python)
-- **`@402fly/client`** - TypeScript client
+- **`@x402fly/client`** - TypeScript client
 
 ### AI Agent Integrations
 - **`402fly-langchain`** - LangChain Tool & Middleware (Python)
 - **`402fly-langgraph`** - LangGraph nodes (Python)
-- **`@402fly/langchain`** - TypeScript LangChain integration
-- **`@402fly/langgraph`** - TypeScript LangGraph integration
+- **`@x402fly/langchain`** - TypeScript LangChain integration
+- **`@x402fly/langgraph`** - TypeScript LangGraph integration
 
 ## Use Cases
 
@@ -156,7 +156,7 @@ response = agent.run("Get premium market data from the API")
 └───────┼─────────────┼─────────────┼──────────────────────┘
         │             │             │
 ┌───────┴─────────────┴─────────────┴──────────────────────┐
-│              402fly-core / @402fly/core              │
+│              402fly-core / @x402fly/core              │
 │  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
 │  │   Payment    │  │    Solana    │  │     Error     │  │
 │  │    Models    │  │  Processor   │  │   Handling    │  │
@@ -210,14 +210,14 @@ response = agent.run("Get premium market data from the API")
 
 ### Python
 ```bash
-pip install 402fly-core 402fly-fastapi 402fly-client
-pip install 402fly-langchain 402fly-langgraph
+pip install fly402core 402fly-fastapi 402fly-client
+pip install fly402langchain 402fly-langgraph
 ```
 
 ### TypeScript
 ```bash
-npm install @402fly/core @402fly/express @402fly/client
-npm install @402fly/langchain @402fly/langgraph
+npm install @x402fly/core @x402fly/express @x402fly/client
+npm install @x402fly/langchain @x402fly/langgraph
 ```
 
 ## Examples
@@ -225,7 +225,7 @@ npm install @402fly/langchain @402fly/langgraph
 ### FastAPI Server
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import Fly402Config, init_fly402, payment_required
+from fly402fastapi import Fly402Config, init_fly402, payment_required
 
 # Initialize X402
 config = Fly402Config(
@@ -250,7 +250,7 @@ async def get_premium_data():
 ### LangChain Agent
 ```python
 from langchain.chat_models import ChatOpenAI
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 from solders.keypair import Keypair
 
 # Load wallet
@@ -274,7 +274,7 @@ response = agent.run(
 ```python
 from typing import TypedDict
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import payment_node, check_payment_required
+from fly402langgraph import payment_node, check_payment_required
 from solders.keypair import Keypair
 
 class AgentState(TypedDict):
@@ -320,7 +320,7 @@ X402_RPC_URL=https://api.devnet.solana.com
 
 ### Code Configuration
 ```python
-from 402fly_fastapi import Fly402Config
+from fly402fastapi import Fly402Config
 
 config = Fly402Config(
     payment_address="YOUR_WALLET",
@@ -354,7 +354,7 @@ config = Fly402Config(
 
 ### Mock Payment Processor
 ```python
-from 402fly_core.testing import MockSolanaPaymentProcessor
+from fly402core.testing import MockSolanaPaymentProcessor
 
 processor = MockSolanaPaymentProcessor()
 processor.balance = 100.0
@@ -366,7 +366,7 @@ client.client.processor = processor
 
 ### Test Server
 ```python
-from 402fly_core.testing import TestServer
+from fly402core.testing import TestServer
 
 server = TestServer(
     payment_address="test_address",

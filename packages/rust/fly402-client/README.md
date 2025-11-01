@@ -25,7 +25,7 @@ tokio = { version = "1.35", features = ["full"] }
 ### Automatic Payment (Recommended)
 
 ```rust
-use 402fly_client::{Fly402AutoClient, AutoClientOptions};
+use fly402client::{Fly402AutoClient, AutoClientOptions};
 use solana_sdk::signer::keypair::Keypair;
 
 #[tokio::main]
@@ -49,7 +49,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Explicit Payment Control
 
 ```rust
-use 402fly_client::Fly402Client;
+use fly402client::Fly402Client;
 use solana_sdk::signer::keypair::Keypair;
 
 #[tokio::main]

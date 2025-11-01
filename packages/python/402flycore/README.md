@@ -17,7 +17,7 @@ The `402fly-core` package provides the fundamental building blocks for implement
 ## Installation
 
 ```bash
-pip install 402fly-core
+pip install fly402core
 ```
 
 ## Core Components
@@ -25,7 +25,7 @@ pip install 402fly-core
 ### Payment Models
 
 ```python
-from 402fly_core import PaymentRequest, PaymentAuthorization
+from fly402core import PaymentRequest, PaymentAuthorization
 
 # PaymentRequest: Represents a payment requirement
 # PaymentAuthorization: Represents completed payment details
@@ -34,7 +34,7 @@ from 402fly_core import PaymentRequest, PaymentAuthorization
 ### Payment Processor
 
 ```python
-from 402fly_core import SolanaPaymentProcessor
+from fly402core import SolanaPaymentProcessor
 from solders.keypair import Keypair
 
 # Initialize payment processor
@@ -50,7 +50,7 @@ processor = SolanaPaymentProcessor(
 ### Error Handling
 
 ```python
-from 402fly_core import (
+from fly402core import (
     Fly402Error,
     PaymentRequiredError,
     PaymentExpiredError,

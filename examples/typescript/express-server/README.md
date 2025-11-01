@@ -112,7 +112,7 @@ Response (402 Payment Required):
 Using the X402 client:
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const keypair = Keypair.fromSecretKey(/* your key */);
@@ -179,7 +179,7 @@ npm run dev
 1. Import and initialize X402:
 
 ```typescript
-import { Fly402Config, initFly402, paymentRequired } from '@402fly/express';
+import { Fly402Config, initFly402, paymentRequired } from '@x402fly/express';
 
 const config = new Fly402Config({
   paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
@@ -210,7 +210,7 @@ app.get(
 1. Create X402 client:
 
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const client = new Fly402AutoClient(keypair);

@@ -80,7 +80,7 @@ The app will start on `http://localhost:3000`.
 1. **Initialize X402 Configuration** (`app/api/config.ts`):
 
 ```typescript
-import { Fly402Config, initFly402 } from "@402fly/nextjs";
+import { Fly402Config, initFly402 } from "@x402fly/nextjs";
 
 const config = new Fly402Config({
   paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
@@ -94,7 +94,7 @@ initFly402(config);
 2. **Protect API Routes** with `withPayment`:
 
 ```typescript
-import { withPayment } from "@402fly/nextjs";
+import { withPayment } from "@x402fly/nextjs";
 
 export const GET = withPayment(
   {
@@ -115,7 +115,7 @@ export const GET = withPayment(
 1. **Setup X402 Client Provider** (`app/components/Fly402ClientProvider.tsx`):
 
 ```typescript
-import { Fly402AutoClient } from "@402fly/client";
+import { Fly402AutoClient } from "@x402fly/client";
 import { Keypair } from "@solana/web3.js";
 
 const keypair = Keypair.generate(); // Or use browser wallet

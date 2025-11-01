@@ -21,16 +21,16 @@ Complete TypeScript/Node.js implementation of the X402 payment protocol for auto
 
 | Package | Description | Version |
 |---------|-------------|---------|
-| [@402fly/core](./packages/typescript/402fly-core) | Core models, errors, and Solana processor | 0.1.0 |
-| [@402fly/client](./packages/typescript/402fly-client) | HTTP clients with payment handling | 0.1.0 |
-| [@402fly/express](./packages/typescript/402fly-express) | Express.js middleware | 0.1.0 |
+| [@x402fly/core](./packages/typescript/402fly-core) | Core models, errors, and Solana processor | 0.1.0 |
+| [@x402fly/client](./packages/typescript/402fly-client) | HTTP clients with payment handling | 0.1.0 |
+| [@x402fly/express](./packages/typescript/402fly-express) | Express.js middleware | 0.1.0 |
 
 ### AI Agent Integration
 
 | Package | Description | Version |
 |---------|-------------|---------|
-| [@402fly/langchain](./packages/typescript/402fly-langchain) | LangChain.js tools | 0.1.0 |
-| [@402fly/langgraph](./packages/typescript/402fly-langgraph) | LangGraph.js workflow nodes | 0.1.0 |
+| [@x402fly/langchain](./packages/typescript/402fly-langchain) | LangChain.js tools | 0.1.0 |
+| [@x402fly/langgraph](./packages/typescript/402fly-langgraph) | LangGraph.js workflow nodes | 0.1.0 |
 
 ## 🚀 Quick Start
 
@@ -75,7 +75,7 @@ Server will start at `http://localhost:3000`.
 
 ```typescript
 import express from 'express';
-import { Fly402Config, initFly402, paymentRequired } from '@402fly/express';
+import { Fly402Config, initFly402, paymentRequired } from '@x402fly/express';
 
 const app = express();
 
@@ -111,7 +111,7 @@ app.listen(3000);
 
 ```typescript
 import { Keypair } from '@solana/web3.js';
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 
 // Load wallet
 const keypair = Keypair.fromSecretKey(/* your secret key */);
@@ -131,7 +131,7 @@ await client.close();
 ### Client Side (Manual Payment Control)
 
 ```typescript
-import { Fly402Client } from '@402fly/client';
+import { Fly402Client } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const keypair = Keypair.fromSecretKey(/* your secret key */);
@@ -162,7 +162,7 @@ await client.close();
 ```typescript
 import { ChatOpenAI } from '@langchain/openai';
 import { AgentExecutor, createOpenAIFunctionsAgent } from 'langchain/agents';
-import { X402PaymentTool } from '@402fly/langchain';
+import { X402PaymentTool } from '@x402fly/langchain';
 import { Keypair } from '@solana/web3.js';
 
 const keypair = Keypair.fromSecretKey(/* your secret key */);
@@ -198,7 +198,7 @@ await executor.invoke({
 
 ```typescript
 import { StateGraph } from '@langchain/langgraph';
-import { fetchWithPaymentNode, checkPaymentCompleted } from '@402fly/langgraph';
+import { fetchWithPaymentNode, checkPaymentCompleted } from '@x402fly/langgraph';
 import { Keypair } from '@solana/web3.js';
 
 const keypair = Keypair.fromSecretKey(/* your secret key */);
@@ -250,11 +250,11 @@ console.log(result.api_response);
 ### Package Dependencies
 
 ```
-@402fly/langgraph
+@x402fly/langgraph
     ↓
-@402fly/langchain
+@x402fly/langchain
     ↓
-@402fly/express → @402fly/client → @402fly/core
+@x402fly/express → @x402fly/client → @x402fly/core
                          ↓
                     @solana/web3.js
                     @solana/spl-token
@@ -262,7 +262,7 @@ console.log(result.api_response);
 
 ## 📚 API Reference
 
-### @402fly/core
+### @x402fly/core
 
 **Models:**
 - `PaymentRequest` - Payment request from 402 response
@@ -280,13 +280,13 @@ console.log(result.api_response);
 **Processor:**
 - `SolanaPaymentProcessor` - Handles Solana blockchain operations
 
-### @402fly/client
+### @x402fly/client
 
 **Clients:**
 - `Fly402Client` - Manual payment control
 - `Fly402AutoClient` - Automatic payment handling
 
-### @402fly/express
+### @x402fly/express
 
 **Middleware:**
 - `paymentRequired(options)` - Protect routes with payment requirement
@@ -297,13 +297,13 @@ console.log(result.api_response);
 - `Fly402Config` - Configuration class
 - `X402Request` - Extended Express request with payment
 
-### @402fly/langchain
+### @x402fly/langchain
 
 **Tools:**
 - `X402PaymentTool` - LangChain tool for payments
 - `createX402PaymentTool()` - Factory function
 
-### @402fly/langgraph
+### @x402fly/langgraph
 
 **Nodes:**
 - `paymentNode` - Handle payment in workflow

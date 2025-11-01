@@ -169,7 +169,7 @@ Server will be available at:
 
 **Python Client**:
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 keypair = Keypair()  # Load your keypair
@@ -181,7 +181,7 @@ print(response.json())
 
 **TypeScript Client**:
 ```typescript
-import { Fly402AutoClient } from '@402fly/client';
+import { Fly402AutoClient } from '@x402fly/client';
 import { Keypair } from '@solana/web3.js';
 
 const keypair = Keypair.generate();  // Load your keypair

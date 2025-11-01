@@ -1,5 +1,5 @@
 {
-  "name": "@402fly/nextjs",
+  "name": "@x402fly/nextjs",
   "version": "0.1.0",
   "description": "Next.js middleware and utilities for 402fly payment protocol",
   "main": "dist/index.js",
@@ -36,7 +36,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@402fly/core": "^0.1.0",
+    "@x402fly/core": "^0.1.0",
     "next": "^14.0.0"
   },
   "devDependencies": {

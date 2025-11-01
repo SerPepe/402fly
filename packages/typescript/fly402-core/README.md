@@ -1,4 +1,4 @@
-# @402fly/core
+# @x402fly/core
 
 Core TypeScript implementation of the X402 payment protocol for autonomous AI agent payments on Solana.
 
@@ -16,11 +16,11 @@ The core package provides fundamental primitives and utilities for implementing 
 ## Installation
 
 ```bash
-npm install @402fly/core
+npm install @x402fly/core
 # or
-pnpm add @402fly/core
+pnpm add @x402fly/core
 # or
-yarn add @402fly/core
+yarn add @x402fly/core
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ yarn add @402fly/core
 ### Payment Request
 
 ```typescript
-import { PaymentRequest } from '@402fly/core';
+import { PaymentRequest } from '@x402fly/core';
 
 // Create a payment request
 const paymentRequest = new PaymentRequest({
@@ -56,7 +56,7 @@ const json = paymentRequest.toJSON();
 ### Payment Authorization
 
 ```typescript
-import { PaymentAuthorization } from '@402fly/core';
+import { PaymentAuthorization } from '@x402fly/core';
 
 // Create payment authorization
 const authorization = new PaymentAuthorization({
@@ -78,7 +78,7 @@ const headerValue = authorization.toHeaderValue();
 ### Solana Payment Processing
 
 ```typescript
-import { SolanaPaymentProcessor } from '@402fly/core';
+import { SolanaPaymentProcessor } from '@x402fly/core';
 import { Connection } from '@solana/web3.js';
 
 const connection = new Connection('https://api.devnet.solana.com');
@@ -100,7 +100,7 @@ import {
   InsufficientFundsError,
   PaymentVerificationError,
   ERROR_CODES
-} from '@402fly/core';
+} from '@x402fly/core';
 
 try {
   // Payment operations

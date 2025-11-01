@@ -1,5 +1,5 @@
 {
-  "name": "@402fly/client",
+  "name": "@x402fly/client",
   "version": "0.1.2",
   "description": "TypeScript HTTP client for 402fly payment protocol",
   "main": "dist/index.js",
@@ -36,7 +36,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@402fly/core": "^0.1.0",
+    "@x402fly/core": "^0.1.0",
     "@solana/web3.js": "^1.87.6",
     "axios": "^1.6.5"
   },

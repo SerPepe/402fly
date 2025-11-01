@@ -15,22 +15,22 @@ Complete installation guide for 402fly.
 
 ```bash
 # Core protocol
-pip install 402fly-core
+pip install fly402core
 
 # FastAPI integration
-pip install 402fly-fastapi
+pip install fly402fastapi
 
 # HTTP client
-pip install 402fly-client
+pip install fly402client
 
 # LangChain integration
-pip install 402fly-langchain
+pip install fly402langchain
 
 # LangGraph integration
-pip install 402fly-langgraph
+pip install fly402langgraph
 
 # Install all packages
-pip install 402fly-core 402fly-fastapi 402fly-client 402fly-langchain 402fly-langgraph
+pip install fly402core 402fly-fastapi 402fly-client 402fly-langchain 402fly-langgraph
 ```
 
 ### Install from Source
@@ -92,7 +92,7 @@ solana balance YOUR_WALLET_ADDRESS --url devnet
 
 ```bash
 # Install FastAPI dependencies
-pip install 402fly-core 402fly-fastapi
+pip install fly402core 402fly-fastapi
 pip install fastapi uvicorn
 
 # Create .env file
@@ -107,7 +107,7 @@ EOF
 
 ```bash
 # Install LangChain dependencies
-pip install 402fly-core 402fly-client 402fly-langchain
+pip install fly402core 402fly-client 402fly-langchain
 pip install langchain openai
 
 # Set OpenAI API key
@@ -121,7 +121,7 @@ python -c "from solders.keypair import Keypair; import json; kp = Keypair(); jso
 
 ```bash
 # Install LangGraph dependencies
-pip install 402fly-core 402fly-client 402fly-langgraph
+pip install fly402core 402fly-client 402fly-langgraph
 pip install langgraph langchain
 
 # Create wallet
@@ -157,23 +157,23 @@ Verify your installation:
 
 ```python
 # Check core package
-from 402fly_core import PaymentRequest
+from fly402core import PaymentRequest
 print("✅ 402fly-core installed")
 
 # Check FastAPI package
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 print("✅ 402fly-fastapi installed")
 
 # Check client package
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 print("✅ 402fly-client installed")
 
 # Check LangChain package
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 print("✅ 402fly-langchain installed")
 
 # Check LangGraph package
-from 402fly_langgraph import payment_node
+from fly402langgraph import payment_node
 print("✅ 402fly-langgraph installed")
 ```
 
