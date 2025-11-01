@@ -119,8 +119,8 @@ Rust is an excellent choice for X402 implementations:
 ## Support
 
 For issues, questions, or contributions:
-- [GitHub Issues](https://github.com/402fly/402fly)
-- [GitHub Discussions](https://github.com/402fly/402fly/discussions)
+- [GitHub Issues](https://github.com/SerPepe/402fly)
+- [GitHub Discussions](https://github.com/SerPepe/402fly/discussions)
 - [X402 Protocol](https://www.x402.org)
 - [Rust Documentation](https://doc.rust-lang.org/)
 

@@ -1,5 +1,5 @@
 /**
- * Example Express.js Server with X402 Payment Support
+ * Example Express.js Server with 402 Payment Support
  *
  * This example demonstrates how to add payment requirements to API endpoints.
  */
@@ -15,12 +15,12 @@ import {
 
 dotenv.config();
 
-// Initialize X402 configuration
+// Initialize 402 configuration
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS || "DEMO_WALLET_ADDRESS",
-  tokenMint: process.env.USDC_MINT_ADDRESS || "DEMO_USDC_MINT",
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS || "DEMO_WALLET_ADDRESS",
+  tokenMint: process.env.FLY402_TOKEN_MINT || "DEMO_TOKEN_MINT",
   network: "solana-devnet",
-  rpcUrl: process.env.SOLANA_RPC_URL || "https://api.devnet.solana.com",
+  rpcUrl: process.env.FLY402_RPC_URL || "https://api.devnet.solana.com",
 });
 
 initFly402(config);

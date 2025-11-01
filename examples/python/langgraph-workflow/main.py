@@ -323,7 +323,7 @@ def example_3_multi_step_workflow():
 def main():
     """Run all examples"""
     print("\n" + "=" * 70)
-    print("🚀 OpenLibx402 LangGraph Workflow Examples")
+    print("🚀 402fly LangGraph Workflow Examples")
     print("=" * 70)
     print("\nThese examples demonstrate how to build workflows that include")
     print("payment nodes for accessing paid APIs.")

@@ -19,7 +19,7 @@ jobs:
                   pip install build twine
             - name: Build Python packages
               run: |
-                  for pkg in openlibx402-client openlibx402-core openlibx402-fastapi openlibx402-langchain openlibx402-langgraph; do
+                  for pkg in 402flyclient 402flycore 402flyfastapi 402flylangchain 402flylanggraph; do
                     cd packages/python/$pkg
                     python -m build
                     cd ../../../
@@ -29,7 +29,7 @@ jobs:
                   TWINE_USERNAME: __token__
                   TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
               run: |
-                  for pkg in openlibx402-client openlibx402-core openlibx402-fastapi openlibx402-langchain openlibx402-langgraph; do
+                  for pkg in 402flyclient 402flycore 402flyfastapi 402flylangchain 402flylanggraph; do
                     cd packages/python/$pkg
                     twine upload dist/*
                     cd ../../../
@@ -55,7 +55,7 @@ jobs:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: |
                   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-                  for pkg in openlibx402-client openlibx402-core openlibx402-express openlibx402-langchain openlibx402-langgraph; do
+                  for pkg in fly402-client fly402-core fly402-express fly402-langchain fly402-langgraph fly402-nextjs; do
                     cd packages/typescript/$pkg
                     npm publish --access public
                     cd ../../../

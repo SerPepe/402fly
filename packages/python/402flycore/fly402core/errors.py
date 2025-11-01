@@ -1,14 +1,14 @@
 """
-OpenLibx402 Error Classes
+402fly Error Classes
 
-Defines all exception types for the X402 payment protocol.
+Defines all exception types for the 402fly payment protocol.
 """
 
 from typing import Optional, Dict, Any
 
 
 class Fly402Error(Exception):
-    """Base exception for X402 protocol errors"""
+    """Base exception for 402fly protocol errors"""
 
     def __init__(
         self, message: str, code: str, details: Optional[Dict[str, Any]] = None

@@ -12,7 +12,7 @@ The `402fly-client` package provides two client types:
 ## Installation
 
 ```bash
-go get github.com/402fly/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/402fly-client
 ```
 
 ## Fly402Client (Explicit Mode)
@@ -359,7 +359,7 @@ if errors.Is(err, context.DeadlineExceeded) {
 ## Error Handling
 
 ```go
-import "github.com/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/402fly-core"
 
 resp, err := client.Get(ctx, url, nil)
 if err != nil {

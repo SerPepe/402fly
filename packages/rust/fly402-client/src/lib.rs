@@ -1,6 +1,6 @@
-//! # OpenLibx402 Client
+//! # 402fly Client
 //!
-//! HTTP client library for the X402 payment protocol with automatic payment handling.
+//! HTTP client library for the 402fly payment protocol with automatic payment handling.
 //!
 //! This library provides two client implementations:
 //! - **X402Client**: Explicit control over payment flow

@@ -2,7 +2,7 @@
 Example LangChain Agent with X402 Payment Support
 
 This example demonstrates how to create an AI agent that can autonomously
-pay for API access using the X402 protocol.
+pay for API access using the 402fly protocol.
 """
 
 from langchain_openai import ChatOpenAI
@@ -122,7 +122,7 @@ def example_2_custom_tools():
     agent = create_agent(
         model=ChatOpenAI(temperature=0),
         tools=[payment_tool],
-        system_prompt="You are a helpful assistant that can make payments to access premium APIs using the X402 protocol.",
+        system_prompt="You are a helpful assistant that can make payments to access premium APIs using the 402fly protocol.",
         debug=True,
     )
 
@@ -199,10 +199,10 @@ def example_3_multi_api():
 def main():
     """Run all examples"""
     print("\n" + "=" * 70)
-    print("🚀 OpenLibx402 LangChain Agent Examples")
+    print("🚀 402fly LangChain Agent Examples")
     print("=" * 70)
     print("\nThese examples demonstrate how AI agents can autonomously")
-    print("pay for API access using the X402 payment protocol.")
+    print("pay for API access using the 402fly payment protocol.")
     print("\n⚠️  Prerequisites:")
     print("   1. FastAPI server running (see fastapi-server example)")
     print("   2. Wallet funded with SOL and USDC on Solana devnet")

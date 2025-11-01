@@ -14,7 +14,7 @@ The `402fly-core` package contains:
 ## Installation
 
 ```bash
-go get github.com/402fly/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/402fly-core
 ```
 
 ## PaymentRequest

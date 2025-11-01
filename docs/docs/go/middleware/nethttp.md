@@ -9,7 +9,7 @@ The `402fly-nethttp` package provides middleware to require payments for HTTP en
 ## Installation
 
 ```bash
-go get github.com/402fly/go/402fly-nethttp
+go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
 ```
 
 ## Quick Start
@@ -22,7 +22,7 @@ import (
     "net/http"
     "os"
 
-    nethttp "github.com/402fly/go/402fly-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
 )
 
 func main() {

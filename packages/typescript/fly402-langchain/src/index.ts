@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 LangChain Package
+ * 402fly LangChain Package
  *
- * LangChain.js integration for X402 payment protocol.
+ * LangChain.js integration for 402fly payment protocol.
  */
 
 export const VERSION = "0.1.1";

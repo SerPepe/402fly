@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-openlibx402-core = { path = "../../../packages/rust/openlibx402-core" }
-openlibx402-rocket = { path = "../../../packages/rust/openlibx402-rocket" }
+fly402-core = { path = "../../../packages/rust/fly402-core" }
+fly402-rocket = { path = "../../../packages/rust/fly402-rocket" }
 rocket = { version = "0.5", features = ["json"] }
 tokio = { version = "1.35", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }

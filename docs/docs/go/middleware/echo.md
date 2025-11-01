@@ -9,7 +9,7 @@ The `402fly-echo` package provides middleware for Echo to require payments for e
 ## Installation
 
 ```bash
-go get github.com/402fly/go/402fly-echo
+go get github.com/SerPepe/402fly/packages/go/402fly-echo
 ```
 
 ## Quick Start
@@ -22,7 +22,7 @@ import (
     "os"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/go/402fly-echo"
+    echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 )
 
 func main() {

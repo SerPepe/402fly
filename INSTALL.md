@@ -37,7 +37,7 @@ pip install 402fly-core 402fly-fastapi 402fly-client 402fly-langchain 402fly-lan
 
 ```bash
 # Clone the repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install packages in development mode
@@ -97,9 +97,9 @@ pip install fastapi uvicorn
 
 # Create .env file
 cat > .env << EOF
-PAYMENT_WALLET_ADDRESS=YOUR_WALLET_ADDRESS
-USDC_MINT_ADDRESS=4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=YOUR_WALLET_ADDRESS
+FLY402_TOKEN_MINT=4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU
+FLY402_RPC_URL=https://api.devnet.solana.com
 EOF
 ```
 
@@ -134,7 +134,7 @@ For development and testing:
 
 ```bash
 # Clone repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install all packages with dev dependencies
@@ -196,7 +196,7 @@ pip install --force-reinstall 402fly-core
 curl https://api.devnet.solana.com -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"getHealth"}'
 
 # Try different RPC endpoint
-export SOLANA_RPC_URL='https://api.devnet.solana.com'
+export FLY402_RPC_URL='https://api.devnet.solana.com'
 ```
 
 ### Wallet Issues
@@ -232,6 +232,6 @@ pip install langchain langchain-openai
 ## Support
 
 - 📖 [Documentation](docs/)
-- 💬 [GitHub Discussions](https://github.com/402fly/402fly/discussions)
-- 🐛 [Report Issues](https://github.com/402fly/402fly/issues)
+- 💬 [GitHub Discussions](https://github.com/SerPepe/402fly/discussions)
+- 🐛 [Report Issues](https://github.com/SerPepe/402fly/issues)
 - 📧 Email: hello@402fly.org

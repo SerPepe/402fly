@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Client Package
+ * 402fly Client Package
  *
- * TypeScript HTTP client library for X402 payment protocol.
+ * TypeScript HTTP client library for 402fly payment protocol.
  */
 
 export const VERSION = "0.1.1";

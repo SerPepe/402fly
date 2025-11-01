@@ -9,20 +9,20 @@ import (
 
 	"github.com/gagliardetto/solana-go"
 	"github.com/mr-tron/base58"
-	"github.com/402fly/go/fly402-client"
+	"github.com/SerPepe/402fly/packages/go/fly402-client"
 )
 
-// This example demonstrates how to use the X402 client to access paid APIs.
+// This example demonstrates how to use the 402 client to access paid APIs.
 //
 // To run this example:
-//  1. Set your Solana wallet private key: export X402_PRIVATE_KEY="your-base58-private-key"
+//  1. Set your Solana wallet private key: export FLY402_PRIVATE_KEY="your-base58-private-key"
 //  2. Make sure the server is running: go run main.go
 //  3. Run this client: go run client_example.go
 func runClientExample() {
 	// Load wallet keypair from environment
-	privateKeyStr := os.Getenv("X402_PRIVATE_KEY")
+	privateKeyStr := os.Getenv("FLY402_PRIVATE_KEY")
 	if privateKeyStr == "" {
-		log.Fatal("X402_PRIVATE_KEY environment variable not set")
+		log.Fatal("FLY402_PRIVATE_KEY environment variable not set")
 	}
 
 	privateKeyBytes := base58.Decode(privateKeyStr)
@@ -86,9 +86,9 @@ func runClientExample() {
 
 // Example using explicit client (manual payment control)
 func runExplicitClientExample() {
-	privateKeyStr := os.Getenv("X402_PRIVATE_KEY")
+	privateKeyStr := os.Getenv("FLY402_PRIVATE_KEY")
 	if privateKeyStr == "" {
-		log.Fatal("X402_PRIVATE_KEY environment variable not set")
+		log.Fatal("FLY402_PRIVATE_KEY environment variable not set")
 	}
 
 	privateKeyBytes := base58.Decode(privateKeyStr)
@@ -143,8 +143,8 @@ func runExplicitClientExample() {
 
 // Uncomment one of these in your main function to run the examples
 func main() {
-	fmt.Println("X402 Client Examples")
-	fmt.Println("====================")
+	fmt.Println("402 Client Examples")
+	fmt.Println("===================")
 
 	// Run auto client example
 	runClientExample()

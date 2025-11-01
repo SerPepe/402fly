@@ -120,8 +120,8 @@ data = response.json()
 
 For complete API reference and guides, see:
 - [Documentation](https://402fly.github.io/docs)
-- [GitHub Repository](https://github.com/402fly/402fly)
-- [Examples](https://github.com/402fly/402fly/tree/main/examples/python)
+- [GitHub Repository](https://github.com/SerPepe/402fly)
+- [Examples](https://github.com/SerPepe/402fly/tree/main/examples/python)
 
 ## Testing
 

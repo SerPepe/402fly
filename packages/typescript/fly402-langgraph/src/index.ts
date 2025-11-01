@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 LangGraph Package
+ * 402fly LangGraph Package
  *
- * LangGraph.js integration for X402 payment protocol.
+ * LangGraph.js integration for 402fly payment protocol.
  */
 
 export const VERSION = "0.1.1";

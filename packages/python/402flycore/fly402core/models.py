@@ -1,7 +1,7 @@
 """
-OpenLibx402 Payment Models
+402fly Payment Models
 
-Defines core data structures for X402 payment protocol.
+Defines core data structures for 402fly payment protocol.
 """
 
 from dataclasses import dataclass, asdict
@@ -15,7 +15,7 @@ from .errors import InvalidPaymentRequestError
 
 @dataclass
 class PaymentRequest:
-    """Represents an X402 payment request (402 response)"""
+    """Represents a 402fly payment request (402 response)"""
 
     max_amount_required: str  # Amount in token units (e.g., "0.10")
     asset_type: str  # "SPL" for Solana tokens

@@ -27,10 +27,10 @@ Create a configuration file for your API routes:
 import { Fly402Config, initFly402 } from "@402fly/nextjs";
 
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
-  tokenMint: process.env.USDC_MINT_ADDRESS!,
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
+  tokenMint: process.env.FLY402_TOKEN_MINT!,
   network: "solana-devnet",
-  rpcUrl: process.env.SOLANA_RPC_URL,
+  rpcUrl: process.env.FLY402_RPC_URL,
 });
 
 initFly402(config);
@@ -268,9 +268,9 @@ export const GET = withPayment(
 ## Environment Variables
 
 ```env
-PAYMENT_WALLET_ADDRESS=your_solana_wallet_address
-USDC_MINT_ADDRESS=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=your_solana_wallet_address
+FLY402_TOKEN_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+FLY402_RPC_URL=https://api.devnet.solana.com
 ```
 
 ## TypeScript
@@ -335,6 +335,6 @@ MIT
 
 ## Links
 
-- [Documentation](https://openlib.xyz/docs)
-- [GitHub](https://github.com/402fly/402fly)
-- [X402 Protocol Spec](https://github.com/402fly/spec)
+- [Documentation](https://github.com/SerPepe/402fly/docs)
+- [GitHub](https://github.com/SerPepe/402fly)
+- [X402 Protocol Spec](https://github.com/SerPepe/402fly)

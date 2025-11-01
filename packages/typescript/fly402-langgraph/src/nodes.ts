@@ -6,7 +6,7 @@
 
 import { Keypair } from '@solana/web3.js';
 import { Fly402AutoClient } from '@402fly/client';
-import { X402Error } from '@402fly/core';
+import { Fly402Error } from '@402fly/core';
 
 export interface PaymentState {
   wallet_keypair?: Keypair;
@@ -81,7 +81,7 @@ export async function paymentNode(state: PaymentState): Promise<PaymentState> {
       payment_error: null,
     };
   } catch (error) {
-    if (error instanceof X402Error) {
+    if (error instanceof Fly402Error) {
       return {
         ...state,
         payment_error: `${error.code}: ${error.message}`,
@@ -156,7 +156,7 @@ export async function fetchWithPaymentNode(
       payment_error: null,
     };
   } catch (error) {
-    if (error instanceof X402Error) {
+    if (error instanceof Fly402Error) {
       return {
         ...state,
         payment_error: `[${error.code}] ${error.message}`,

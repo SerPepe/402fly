@@ -16,7 +16,7 @@ import (
 	"strings"
 
 	"github.com/gagliardetto/solana-go"
-	"github.com/402fly/go/fly402-core"
+	"github.com/SerPepe/402fly/packages/go/fly402-core"
 )
 
 // X402Client provides explicit control over the X402 payment flow.

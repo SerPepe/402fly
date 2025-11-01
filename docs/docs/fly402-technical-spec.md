@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-402fly is a library ecosystem that implements the X402 protocol for enabling autonomous, frictionless payments in AI agents and web APIs. The protocol leverages HTTP 402 "Payment Required" status code and Solana blockchain for instant, low-cost transactions.
+402fly is a library ecosystem that implements the 402fly protocol for enabling autonomous, frictionless payments in AI agents and web APIs. The protocol leverages HTTP 402 "Payment Required" status code and Solana blockchain for instant, low-cost transactions.
 
 ## Core Principles
 
@@ -396,7 +396,7 @@ def payment_required(
         @payment_required(
             amount="0.10",
             payment_address="FPxxx...",
-            token_mint="USDC_MINT_ADDRESS"
+            token_mint="FLY402_TOKEN_MINT"
         )
         async def get_premium_data():
             return {"data": "Premium content"}
@@ -457,7 +457,7 @@ def verify_payment_factory(
 from pydantic import BaseModel
 
 class Fly402Config(BaseModel):
-    """Global X402 configuration"""
+    """Global 402 configuration"""
     payment_address: str
     token_mint: str
     network: str = "solana-devnet"
@@ -467,7 +467,7 @@ class Fly402Config(BaseModel):
     auto_verify: bool = True
     
     class Config:
-        env_prefix = "X402_"  # Load from X402_* environment variables
+        env_prefix = "FLY402_"  # Load from FLY402_* environment variables
 
 # Singleton configuration
 _config: Optional[Fly402Config] = None
@@ -1586,9 +1586,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://openlib.xyz"
+Homepage = "https://github.com/SerPepe/402fly"
 Documentation = "https://402fly.github.io/docs"
-Repository = "https://github.com/402fly/402fly"
+Repository = "https://github.com/SerPepe/402fly"
 ```
 
 ### TypeScript Packages (npm)

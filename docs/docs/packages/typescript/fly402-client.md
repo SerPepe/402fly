@@ -1,6 +1,6 @@
 # @402fly/client
 
-TypeScript HTTP client for X402 payment protocol.
+TypeScript HTTP client for 402fly payment protocol.
 
 ## Installation
 

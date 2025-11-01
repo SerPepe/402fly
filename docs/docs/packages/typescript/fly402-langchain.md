@@ -1,6 +1,6 @@
 # @402fly/langchain
 
-LangChain.js integration for X402 payment protocol.
+LangChain.js integration for 402fly payment protocol.
 
 ## Installation
 
@@ -10,7 +10,7 @@ npm install @402fly/langchain
 
 ## Features
 
-- LangChain tools for X402 payments
+- LangChain tools for 402fly payments
 - AI agent payment handling
 - Automatic payment workflows
 - TypeScript support
@@ -18,11 +18,11 @@ npm install @402fly/langchain
 ## Usage
 
 ```typescript
-import { X402PaymentTool } from '@402fly/langchain';
+import { 402flyPaymentTool } from '@402fly/langchain';
 import { ChatOpenAI } from 'langchain/chat_models/openai';
 import { initializeAgent } from 'langchain/agents';
 
-const paymentTool = new X402PaymentTool({
+const paymentTool = new 402flyPaymentTool({
   wallet: keypair,
   maxPayment: '5.0'
 });

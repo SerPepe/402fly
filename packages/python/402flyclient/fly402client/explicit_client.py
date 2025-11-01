@@ -108,7 +108,7 @@ class Fly402Client:
         )
         default_rpc_url = rpc_url or os.getenv(
             "FLY402_RPC_URL",
-            "https://devnet.helius-rpc.com/?api-key=8d4a82b0-d5c2-4ec5-8230-2b0c2261984c"
+            "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com"
         )
 
         self.wallet_keypair = wallet_keypair

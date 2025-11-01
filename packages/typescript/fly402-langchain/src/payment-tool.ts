@@ -8,7 +8,7 @@ import { DynamicStructuredTool } from '@langchain/core/tools';
 import { z } from 'zod';
 import { Keypair } from '@solana/web3.js';
 import { Fly402AutoClient } from '@402fly/client';
-import { X402Error } from '@402fly/core';
+import { Fly402Error } from '@402fly/core';
 
 export interface X402PaymentToolOptions {
   walletKeypair: Keypair;
@@ -50,7 +50,7 @@ export function createX402PaymentTool(
         const data = response.data;
         return typeof data === 'string' ? data : JSON.stringify(data);
       } catch (error) {
-        if (error instanceof X402Error) {
+        if (error instanceof Fly402Error) {
           return `Payment error: ${error.code} - ${error.message}`;
         }
         return `Error: ${(error as Error).message}`;
@@ -107,7 +107,7 @@ export class X402PaymentTool extends DynamicStructuredTool {
         ? response.data
         : JSON.stringify(response.data);
     } catch (error) {
-      if (error instanceof X402Error) {
+      if (error instanceof Fly402Error) {
         return `Payment error: ${error.code} - ${error.message}`;
       }
       return `Error: ${(error as Error).message}`;

@@ -29,12 +29,12 @@ from fastapi import FastAPI
 from 402fly_fastapi import Fly402Config, init_fly402
 import os
 
-# Initialize X402 configuration
+# Initialize 402 configuration
 config = Fly402Config(
-    payment_address=os.getenv("PAYMENT_WALLET_ADDRESS"),
-    token_mint=os.getenv("USDC_MINT_ADDRESS"),
-    network="solana-devnet",
-    rpc_url=os.getenv("SOLANA_RPC_URL", "https://api.devnet.solana.com"),
+    payment_address=os.getenv("FLY402_PAYMENT_ADDRESS"),
+    token_mint=os.getenv("FLY402_TOKEN_MINT"),
+    network=os.getenv("FLY402_NETWORK", "solana-devnet"),
+    rpc_url=os.getenv("FLY402_RPC_URL"),
 )
 init_fly402(config)
 
@@ -145,11 +145,11 @@ from 402fly_fastapi import (
 from 402fly_core import PaymentAuthorization
 import os
 
-# Initialize X402
+# Initialize 402 config
 config = Fly402Config(
-    payment_address=os.getenv("PAYMENT_WALLET_ADDRESS"),
-    token_mint=os.getenv("USDC_MINT_ADDRESS"),
-    network="solana-devnet",
+    payment_address=os.getenv("FLY402_PAYMENT_ADDRESS"),
+    token_mint=os.getenv("FLY402_TOKEN_MINT"),
+    network=os.getenv("FLY402_NETWORK", "solana-devnet"),
 )
 init_fly402(config)
 
@@ -184,8 +184,8 @@ if __name__ == "__main__":
 
 For complete API reference and guides, see:
 - [Documentation](https://402fly.github.io/docs)
-- [GitHub Repository](https://github.com/402fly/402fly)
-- [Full Example](https://github.com/402fly/402fly/tree/main/examples/python/fastapi-server)
+- [GitHub Repository](https://github.com/SerPepe/402fly)
+- [Full Example](https://github.com/SerPepe/402fly/tree/main/examples/python/fastapi-server)
 
 ## Testing
 

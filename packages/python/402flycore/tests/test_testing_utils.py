@@ -1,5 +1,5 @@
 """
-Tests for OpenLibx402 testing utilities
+Tests for 402fly testing utilities
 """
 
 import pytest

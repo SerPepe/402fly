@@ -1,5 +1,5 @@
 /**
- * Configuration Management for OpenLibx402 Next.js
+ * Configuration Management for 402fly Next.js
  *
  * Global configuration and settings management.
  */
@@ -41,11 +41,11 @@ export class Fly402Config {
 
     // Default URLs by network
     const urls: Record<string, string> = {
-      "solana-mainnet": "https://api.mainnet-beta.solana.com",
+      "solana-mainnet": "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com",
       "solana-devnet": "https://api.devnet.solana.com",
       "solana-testnet": "https://api.testnet.solana.com",
     };
-    return urls[this.network] || "https://api.devnet.solana.com";
+    return urls[this.network] || "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com";
   }
 }
 
@@ -58,7 +58,7 @@ export function initFly402(config: Fly402Config): void {
 
 export function getConfig(): Fly402Config {
   if (_config === null) {
-    throw new Error("X402 not initialized. Call initFly402() first.");
+    throw new Error("402fly not initialized. Call initFly402() first.");
   }
   return _config;
 }

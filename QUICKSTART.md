@@ -12,7 +12,7 @@ Get up and running with 402fly in 5 minutes!
 
 ```bash
 # Clone the repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install all packages
@@ -67,9 +67,9 @@ pip install -r requirements.txt
 
 # Create .env file
 cat > .env << EOF
-PAYMENT_WALLET_ADDRESS=$WALLET_ADDRESS
-USDC_MINT_ADDRESS=4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=$WALLET_ADDRESS
+FLY402_TOKEN_MINT=4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU
+FLY402_RPC_URL=https://api.devnet.solana.com
 EOF
 
 # Start the server
@@ -285,13 +285,13 @@ pytest packages/python/*/tests
 - 💻 [Technical Specification](docs/402fly-technical-spec.md)
 - 📖 [Quick Reference](docs/quick-reference.md)
 - 🚀 [Examples](examples/)
-- 🐛 [Report Issues](https://github.com/402fly/402fly/issues)
+- 🐛 [Report Issues](https://github.com/SerPepe/402fly/issues)
 
 ## Support
 
 Need help?
 
-- 💬 [GitHub Discussions](https://github.com/402fly/402fly/discussions)
+- 💬 [GitHub Discussions](https://github.com/SerPepe/402fly/discussions)
 - 📧 Email: hello@402fly.org
 - 📖 [Installation Guide](INSTALL.md)
 

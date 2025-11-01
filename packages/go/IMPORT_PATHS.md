@@ -6,38 +6,38 @@ The Go packages use simplified import paths for better developer experience.
 
 ### Core Package
 ```go
-import "github.com/402fly/go/fly402-core"
+import "github.com/SerPepe/402fly/packages/go/fly402-core"
 ```
 
 ### Client Package
 ```go
-import "github.com/402fly/go/fly402-client"
+import "github.com/SerPepe/402fly/packages/go/fly402-client"
 ```
 
 ### net/http Middleware
 ```go
-import nethttp "github.com/402fly/go/fly402-nethttp"
+import nethttp "github.com/SerPepe/402fly/packages/go/fly402-nethttp"
 ```
 
 ### Echo Middleware
 ```go
-import echox402 "github.com/402fly/go/fly402-echo"
+import echox402 "github.com/SerPepe/402fly/packages/go/fly402-echo"
 ```
 
 ## Installation
 
 ```bash
 # Core package
-go get github.com/402fly/go/fly402-core
+go get github.com/SerPepe/402fly/packages/go/fly402-core
 
 # Client package
-go get github.com/402fly/go/fly402-client
+go get github.com/SerPepe/402fly/packages/go/fly402-client
 
 # net/http middleware
-go get github.com/402fly/go/fly402-nethttp
+go get github.com/SerPepe/402fly/packages/go/fly402-nethttp
 
 # Echo middleware
-go get github.com/402fly/go/fly402-echo
+go get github.com/SerPepe/402fly/packages/go/fly402-echo
 ```
 
 ## Example Usage
@@ -51,13 +51,13 @@ import (
     "encoding/json"
     "net/http"
 
-    nethttp "github.com/402fly/go/fly402-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/fly402-nethttp"
 )
 
 func main() {
     nethttp.InitX402(&nethttp.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -79,13 +79,13 @@ import (
     "net/http"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/go/fly402-echo"
+    echox402 "github.com/SerPepe/402fly/packages/go/fly402-echo"
 )
 
 func main() {
     echox402.InitX402(&echox402.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -111,7 +111,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/fly402-client"
+    "github.com/SerPepe/402fly/packages/go/fly402-client"
 )
 
 func main() {
@@ -145,7 +145,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/fly402-client"
+    "github.com/SerPepe/402fly/packages/go/fly402-client"
 )
 
 func main() {
@@ -190,20 +190,20 @@ The packages are located in the monorepo at:
 
 ```
 packages/go/
-├── fly402-core/       # github.com/402fly/go/fly402-core
-├── fly402-client/     # github.com/402fly/go/fly402-client
-├── fly402-nethttp/    # github.com/402fly/go/fly402-nethttp
-└── fly402-echo/       # github.com/402fly/go/fly402-echo
+├── fly402-core/       # github.com/SerPepe/402fly/packages/go/fly402-core
+├── fly402-client/     # github.com/SerPepe/402fly/packages/go/fly402-client
+├── fly402-nethttp/    # github.com/SerPepe/402fly/packages/go/fly402-nethttp
+└── fly402-echo/       # github.com/SerPepe/402fly/packages/go/fly402-echo
 ```
 
 ## Publishing
 
 When publishing to GitHub, the packages will be available at:
 
-- `github.com/402fly/go/fly402-core`
-- `github.com/402fly/go/fly402-client`
-- `github.com/402fly/go/fly402-nethttp`
-- `github.com/402fly/go/fly402-echo`
+- `github.com/SerPepe/402fly/packages/go/fly402-core`
+- `github.com/SerPepe/402fly/packages/go/fly402-client`
+- `github.com/SerPepe/402fly/packages/go/fly402-nethttp`
+- `github.com/SerPepe/402fly/packages/go/fly402-echo`
 
 Users can install them directly with `go get`.
 
@@ -213,10 +213,10 @@ For local development, the examples use `replace` directives in their `go.mod` f
 
 ```go
 replace (
-    github.com/402fly/go/fly402-client => ../../../packages/go/fly402-client
-    github.com/402fly/go/fly402-core => ../../../packages/go/fly402-core
-    github.com/402fly/go/fly402-nethttp => ../../../packages/go/fly402-nethttp
-    github.com/402fly/go/fly402-echo => ../../../packages/go/fly402-echo
+    github.com/SerPepe/402fly/packages/go/fly402-client => ../../../packages/go/fly402-client
+    github.com/SerPepe/402fly/packages/go/fly402-core => ../../../packages/go/fly402-core
+    github.com/SerPepe/402fly/packages/go/fly402-nethttp => ../../../packages/go/fly402-nethttp
+    github.com/SerPepe/402fly/packages/go/fly402-echo => ../../../packages/go/fly402-echo
 )
 ```
 

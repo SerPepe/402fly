@@ -290,8 +290,8 @@ print("Fund this wallet with SOL and USDC on devnet!")
 
 For complete API reference and guides, see:
 - [Documentation](https://402fly.github.io/docs)
-- [GitHub Repository](https://github.com/402fly/402fly)
-- [Full Example](https://github.com/402fly/402fly/tree/main/examples/python/langgraph-workflow)
+- [GitHub Repository](https://github.com/SerPepe/402fly)
+- [Full Example](https://github.com/SerPepe/402fly/tree/main/examples/python/langgraph-workflow)
 
 ## Testing
 

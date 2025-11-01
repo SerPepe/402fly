@@ -1,6 +1,6 @@
 # @402fly/core
 
-Core TypeScript library for X402 payment protocol.
+Core TypeScript library for 402fly payment protocol.
 
 ## Installation
 

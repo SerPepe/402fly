@@ -1,11 +1,11 @@
 # 402fly Core
 
-Core implementation of the X402 payment protocol for autonomous AI agent payments.
+Core implementation of the 402fly payment protocol for autonomous AI agent payments.
 
 ## Installation
 
 ```bash
-pip install 402fly-core
+pip install fly402core
 ```
 
 ## Features
@@ -18,7 +18,7 @@ pip install 402fly-core
 ## Usage
 
 ```python
-from 402fly_core import PaymentRequest, PaymentAuthorization, SolanaPaymentProcessor
+from fly402core import PaymentRequest, PaymentAuthorization, SolanaPaymentProcessor
 
 # Create payment processor
 processor = SolanaPaymentProcessor("https://api.devnet.solana.com")
@@ -42,7 +42,7 @@ verified = await processor.verify_transaction(
 ## Testing
 
 ```python
-from 402fly_core.testing import MockSolanaPaymentProcessor, create_mock_payment_request
+from fly402core.testing import MockSolanaPaymentProcessor, create_mock_payment_request
 
 # Use mock processor in tests
 processor = MockSolanaPaymentProcessor()

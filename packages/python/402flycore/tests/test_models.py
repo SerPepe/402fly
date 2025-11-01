@@ -1,5 +1,5 @@
 """
-Tests for OpenLibx402 core models
+Tests for 402fly core models
 """
 
 import pytest

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenLibx402 Test Runner
+402fly Test Runner
 
 Automatically runs all tests across packages and generates a report.
 """
@@ -43,7 +43,7 @@ class PackageTestResult:
 
 
 class TestRunner:
-    """Test runner for OpenLibx402 packages"""
+    """Test runner for 402fly packages"""
 
     def __init__(self):
         self.root_dir = Path(__file__).parent
@@ -248,7 +248,7 @@ class TestRunner:
             self.print_warning("No valid packages selected for testing.")
             return 0
 
-        self.print_header("🧪 OpenLibx402 Test Runner")
+        self.print_header("🧪 402fly Test Runner")
 
         self.results = []
         total_tests = 0
@@ -364,7 +364,7 @@ def main():
     # Parse command line arguments
     import argparse
 
-    parser = argparse.ArgumentParser(description="Run OpenLibx402 tests")
+    parser = argparse.ArgumentParser(description="Run 402fly tests")
     parser.add_argument(
         "--package",
         "-p",

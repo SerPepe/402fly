@@ -27,7 +27,7 @@ app = FastAPI()
 @payment_required(
     amount="0.10",
     payment_address="YOUR_WALLET_ADDRESS",
-    token_mint="USDC_MINT_ADDRESS",
+    token_mint="FLY402_TOKEN_MINT",
     network="solana-devnet",
     description="Access to premium market data"
 )
@@ -48,7 +48,7 @@ async def get_expensive_data(
         verify_payment_factory(
             amount="1.00",
             payment_address="YOUR_WALLET_ADDRESS",
-            token_mint="USDC_MINT_ADDRESS"
+            token_mint="FLY402_TOKEN_MINT"
         )
     )
 ):
@@ -65,7 +65,7 @@ from 402fly_fastapi import Fly402Config, init_fly402
 
 config = Fly402Config(
     payment_address="YOUR_WALLET_ADDRESS",
-    token_mint="USDC_MINT_ADDRESS",
+    token_mint="FLY402_TOKEN_MINT",
     network="solana-devnet",
     default_amount="0.01"
 )
@@ -368,11 +368,11 @@ except Fly402Error as e:
 ### Environment Variables
 ```bash
 # .env file
-X402_PAYMENT_ADDRESS=YourSolanaWalletAddress
-X402_TOKEN_MINT=USDC_MINT_ADDRESS
-X402_NETWORK=solana-devnet
-X402_RPC_URL=https://api.devnet.solana.com
-X402_DEFAULT_AMOUNT=0.01
+FLY402_PAYMENT_ADDRESS=YourSolanaWalletAddress
+FLY402_TOKEN_MINT=YOUR_TOKEN_MINT_ADDRESS
+FLY402_NETWORK=solana-devnet
+FLY402_RPC_URL=https://api.devnet.solana.com
+FLY402_DEFAULT_AMOUNT=0.01
 ```
 
 ```python
@@ -383,10 +383,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 config = Fly402Config(
-    payment_address=os.getenv("X402_PAYMENT_ADDRESS"),
-    token_mint=os.getenv("X402_TOKEN_MINT"),
-    network=os.getenv("X402_NETWORK", "solana-devnet"),
-    rpc_url=os.getenv("X402_RPC_URL"),
+    payment_address=os.getenv("FLY402_PAYMENT_ADDRESS"),
+    token_mint=os.getenv("FLY402_TOKEN_MINT"),
+    network=os.getenv("FLY402_NETWORK", "solana-devnet"),
+    rpc_url=os.getenv("FLY402_RPC_URL"),
 )
 
 init_fly402(config)

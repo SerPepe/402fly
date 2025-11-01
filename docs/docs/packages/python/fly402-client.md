@@ -1,11 +1,11 @@
 # 402fly Client
 
-HTTP client library for making X402-enabled API calls with automatic payment handling.
+HTTP client library for making 402fly-enabled API calls with automatic payment handling.
 
 ## Installation
 
 ```bash
-pip install 402fly-client
+pip install fly402client
 ```
 
 ## Features
@@ -23,7 +23,7 @@ pip install 402fly-client
 ### Explicit Client (Manual Control)
 
 ```python
-from 402fly_client import Fly402Client
+from fly402client import Fly402Client
 from solders.keypair import Keypair
 
 # Load wallet
@@ -78,7 +78,7 @@ await client.close()
 ### Implicit Client (Auto-Payment)
 
 ```python
-from 402fly_client import Fly402AutoClient
+from fly402client import Fly402AutoClient
 from solders.keypair import Keypair
 
 # Create auto-client with safety limits

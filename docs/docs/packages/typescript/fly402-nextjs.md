@@ -1,6 +1,6 @@
 # @402fly/nextjs
 
-Next.js middleware and utilities for the X402 payment protocol. This package provides seamless integration of blockchain-based micropayments into your Next.js applications.
+Next.js middleware and utilities for the 402fly payment protocol. This package provides seamless integration of blockchain-based micropayments into your Next.js applications.
 
 ## Installation
 
@@ -23,8 +23,8 @@ import { Fly402Config, initFly402, withPayment } from '@402fly/nextjs';
 
 // Initialize configuration
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
-  tokenMint: process.env.USDC_MINT_ADDRESS!,
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
+  tokenMint: process.env.FLY402_TOKEN_MINT!,
   network: 'solana-devnet',
 });
 

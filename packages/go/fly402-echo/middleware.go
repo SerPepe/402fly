@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
-	"github.com/402fly/go/fly402-core"
+	"github.com/SerPepe/402fly/packages/go/fly402-core"
 )
 
 // Config holds global configuration for X402 middleware.
@@ -31,7 +31,7 @@ var globalConfig *Config
 //
 //	echox402.InitX402(&echox402.Config{
 //	    PaymentAddress: "YOUR_WALLET_ADDRESS",
-//	    TokenMint:      "USDC_MINT_ADDRESS",
+//	    TokenMint:      "FLY402_TOKEN_MINT",
 //	    Network:        "solana-devnet",
 //	    AutoVerify:     true,
 //	})

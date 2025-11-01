@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Express Package
+ * 402fly Express Package
  *
- * Express.js middleware and utilities for X402 payment protocol.
+ * Express.js middleware and utilities for 402fly payment protocol.
  */
 
 export const VERSION = "0.1.1";

@@ -1,6 +1,6 @@
 # 402fly Go Examples
 
-Example implementations demonstrating how to use the X402 protocol with Go.
+Example implementations demonstrating how to use the 402fly protocol with Go.
 
 ## Examples
 
@@ -21,9 +21,9 @@ A complete example using Go's standard `net/http` package:
 cd nethttp-server
 
 # Set environment variables
-export X402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"
+export FLY402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"
 
 # Run
 go run main.go
@@ -42,7 +42,7 @@ go run main.go
 cd nethttp-server
 
 # Set your wallet private key
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 
 # Run client example
 go run client_example.go
@@ -65,9 +65,9 @@ A complete example using the Echo web framework:
 cd echo-server
 
 # Set environment variables
-export X402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"
+export FLY402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"
 
 # Run
 go run main.go
@@ -106,15 +106,15 @@ go run main.go
 
 **Server:**
 ```bash
-export X402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"
+export FLY402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"
 export PORT="8080"
 ```
 
 **Client:**
 ```bash
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 ```
 
 ## Testing Locally
@@ -123,9 +123,9 @@ export X402_PRIVATE_KEY="your-base58-private-key"
 
 ```bash
 cd nethttp-server  # or echo-server
-export X402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"
+export FLY402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"
 go run main.go
 ```
 
@@ -162,7 +162,7 @@ Response:
 
 ```bash
 cd nethttp-server
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 go run client_example.go
 ```
 
@@ -184,13 +184,13 @@ import (
     "encoding/json"
     "net/http"
 
-    nethttp "github.com/402fly/402fly/go/402fly-nethttp"
+    nethttp "github.com/SerPepe/402fly/go/402fly-nethttp"
 )
 
 func main() {
     nethttp.InitX402(&nethttp.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -215,13 +215,13 @@ import (
     "net/http"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/402fly/go/402fly-echo"
+    echox402 "github.com/SerPepe/402fly/go/402fly-echo"
 )
 
 func main() {
     echox402.InitX402(&echox402.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -250,7 +250,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/go/402fly-client"
 )
 
 func main() {
@@ -285,7 +285,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/go/402fly-client"
 )
 
 func main() {

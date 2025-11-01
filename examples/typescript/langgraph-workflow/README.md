@@ -1,11 +1,11 @@
 # LangGraph.js Workflow with X402 Payment Support
 
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 ```
 
-This example demonstrates how to build LangGraph.js workflows that include payment nodes for accessing paid APIs using the X402 payment protocol.
+This example demonstrates how to build LangGraph.js workflows that include payment nodes for accessing paid APIs using the 402fly payment protocol.
 
 ## Features
 

@@ -7,30 +7,30 @@ import (
 	"net/http"
 	"os"
 
-	nethttp "github.com/402fly/go/fly402-nethttp"
+	nethttp "github.com/SerPepe/402fly/packages/go/fly402-nethttp"
 )
 
 func main() {
 	// Load configuration from environment variables
-	paymentAddress := os.Getenv("X402_PAYMENT_ADDRESS")
-	tokenMint := os.Getenv("X402_TOKEN_MINT")
-	network := os.Getenv("X402_NETWORK")
+	paymentAddress := os.Getenv("FLY402_PAYMENT_ADDRESS")
+	tokenMint := os.Getenv("FLY402_TOKEN_MINT")
+	network := os.Getenv("FLY402_NETWORK")
 
 	if paymentAddress == "" {
 		paymentAddress = "YOUR_SOLANA_WALLET_ADDRESS"
-		log.Println("⚠️  X402_PAYMENT_ADDRESS not set, using placeholder")
+		log.Println("⚠️  FLY402_PAYMENT_ADDRESS not set, using placeholder")
 	}
 
 	if tokenMint == "" {
 		tokenMint = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" // USDC devnet
-		log.Println("⚠️  X402_TOKEN_MINT not set, using USDC devnet")
+		log.Println("⚠️  FLY402_TOKEN_MINT not set, using USDC devnet")
 	}
 
 	if network == "" {
 		network = "solana-devnet"
 	}
 
-	// Initialize X402 configuration
+	// Initialize 402 configuration
 	nethttp.InitX402(&nethttp.Config{
 		PaymentAddress: paymentAddress,
 		TokenMint:      tokenMint,
@@ -68,7 +68,7 @@ func main() {
 		port = "8080"
 	}
 
-	log.Printf("🚀 X402 Server starting on port %s", port)
+	log.Printf("🚀 402 Server starting on port %s", port)
 	log.Printf("📍 Network: %s", network)
 	log.Printf("💰 Payment Address: %s", paymentAddress)
 	log.Printf("🪙 Token Mint: %s", tokenMint)

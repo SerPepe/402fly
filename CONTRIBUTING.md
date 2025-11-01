@@ -12,7 +12,7 @@ Thank you for your interest in contributing to 402fly! This document provides gu
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [Issues](https://github.com/402fly/402fly/issues)
+1. Check if the bug has already been reported in [Issues](https://github.com/SerPepe/402fly/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce
@@ -221,7 +221,7 @@ Add payment verification for FastAPI endpoints
 ## Questions?
 
 - Check the [documentation](docs/)
-- Search [existing issues](https://github.com/402fly/402fly/issues)
+- Search [existing issues](https://github.com/SerPepe/402fly/issues)
 - Ask in discussions or open a new issue
 
 Thank you for contributing to 402fly! 🚀

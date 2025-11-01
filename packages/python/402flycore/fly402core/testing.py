@@ -1,5 +1,5 @@
 """
-Testing Utilities for OpenLibx402
+Testing Utilities for 402fly
 
 Mock implementations for testing without real blockchain transactions.
 """
@@ -71,7 +71,7 @@ class MockTransaction:
 
 
 class MockPaymentServer:
-    """Mock X402 payment server for testing"""
+    """Mock 402fly payment server for testing"""
 
     def __init__(
         self, payment_address: str, token_mint: str, network: str = "solana-devnet"

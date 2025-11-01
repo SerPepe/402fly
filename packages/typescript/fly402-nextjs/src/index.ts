@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Next.js Package
+ * 402fly Next.js Package
  *
- * Next.js middleware and utilities for X402 payment protocol.
+ * Next.js middleware and utilities for 402fly payment protocol.
  */
 
 export const VERSION = "0.1.0";

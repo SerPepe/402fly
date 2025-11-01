@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/402fly/go/fly402-core"
+	"github.com/SerPepe/402fly/packages/go/fly402-core"
 )
 
 // Config holds global configuration for X402 middleware.
@@ -33,7 +33,7 @@ var globalConfig *Config
 //
 //	nethttp.InitX402(&nethttp.Config{
 //	    PaymentAddress: "YOUR_WALLET_ADDRESS",
-//	    TokenMint:      "USDC_MINT_ADDRESS",
+//	    TokenMint:      "FLY402_TOKEN_MINT",
 //	    Network:        "solana-devnet",
 //	    AutoVerify:     true,
 //	})

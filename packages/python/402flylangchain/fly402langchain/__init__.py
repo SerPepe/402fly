@@ -1,7 +1,7 @@
 """
-OpenLibx402 LangChain Package
+402fly LangChain Package
 
-LangChain integration for X402 payment protocol.
+LangChain integration for 402fly payment protocol.
 """
 
 __version__ = "0.1.1"

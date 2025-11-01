@@ -12,7 +12,7 @@ categories = ["web-programming"]
 readme = "README.md"
 
 [dependencies]
-fly402-core = "0.0.3"
+fly402-core = { path = "../fly402-core" }
 actix-web.workspace = true
 actix-rt.workspace = true
 serde.workspace = true

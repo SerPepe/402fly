@@ -236,8 +236,8 @@ pnpm test
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/402fly/402fly/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/SerPepe/402fly/blob/main/CONTRIBUTING.md)
 
 ## License
 
-MIT - See [LICENSE](https://github.com/402fly/402fly/blob/main/LICENSE)
+MIT - See [LICENSE](https://github.com/SerPepe/402fly/blob/main/LICENSE)

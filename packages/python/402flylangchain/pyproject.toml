@@ -5,9 +5,9 @@ build-backend = "hatchling.build"
 [project]
 name = "fly402langchain"
 version = "0.1.1"
-description = "LangChain integration for X402 payment protocol"
+description = "LangChain integration for the 402fly payment protocol"
 authors = [
-    {name = "OpenLibx402 Contributors", email = "hello@openlibx402.org"},
+    {name = "402fly Contributors", email = "hello@402fly.dev"},
 ]
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -19,8 +19,8 @@ dependencies = [
     "solders>=0.18.0",
 ]
 keywords = [
-    "openlibx402",
-    "x402",
+    "402fly",
+    "402",
     "langchain",
     "agents",
     "payments",
@@ -52,9 +52,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://openlib.xyz"
-Documentation = "https://openlibx402.github.io/docs"
-Repository = "https://github.com/openlibx402/openlibx402"
+Homepage = "https://github.com/SerPepe/402fly"
+Documentation = "https://docs.402fly.dev"
+Repository = "https://github.com/SerPepe/402fly"
 
 [tool.hatch.version]
 path = "fly402langchain/__init__.py"

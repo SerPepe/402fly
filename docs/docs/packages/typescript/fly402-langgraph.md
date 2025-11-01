@@ -1,6 +1,6 @@
 # @402fly/langgraph
 
-LangGraph.js integration for X402 payment protocol.
+LangGraph.js integration for 402fly payment protocol.
 
 ## Installation
 

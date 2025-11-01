@@ -1,32 +1,32 @@
 # 402fly LangChain
 
-LangChain integration for X402 payment protocol.
+LangChain integration for the 402fly payment protocol.
 
 ## Installation
 
 ```bash
-pip install 402fly-langchain
+pip install fly402langchain
 ```
 
 ## Features
 
-- X402PaymentTool for LangChain agents
-- X402RequestsWrapper for automatic payment handling
-- Convenience function for creating X402-enabled agents
+- Fly402PaymentTool for LangChain agents
+- Fly402RequestsWrapper for automatic payment handling
+- Convenience function for creating 402fly-enabled agents
 
 ## Usage
 
-### Using X402PaymentTool
+### Using Fly402PaymentTool
 
 ```python
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import initialize_agent, AgentType
-from 402fly_langchain import X402PaymentTool
+from fly402langchain import Fly402PaymentTool
 from solders.keypair import Keypair
 
 keypair = Keypair()
 
-payment_tool = X402PaymentTool(
+payment_tool = Fly402PaymentTool(
     wallet_keypair=keypair,
     max_payment="5.0"
 )
@@ -40,13 +40,13 @@ agent = initialize_agent(
 response = agent.run("Get premium data from https://api.example.com/data")
 ```
 
-### Using X402RequestsWrapper
+### Using Fly402RequestsWrapper
 
 ```python
 from langchain.agents import load_tools
-from 402fly_langchain import X402RequestsWrapper
+from fly402langchain import Fly402RequestsWrapper
 
-requests_wrapper = X402RequestsWrapper(
+requests_wrapper = 402flyRequestsWrapper(
     wallet_keypair=keypair,
     max_payment="1.0"
 )
@@ -63,7 +63,7 @@ agent = initialize_agent(tools=tools, llm=ChatOpenAI())
 ### Convenience Function
 
 ```python
-from 402fly_langchain import create_x402_agent
+from fly402langchain import create_x402_agent
 
 agent = create_x402_agent(
     wallet_keypair=keypair,

@@ -318,7 +318,7 @@ use 402fly_rocket::Fly402Config;
 
 let config = Fly402Config {
     payment_address: "YOUR_WALLET".to_string(),     // Your Solana wallet
-    token_mint: "USDC_MINT_ADDRESS".to_string(),    // USDC token mint
+    token_mint: "FLY402_TOKEN_MINT".to_string(),    // Token mint (USDC or native)
     network: "solana-devnet".to_string(),           // Network identifier
     rpc_url: Some("https://api.devnet.solana.com".to_string()), // Custom RPC
     auto_verify: true,                              // Verify payments on-chain

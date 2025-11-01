@@ -15,7 +15,7 @@ go mod init github.com/yourname/x402-server
 ### Step 2: Install Dependencies
 
 ```bash
-go get github.com/402fly/go/402fly-nethttp
+go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
 ```
 
 ### Step 3: Create Your Server
@@ -31,7 +31,7 @@ import (
     "net/http"
     "os"
 
-    nethttp "github.com/402fly/go/402fly-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
 )
 
 func main() {
@@ -134,7 +134,7 @@ Response (402 Payment Required):
 Prefer Echo? It's even simpler:
 
 ```bash
-go get github.com/402fly/go/402fly-echo
+go get github.com/SerPepe/402fly/packages/go/402fly-echo
 ```
 
 ```go
@@ -145,7 +145,7 @@ import (
     "os"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/go/402fly-echo"
+    echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 )
 
 func main() {

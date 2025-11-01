@@ -1,7 +1,7 @@
 /**
  * X402 Fetch Utility
  *
- * Implements the X402 payment protocol for browser-based requests.
+ * Implements the 402fly payment protocol for browser-based requests.
  * Handles 402 Payment Required responses and payment retry flow.
  */
 

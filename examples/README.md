@@ -1,11 +1,11 @@
 # 402fly Examples
 
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 ```
 
-This directory contains example applications demonstrating the X402 payment protocol in both Python and TypeScript.
+This directory contains example applications demonstrating the 402fly payment protocol in both Python and TypeScript.
 
 ## 📁 Structure
 

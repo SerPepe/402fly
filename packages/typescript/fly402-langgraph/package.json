@@ -1,7 +1,7 @@
 {
   "name": "@402fly/langgraph",
   "version": "0.1.2",
-  "description": "LangGraph.js integration for X402 payment protocol",
+  "description": "LangGraph.js integration for 402fly payment protocol",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -16,22 +16,22 @@
     "lint": "eslint src/**/*.ts"
   },
   "keywords": [
-    "x402",
+    "402fly",
     "payment",
     "langgraph",
     "ai-agents",
     "workflow"
   ],
-  "author": "402fly",
+  "author": "SerPepe",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/402fly/402fly.git",
-    "directory": "packages/typescript/402fly-langgraph"
+    "url": "https://github.com/SerPepe/402fly.git",
+    "directory": "packages/typescript/fly402-langgraph"
   },
-  "homepage": "https://openlib.xyz",
+  "homepage": "https://github.com/SerPepe/402fly",
   "bugs": {
-    "url": "https://github.com/402fly/402fly/issues"
+    "url": "https://github.com/SerPepe/402fly/issues"
   },
   "publishConfig": {
     "access": "public"

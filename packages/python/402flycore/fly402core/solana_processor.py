@@ -307,8 +307,8 @@ class SolanaPaymentProcessor:
     def get_default_rpc_url(self, network: str) -> str:
         """Get default RPC URL for network"""
         urls = {
-            "solana-mainnet": "https://api.mainnet-beta.solana.com",
+            "solana-mainnet": "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com",
             "solana-devnet": "https://api.devnet.solana.com",
             "solana-testnet": "https://api.testnet.solana.com",
         }
-        return urls.get(network, "https://api.devnet.solana.com")
+        return urls.get(network, "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com")

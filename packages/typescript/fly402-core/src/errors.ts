@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Error Classes
+ * 402fly Error Classes
  *
- * Defines all exception types for the X402 payment protocol.
+ * Defines all exception types for the 402fly payment protocol.
  */
 
 export interface ErrorDetails {

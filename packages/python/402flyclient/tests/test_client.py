@@ -1,5 +1,5 @@
 """
-Tests for OpenLibx402 client
+Tests for 402fly client
 """
 
 import pytest

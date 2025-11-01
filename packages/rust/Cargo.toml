@@ -10,10 +10,10 @@ members = [
 [workspace.package]
 version = "0.0.3"
 edition = "2021"
-authors = ["OpenLibx402 Contributors"]
+authors = ["402fly Contributors"]
 license = "MIT"
 repository = "https://github.com/fly402/fly402"
-homepage = "https://openlib.xyz"
+homepage = "https://github.com/SerPepe/402fly"
 
 [workspace.dependencies]
 # Core dependencies

@@ -48,7 +48,7 @@ app = FastAPI()
 @payment_required(
     amount="0.10",
     payment_address="YOUR_WALLET_ADDRESS",
-    token_mint="USDC_MINT_ADDRESS"
+    token_mint="FLY402_TOKEN_MINT"
 )
 async def get_premium_data():
     return {"data": "Premium content"}
@@ -63,7 +63,7 @@ import { paymentRequired, initFly402, Fly402Config } from '@402fly/express';
 const app = express();
 initFly402(new Fly402Config({
     paymentAddress: "YOUR_WALLET_ADDRESS",
-    tokenMint: "USDC_MINT_ADDRESS"
+    tokenMint: "FLY402_TOKEN_MINT"
 }));
 
 app.get('/premium-data',
@@ -139,14 +139,14 @@ npm install @402fly/core @402fly/express @402fly/client
 
 **Python (uv monorepo):**
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 uv sync
 ```
 
 **TypeScript (pnpm monorepo):**
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 pnpm install
 pnpm run build
@@ -352,10 +352,10 @@ python main.py
 ### Environment Variables
 
 ```bash
-X402_PAYMENT_ADDRESS=YourSolanaWalletAddress
-X402_TOKEN_MINT=USDC_MINT_ADDRESS
-X402_NETWORK=solana-devnet
-X402_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=YourSolanaWalletAddress
+FLY402_TOKEN_MINT=YOUR_TOKEN_MINT_ADDRESS
+FLY402_NETWORK=solana-devnet
+FLY402_RPC_URL=https://api.devnet.solana.com
 ```
 
 ### Code Configuration
@@ -416,7 +416,7 @@ We welcome contributions! Here's how you can help:
 
 ```bash
 # Clone repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install development dependencies

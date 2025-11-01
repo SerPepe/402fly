@@ -280,7 +280,7 @@ export default function Home() {
           <p className="text-center text-gray-600 text-sm">
             Learn more about{" "}
             <a
-              href="https://openlib.xyz"
+              href="https://402fly.dev"
               className="text-blue-600 hover:underline"
             >
               X402 Protocol

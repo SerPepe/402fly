@@ -1,6 +1,6 @@
 # @402fly/express
 
-Express.js middleware and decorators for X402 payment protocol.
+Express.js middleware and decorators for 402fly payment protocol.
 
 ## Installation
 
@@ -26,7 +26,7 @@ const app = express();
 app.get('/premium-data', paymentRequired({
   amount: '0.10',
   paymentAddress: 'YOUR_WALLET_ADDRESS',
-  tokenMint: 'USDC_MINT_ADDRESS',
+  tokenMint: 'FLY402_TOKEN_MINT',
   description: 'Access to premium data'
 }), (req, res) => {
   res.json({ data: 'Premium content' });

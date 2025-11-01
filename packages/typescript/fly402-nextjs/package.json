@@ -1,7 +1,7 @@
 {
   "name": "@402fly/nextjs",
   "version": "0.1.0",
-  "description": "Next.js middleware and utilities for X402 payment protocol",
+  "description": "Next.js middleware and utilities for 402fly payment protocol",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -16,21 +16,21 @@
     "lint": "eslint src/**/*.ts"
   },
   "keywords": [
-    "x402",
+    "402fly",
     "payment",
     "nextjs",
     "middleware"
   ],
-  "author": "402fly",
+  "author": "SerPepe",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/402fly/402fly.git",
-    "directory": "packages/typescript/402fly-nextjs"
+    "url": "https://github.com/SerPepe/402fly.git",
+    "directory": "packages/typescript/fly402-nextjs"
   },
-  "homepage": "https://openlib.xyz",
+  "homepage": "https://github.com/SerPepe/402fly",
   "bugs": {
-    "url": "https://github.com/402fly/402fly/issues"
+    "url": "https://github.com/SerPepe/402fly/issues"
   },
   "publishConfig": {
     "access": "public"

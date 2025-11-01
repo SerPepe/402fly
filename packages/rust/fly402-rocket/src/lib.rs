@@ -1,9 +1,9 @@
-//! # OpenLibx402 Rocket
+//! # 402fly Rocket
 //!
-//! Rocket web framework integration for the X402 payment protocol.
+//! Rocket web framework integration for the 402fly payment protocol.
 //!
 //! This library provides guards and utilities to protect Rocket endpoints
-//! with payment requirements using the X402 protocol.
+//! with payment requirements using the 402fly protocol.
 //!
 //! ## Example
 //!

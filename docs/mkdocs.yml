@@ -1,29 +1,29 @@
-site_name: OpenLibx402 Docs
-site_description: Documentation for the OpenLibx402 autonomous payments ecosystem
-repo_url: https://github.com/openlibx402/docs/
+site_name: 402fly Docs
+site_description: Documentation for the 402fly autonomous payments ecosystem
+repo_url: https://github.com/402fly/docs/
 docs_dir: docs
 site_dir: site
-site_url: https://openlibx402.github.io/docs/
+site_url: https://docs.402fly.dev/
 use_directory_urls: true
 
 nav:
   - Overview: index.md
-  - Technical Specification: openlibx402-technical-spec.md
+  - Technical Specification: fly402-technical-spec.md
   - Quick Reference: quick-reference.md
   - Packages:
       - Python:
-          - Core Library: packages/python/openlibx402-core.md
-          - FastAPI Integration: packages/python/openlibx402-fastapi.md
-          - Client Library: packages/python/openlibx402-client.md
-          - LangChain Integration: packages/python/openlibx402-langchain.md
-          - LangGraph Integration: packages/python/openlibx402-langgraph.md
+          - Core Library: packages/python/fly402-core.md
+          - FastAPI Integration: packages/python/fly402-fastapi.md
+          - Client Library: packages/python/fly402-client.md
+          - LangChain Integration: packages/python/fly402-langchain.md
+          - LangGraph Integration: packages/python/fly402-langgraph.md
       - TypeScript:
-          - Core Library: packages/typescript/openlibx402-core.md
-          - Client SDK: packages/typescript/openlibx402-client.md
-          - Express Middleware: packages/typescript/openlibx402-express.md
-          - Next.js Middleware: packages/typescript/openlibx402-nextjs.md
-          - LangChain Integration: packages/typescript/openlibx402-langchain.md
-          - LangGraph Integration: packages/typescript/openlibx402-langgraph.md
+          - Core Library: packages/typescript/fly402-core.md
+          - Client SDK: packages/typescript/fly402-client.md
+          - Express Middleware: packages/typescript/fly402-express.md
+          - Next.js Middleware: packages/typescript/fly402-nextjs.md
+          - LangChain Integration: packages/typescript/fly402-langchain.md
+          - LangGraph Integration: packages/typescript/fly402-langgraph.md
       - Go:
           - Overview: go/index.md
           - Core Library: go/libraries/core.md
@@ -117,4 +117,4 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/openlibx402
+      link: https://github.com/402fly

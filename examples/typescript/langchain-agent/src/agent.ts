@@ -2,7 +2,7 @@
  * Example LangChain.js Agent with X402 Payment Support
  *
  * This example demonstrates how to create an AI agent that can autonomously
- * pay for API access using the X402 protocol.
+ * pay for API access using the 402fly protocol.
  */
 
 import { createX402PaymentTool } from "@402fly/langchain";
@@ -185,7 +185,7 @@ async function main() {
    * Run all examples
    */
   console.log("\n" + "=".repeat(70));
-  console.log("🚀 OpenLibx402 LangChain.js Payment Tool Examples");
+  console.log("🚀 402fly LangChain.js Payment Tool Examples");
   console.log("=".repeat(70));
   console.log(
     "\nThese examples demonstrate the X402 payment tool for LangChain.js."

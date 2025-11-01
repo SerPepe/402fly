@@ -25,7 +25,7 @@ import (
     "encoding/json"
     "net/http"
 
-    nethttp "github.com/402fly/go/fly402-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/fly402-nethttp"
 )
 
 func main() {
@@ -58,7 +58,7 @@ import (
     "net/http"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/go/fly402-echo"
+    echox402 "github.com/SerPepe/402fly/packages/go/fly402-echo"
 )
 
 func main() {
@@ -95,7 +95,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/fly402-client"
+    "github.com/SerPepe/402fly/packages/go/fly402-client"
 )
 
 func main() {
@@ -134,7 +134,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/fly402-client"
+    "github.com/SerPepe/402fly/packages/go/fly402-client"
 )
 
 func main() {
@@ -182,16 +182,16 @@ func main() {
 
 ```bash
 # Core package
-go get github.com/402fly/go/fly402-core
+go get github.com/SerPepe/402fly/packages/go/fly402-core
 
 # Client package
-go get github.com/402fly/go/fly402-client
+go get github.com/SerPepe/402fly/packages/go/fly402-client
 
 # net/http middleware
-go get github.com/402fly/go/fly402-nethttp
+go get github.com/SerPepe/402fly/packages/go/fly402-nethttp
 
 # Echo middleware
-go get github.com/402fly/go/fly402-echo
+go get github.com/SerPepe/402fly/packages/go/fly402-echo
 ```
 
 ## Development
@@ -207,9 +207,9 @@ client := client.NewFly402Client(walletKeypair, "", nil, true) // allowLocal = t
 And in your server configuration:
 
 ```bash
-export X402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"
+export FLY402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"
 ```
 
 ### Running Examples
@@ -225,7 +225,7 @@ go run main.go
 
 # Run client example
 cd examples/go/nethttp-server
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 go run client_example.go
 ```
 
@@ -273,13 +273,13 @@ packages/go/
 
 ```bash
 # Server configuration
-X402_PAYMENT_ADDRESS=YourSolanaWalletAddress
-X402_TOKEN_MINT=USDC_MINT_ADDRESS
-X402_NETWORK=solana-devnet
-X402_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=YourSolanaWalletAddress
+FLY402_TOKEN_MINT=YOUR_TOKEN_MINT_ADDRESS
+FLY402_NETWORK=solana-devnet
+FLY402_RPC_URL=https://api.devnet.solana.com
 
 # Client configuration
-X402_PRIVATE_KEY=YourBase58PrivateKey
+FLY402_PRIVATE_KEY=YourBase58PrivateKey
 ```
 
 ## Documentation

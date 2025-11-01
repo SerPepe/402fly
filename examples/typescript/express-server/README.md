@@ -1,7 +1,7 @@
 # Express.js Server Example with X402 Payment Support
 
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 ```
 
@@ -34,9 +34,9 @@ cp .env.example .env
 Edit `.env` with your Solana wallet details:
 
 ```env
-PAYMENT_WALLET_ADDRESS=your_solana_wallet_address_here
-USDC_MINT_ADDRESS=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=your_solana_wallet_address_here
+FLY402_TOKEN_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+FLY402_RPC_URL=https://api.devnet.solana.com
 PORT=3000
 ```
 
@@ -182,8 +182,8 @@ npm run dev
 import { Fly402Config, initFly402, paymentRequired } from '@402fly/express';
 
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
-  tokenMint: process.env.USDC_MINT_ADDRESS!,
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
+  tokenMint: process.env.FLY402_TOKEN_MINT!,
   network: 'solana-devnet',
 });
 
@@ -232,5 +232,5 @@ const response = await client.get('http://localhost:3000/premium-data');
 ## Learn More
 
 - [402fly Documentation](../../packages/typescript/README.md)
-- [X402 Protocol Specification](https://github.com/402fly/spec)
+- [X402 Protocol Specification](https://github.com/SerPepe/402fly)
 - [Solana Web3.js](https://solana-labs.github.io/solana-web3.js/)

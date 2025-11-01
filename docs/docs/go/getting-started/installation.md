@@ -16,22 +16,22 @@ Install the packages you need:
 
 ```bash
 # Core protocol (required)
-go get github.com/402fly/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/402fly-core
 
 # Client for consuming APIs
-go get github.com/402fly/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/402fly-client
 
 # Middleware for your framework
-go get github.com/402fly/go/402fly-nethttp
+go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
 # or
-go get github.com/402fly/go/402fly-echo
+go get github.com/SerPepe/402fly/packages/go/402fly-echo
 ```
 
 ### Option 2: Development Installation (for Contributors)
 
 ```bash
 # Clone the repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Navigate to a package
@@ -50,17 +50,17 @@ go test ./...
 ### Verify with Go
 
 ```bash
-go list -m github.com/402fly/go/402fly-core
+go list -m github.com/SerPepe/402fly/packages/go/402fly-core
 ```
 
 Output should show:
 ```
-github.com/402fly/go/402fly-core v0.1.0
+github.com/SerPepe/402fly/packages/go/402fly-core v0.1.0
 ```
 
 ### Verify with pkg.go.dev
 
-Visit: https://pkg.go.dev/github.com/402fly/go/402fly-core
+Visit: https://pkg.go.dev/github.com/SerPepe/402fly/packages/go/402fly-core
 
 ## Import Statements
 
@@ -70,8 +70,8 @@ Once installed, you can import in your code:
 package main
 
 import (
-    "github.com/402fly/go/402fly-core"
-    "github.com/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/402fly-core"
+    "github.com/SerPepe/402fly/packages/go/402fly-client"
 )
 ```
 
@@ -79,8 +79,8 @@ Or with aliases:
 
 ```go
 import (
-    nethttp "github.com/402fly/go/402fly-nethttp"
-    echox402 "github.com/402fly/go/402fly-echo"
+    nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
+    echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 )
 ```
 
@@ -149,14 +149,14 @@ To test on Solana devnet:
 ### Module not found error
 
 ```
-go: github.com/402fly/go/402fly-core@latest:
+go: github.com/SerPepe/402fly/packages/go/402fly-core@latest:
 reading go.sum: no matching version found
 ```
 
 **Solution**: Clear module cache and retry:
 ```bash
 go clean -modcache
-go get github.com/402fly/go/402fly-core@latest
+go get github.com/SerPepe/402fly/packages/go/402fly-core@latest
 ```
 
 ### Version mismatch
@@ -168,10 +168,10 @@ different modules with the same import path
 **Solution**: Ensure you're using the correct import path:
 ```bash
 # Wrong (old path)
-import "github.com/402fly/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/go/402fly-core"
 
 # Correct (simplified path)
-import "github.com/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/402fly-core"
 ```
 
 ### Missing Go version
@@ -202,5 +202,5 @@ After installation:
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/402fly/402fly/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/402fly/402fly/discussions)
+- **Issues**: [GitHub Issues](https://github.com/SerPepe/402fly/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/SerPepe/402fly/discussions)

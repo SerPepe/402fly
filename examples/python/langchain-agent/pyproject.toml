@@ -10,5 +10,5 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "solders>=0.18.0",
     "solana>=0.30.0",
-    "openlibx402-langchain",
+    "fly402langchain",
 ]

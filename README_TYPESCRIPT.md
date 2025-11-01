@@ -81,8 +81,8 @@ const app = express();
 
 // Initialize X402
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
-  tokenMint: process.env.USDC_MINT_ADDRESS!,
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
+  tokenMint: process.env.FLY402_TOKEN_MINT!,
   network: 'solana-devnet',
 });
 initFly402(config);
@@ -331,14 +331,14 @@ npm test
 
 ```env
 # Server configuration
-PAYMENT_WALLET_ADDRESS=your_solana_wallet_address
-USDC_MINT_ADDRESS=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+FLY402_PAYMENT_ADDRESS=your_solana_wallet_address
+FLY402_TOKEN_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 SOLANA_RPC_URL=https://api.devnet.solana.com
 PORT=3000
 
 # Client configuration (optional)
-X402_MAX_PAYMENT=5.0
-X402_AUTO_RETRY=true
+FLY402_MAX_PAYMENT=5.0
+FLY402_AUTO_RETRY=true
 ```
 
 ### Fly402Config Options
@@ -372,7 +372,7 @@ MIT License - see LICENSE file for details
 ## 🔗 Links
 
 - [Python Implementation](./packages/python)
-- [Protocol Specification](https://github.com/402fly/spec)
+- [Protocol Specification](https://github.com/SerPepe/402fly)
 - [Solana Documentation](https://docs.solana.com)
 - [Express.js](https://expressjs.com)
 - [LangChain.js](https://js.langchain.com)

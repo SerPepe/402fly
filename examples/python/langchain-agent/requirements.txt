@@ -1,6 +1,6 @@
-openlibx402-core>=0.1.0
-openlibx402-client>=0.1.0
-openlibx402-langchain>=0.1.0
+fly402core>=0.1.0
+fly402client>=0.1.0
+fly402langchain>=0.1.0
 langchain>=1.0.0
 langchain-openai>=0.1.0
 openai>=1.0.0

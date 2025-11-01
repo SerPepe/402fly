@@ -1,7 +1,7 @@
 # Next.js App Example with X402 Payment Support
 
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 ```
 
@@ -44,9 +44,9 @@ cp .env.example .env.local
 Edit `.env.local` with your Solana wallet details:
 
 ```env
-PAYMENT_WALLET_ADDRESS=your_solana_wallet_address_here
-USDC_MINT_ADDRESS=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=your_solana_wallet_address_here
+FLY402_TOKEN_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+FLY402_RPC_URL=https://api.devnet.solana.com
 ```
 
 ### 3. Build and Run
@@ -114,8 +114,8 @@ nextjs-app/
 import { Fly402Config, initFly402 } from "@402fly/nextjs";
 
 const config = new Fly402Config({
-  paymentAddress: process.env.PAYMENT_WALLET_ADDRESS!,
-  tokenMint: process.env.USDC_MINT_ADDRESS!,
+  paymentAddress: process.env.FLY402_PAYMENT_ADDRESS!,
+  tokenMint: process.env.FLY402_TOKEN_MINT!,
   network: "solana-devnet",
 });
 

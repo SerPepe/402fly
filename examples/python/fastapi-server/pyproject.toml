@@ -8,6 +8,6 @@ dependencies = [
     "fastapi>=0.120.1",
     "python-dotenv>=1.2.1",
     "uvicorn>=0.38.0",
-    "openlibx402-core",
-    "openlibx402-fastapi",
+    "fly402core",
+    "fly402fastapi",
 ]

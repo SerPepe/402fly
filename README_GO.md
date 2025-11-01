@@ -34,23 +34,23 @@ Complete guide for using 402fly with Go to build payment-enabled APIs and client
 
 ## Installation
 
-The Go packages are published in a single repository: [github.com/402fly/go](https://github.com/402fly/go)
+The Go packages are published in a single repository: [github.com/SerPepe/402fly/packages/go](https://github.com/SerPepe/402fly/packages/go)
 
 ```bash
 # Install core package
-go get github.com/402fly/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/402fly-core
 
 # Install client
-go get github.com/402fly/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/402fly-client
 
 # Install net/http middleware
-go get github.com/402fly/go/402fly-nethttp
+go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
 
 # Install Echo middleware
-go get github.com/402fly/go/402fly-echo
+go get github.com/SerPepe/402fly/packages/go/402fly-echo
 ```
 
-All packages are managed in a single Git repository with separate Go modules for each package, enabling flexible import paths like `github.com/402fly/go/402fly-core`.
+All packages are managed in a single Git repository with separate Go modules for each package, enabling flexible import paths like `github.com/SerPepe/402fly/packages/go/402fly-core`.
 
 ## Quick Start
 
@@ -63,14 +63,14 @@ import (
     "encoding/json"
     "net/http"
 
-    nethttp "github.com/402fly/go/402fly-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
 )
 
 func main() {
     // Initialize X402
     nethttp.InitX402(&nethttp.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -102,7 +102,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/402fly-client"
 )
 
 func main() {
@@ -143,7 +143,7 @@ Core protocol implementation with models, errors, and Solana payment processing.
 **Example:**
 
 ```go
-import "github.com/402fly/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/go/402fly-core"
 
 processor := core.NewSolanaPaymentProcessor("https://api.devnet.solana.com", &keypair)
 defer processor.Close()
@@ -189,11 +189,11 @@ Middleware for standard Go `net/http` package.
 **Example:**
 
 ```go
-import nethttp "github.com/402fly/402fly/go/402fly-nethttp"
+import nethttp "github.com/SerPepe/402fly/go/402fly-nethttp"
 
 nethttp.InitX402(&nethttp.Config{
     PaymentAddress: "YOUR_WALLET_ADDRESS",
-    TokenMint:      "USDC_MINT_ADDRESS",
+    TokenMint:      "FLY402_TOKEN_MINT",
     Network:        "solana-devnet",
     AutoVerify:     true,
 })
@@ -211,11 +211,11 @@ Middleware for Echo web framework.
 **Example:**
 
 ```go
-import echox402 "github.com/402fly/402fly/go/402fly-echo"
+import echox402 "github.com/SerPepe/402fly/go/402fly-echo"
 
 echox402.InitX402(&echox402.Config{
     PaymentAddress: "YOUR_WALLET_ADDRESS",
-    TokenMint:      "USDC_MINT_ADDRESS",
+    TokenMint:      "FLY402_TOKEN_MINT",
     Network:        "solana-devnet",
     AutoVerify:     true,
 })
@@ -237,13 +237,13 @@ import (
     "encoding/json"
     "net/http"
 
-    nethttp "github.com/402fly/go/402fly-nethttp"
+    nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
 )
 
 func main() {
     nethttp.InitX402(&nethttp.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -284,13 +284,13 @@ import (
     "net/http"
 
     "github.com/labstack/echo/v4"
-    echox402 "github.com/402fly/go/402fly-echo"
+    echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 )
 
 func main() {
     echox402.InitX402(&echox402.Config{
         PaymentAddress: "YOUR_WALLET_ADDRESS",
-        TokenMint:      "USDC_MINT_ADDRESS",
+        TokenMint:      "FLY402_TOKEN_MINT",
         Network:        "solana-devnet",
         AutoVerify:     true,
     })
@@ -331,7 +331,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/402fly-client"
 )
 
 func main() {
@@ -376,7 +376,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/402fly/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/402fly-client"
 )
 
 func main() {
@@ -442,8 +442,8 @@ Full-featured server with multiple endpoints and pricing tiers.
 
 ```bash
 cd examples/go/nethttp-server
-export X402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 go run main.go
 ```
 
@@ -453,8 +453,8 @@ Echo framework implementation with dynamic pricing.
 
 ```bash
 cd examples/go/echo-server
-export X402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_PAYMENT_ADDRESS="YOUR_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 go run main.go
 ```
 
@@ -464,7 +464,7 @@ Demonstrates both automatic and explicit payment modes.
 
 ```bash
 cd examples/go/nethttp-server
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 go run client_example.go
 ```
 
@@ -474,15 +474,15 @@ go run client_example.go
 
 **Server:**
 ```bash
-export X402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
-export X402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-export X402_NETWORK="solana-devnet"  # or solana-mainnet
-export X402_RPC_URL="https://api.devnet.solana.com"
+export FLY402_PAYMENT_ADDRESS="YOUR_SOLANA_WALLET_ADDRESS"
+export FLY402_TOKEN_MINT="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+export FLY402_NETWORK="solana-devnet"  # or solana-mainnet
+export FLY402_RPC_URL="https://api.devnet.solana.com"
 ```
 
 **Client:**
 ```bash
-export X402_PRIVATE_KEY="your-base58-private-key"
+export FLY402_PRIVATE_KEY="your-base58-private-key"
 ```
 
 ### Code Configuration
@@ -491,7 +491,7 @@ export X402_PRIVATE_KEY="your-base58-private-key"
 ```go
 nethttp.InitX402(&nethttp.Config{
     PaymentAddress: "YOUR_WALLET_ADDRESS",
-    TokenMint:      "USDC_MINT_ADDRESS",
+    TokenMint:      "FLY402_TOKEN_MINT",
     Network:        "solana-devnet",
     RPCURL:         "https://api.devnet.solana.com",
     AutoVerify:     true,
@@ -551,7 +551,7 @@ package main
 import (
     "testing"
 
-    "github.com/402fly/402fly/go/402fly-core"
+    "github.com/SerPepe/402fly/go/402fly-core"
 )
 
 func TestPaymentRequest(t *testing.T) {

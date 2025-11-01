@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Payment Models
+ * 402fly Payment Models
  *
- * Defines core data structures for X402 payment protocol.
+ * Defines core data structures for 402fly payment protocol.
  */
 
 import { InvalidPaymentRequestError } from "./errors";

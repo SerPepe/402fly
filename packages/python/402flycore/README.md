@@ -84,7 +84,7 @@ For most use cases, you'll want to use one of these higher-level packages rather
 
 For complete API reference and guides, see:
 - [Documentation](https://402fly.github.io/docs)
-- [GitHub Repository](https://github.com/402fly/402fly)
+- [GitHub Repository](https://github.com/SerPepe/402fly)
 
 ## Testing
 

@@ -1,7 +1,7 @@
 """
-OpenLibx402 LangGraph Package
+402fly LangGraph Package
 
-LangGraph integration for X402 payment protocol.
+LangGraph integration for 402fly payment protocol.
 """
 
 __version__ = "0.1.1"

@@ -31,11 +31,11 @@ class Fly402Config(BaseModel):
 
         # Default URLs by network
         urls = {
-            "solana-mainnet": "https://api.mainnet-beta.solana.com",
-            "solana-devnet": "https://devnet.helius-rpc.com/?api-key=8d4a82b0-d5c2-4ec5-8230-2b0c2261984c",
+            "solana-mainnet": "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com",
+            "solana-devnet": "https://api.devnet.solana.com",
             "solana-testnet": "https://api.testnet.solana.com",
         }
-        return urls.get(self.network, "https://devnet.helius-rpc.com/?api-key=8d4a82b0-d5c2-4ec5-8230-2b0c2261984c")
+        return urls.get(self.network, "https://evangelina-rc8p3q-fast-mainnet.helius-rpc.com")
 
 
 # Singleton configuration

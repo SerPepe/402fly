@@ -16,9 +16,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@openlibx402/client": "workspace:*",
-    "@openlibx402/core": "workspace:*",
-    "@openlibx402/nextjs": "workspace:*",
+    "@402fly/client": "workspace:*",
+    "@402fly/core": "workspace:*",
+    "@402fly/nextjs": "workspace:*",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",

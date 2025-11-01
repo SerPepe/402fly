@@ -312,7 +312,7 @@ app = workflow.compile()
 
 ### Environment Variables
 ```bash
-X402_PAYMENT_ADDRESS=YourSolanaWalletAddress
+FLY402_PAYMENT_ADDRESS=YourServiceWalletAddress
 X402_TOKEN_MINT=USDC_MINT_ADDRESS
 X402_NETWORK=solana-devnet
 X402_RPC_URL=https://api.devnet.solana.com
@@ -391,7 +391,7 @@ We welcome contributions! Here's how you can help:
 ### Development Setup
 ```bash
 # Clone repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install development dependencies
@@ -459,11 +459,11 @@ A: Yes! Once configured with a wallet, agents can discover, pay for, and use API
 
 - 💬 [Discord](#) - Coming soon
 - 🐦 [Twitter](https://x.com/402fly) - @402fly
-- 📧 [Email](mailto:x402@openlib.xyz) - x402@openlib.xyz
+- 📧 [Email](mailto:x402@github.com/SerPepe/402fly) - x402@github.com/SerPepe/402fly
 
 ## License
 
-402fly is released under the [MIT License](https://github.com/402fly/402fly/blob/main/LICENSE).
+402fly is released under the [MIT License](https://github.com/SerPepe/402fly/blob/main/LICENSE).
 
 ## Acknowledgments
 

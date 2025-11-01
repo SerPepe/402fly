@@ -196,9 +196,9 @@ pnpm run example:server
 Create `.env` file in the example directory:
 
 ```env
-PAYMENT_WALLET_ADDRESS=your_solana_wallet_address
-USDC_MINT_ADDRESS=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-SOLANA_RPC_URL=https://api.devnet.solana.com
+FLY402_PAYMENT_ADDRESS=your_solana_wallet_address
+FLY402_TOKEN_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+FLY402_RPC_URL=https://api.devnet.solana.com
 ```
 
 ### 3. Test the API

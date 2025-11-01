@@ -48,31 +48,31 @@ The Go implementation provides:
 
 ```go
 // Core protocol
-import "github.com/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/402fly-core"
 
 // HTTP client
-import "github.com/402fly/go/402fly-client"
+import "github.com/SerPepe/402fly/packages/go/402fly-client"
 
 // net/http middleware
-import nethttp "github.com/402fly/go/402fly-nethttp"
+import nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
 
 // Echo middleware
-import echox402 "github.com/402fly/go/402fly-echo"
+import echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 ```
 
 ## Installation
 
 ```bash
 # Core package (required)
-go get github.com/402fly/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/402fly-core
 
 # Client (for consuming paid APIs)
-go get github.com/402fly/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/402fly-client
 
 # Middleware for your framework
-go get github.com/402fly/go/402fly-nethttp
+go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
 # or
-go get github.com/402fly/go/402fly-echo
+go get github.com/SerPepe/402fly/packages/go/402fly-echo
 ```
 
 ## The X402 Flow
@@ -108,8 +108,8 @@ go get github.com/402fly/go/402fly-echo
 ## Support
 
 For issues, questions, or contributions:
-- [GitHub Issues](https://github.com/402fly/402fly)
-- [GitHub Discussions](https://github.com/402fly/402fly/discussions)
+- [GitHub Issues](https://github.com/SerPepe/402fly)
+- [GitHub Discussions](https://github.com/SerPepe/402fly/discussions)
 - [X402 Protocol](https://www.x402.org)
 
 ## Next Steps

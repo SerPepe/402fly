@@ -1,11 +1,11 @@
 # 402fly FastAPI
 
-FastAPI middleware and decorators for X402 payment protocol.
+FastAPI middleware and decorators for the 402fly payment protocol.
 
 ## Installation
 
 ```bash
-pip install 402fly-fastapi
+pip install fly402fastapi
 ```
 
 ## Features
@@ -22,7 +22,7 @@ pip install 402fly-fastapi
 
 ```python
 from fastapi import FastAPI
-from 402fly_fastapi import payment_required
+from fly402fastapi import payment_required
 
 app = FastAPI()
 
@@ -41,7 +41,7 @@ async def get_premium_data():
 
 ```python
 from fastapi import FastAPI, Depends
-from 402fly_fastapi import verify_payment_factory, PaymentAuthorization
+from fly402fastapi import verify_payment_factory, PaymentAuthorization
 
 app = FastAPI()
 
@@ -64,7 +64,7 @@ async def get_expensive_data(
 ### Global Configuration
 
 ```python
-from 402fly_fastapi import Fly402Config, init_fly402
+from fly402fastapi import Fly402Config, init_fly402
 
 config = Fly402Config(
     payment_address="YOUR_WALLET_ADDRESS",

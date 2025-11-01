@@ -1,5 +1,5 @@
 """
-Tests for OpenLibx402 error classes
+Tests for 402fly error classes
 """
 
 import pytest

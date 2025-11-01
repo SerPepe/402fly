@@ -1,9 +1,9 @@
-//! # OpenLibx402 Actix Web
+//! # 402fly Actix Web
 //!
-//! Actix Web framework integration for the X402 payment protocol.
+//! Actix Web framework integration for the 402fly payment protocol.
 //!
 //! This library provides middleware and extractors to protect Actix Web endpoints
-//! with payment requirements using the X402 protocol.
+//! with payment requirements using the 402fly protocol.
 //!
 //! ## Example
 //!

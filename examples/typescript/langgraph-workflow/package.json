@@ -17,9 +17,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@openlibx402/core": "workspace:*",
-    "@openlibx402/client": "workspace:*",
-    "@openlibx402/langgraph": "workspace:*",
+    "@402fly/core": "workspace:*",
+    "@402fly/client": "workspace:*",
+    "@402fly/langgraph": "workspace:*",
     "@solana/web3.js": "^1.87.6",
     "@langchain/langgraph": "^1.0.1",
     "dotenv": "^17.2.3"

@@ -34,7 +34,7 @@ def payment_required(
         @payment_required(
             amount="0.10",
             payment_address="YOUR_WALLET_ADDRESS",
-            token_mint="USDC_MINT_ADDRESS"
+            token_mint="FLY402_TOKEN_MINT"
         )
         async def get_premium_data():
             return {"data": "Premium content"}

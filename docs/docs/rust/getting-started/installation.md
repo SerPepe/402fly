@@ -97,7 +97,7 @@ To build from source or contribute:
 
 ```bash
 # Clone repository
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly/packages/rust
 
 # Build all packages
@@ -255,4 +255,4 @@ cargo add solana-client@2.0
 Need help? Check:
 - [Rust Documentation](https://doc.rust-lang.org/)
 - [Cargo Book](https://doc.rust-lang.org/cargo/)
-- [GitHub Issues](https://github.com/402fly/402fly/issues)
+- [GitHub Issues](https://github.com/SerPepe/402fly/issues)

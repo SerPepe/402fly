@@ -1,7 +1,7 @@
 /**
- * OpenLibx402 Core Package
+ * 402fly Core Package
  *
- * Core TypeScript implementation of the X402 payment protocol for autonomous AI agent payments.
+ * Core TypeScript implementation of the 402fly payment protocol for autonomous AI agent payments.
  */
 
 export const VERSION = "0.1.1";

@@ -1,11 +1,11 @@
-module github.com/openlibx402/examples/go/nethttp-server
+module github.com/402fly/examples/go/nethttp-server
 
 go 1.21
 
 require (
 	github.com/gagliardetto/solana-go v1.11.0
-	github.com/openlibx402/go/openlibx402-client v0.1.0
-	github.com/openlibx402/go/openlibx402-nethttp v0.1.0
+	github.com/402fly/go/fly402-client v0.1.0
+	github.com/402fly/go/fly402-nethttp v0.1.0
 )
 
 require (
@@ -27,7 +27,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/mostynb/zstdpool-freelist v0.0.0-20201229113212-927304c0c3b1 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
-	github.com/openlibx402/go/openlibx402-core v0.1.0 // indirect
+	github.com/402fly/go/fly402-core v0.1.0 // indirect
 	github.com/streamingfast/logging v0.0.0-20230608130331-f22c91403091 // indirect
 	go.mongodb.org/mongo-driver v1.11.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
@@ -41,7 +41,7 @@ require (
 )
 
 replace (
-	github.com/openlibx402/go/openlibx402-client => ../../../packages/go/openlibx402-client
-	github.com/openlibx402/go/openlibx402-core => ../../../packages/go/openlibx402-core
-	github.com/openlibx402/go/openlibx402-nethttp => ../../../packages/go/openlibx402-nethttp
+	github.com/402fly/go/fly402-client => ../../../packages/go/fly402-client
+	github.com/402fly/go/fly402-core => ../../../packages/go/fly402-core
+	github.com/402fly/go/fly402-nethttp => ../../../packages/go/fly402-nethttp
 )

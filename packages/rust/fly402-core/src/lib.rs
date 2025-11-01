@@ -1,15 +1,15 @@
-//! # OpenLibx402 Core
+//! # 402fly Core
 //!
-//! Core library for the X402 payment protocol with Solana blockchain integration.
+//! Core library for the 402fly payment protocol with Solana blockchain integration.
 //!
 //! This library provides the fundamental types, error handling, and payment processing
-//! capabilities for implementing the X402 protocol - an open standard enabling AI agents
+//! capabilities for implementing the 402fly protocol - an open standard enabling AI agents
 //! to autonomously pay for API access using Solana blockchain micropayments.
 //!
 //! ## Features
 //!
 //! - **Payment Models**: `PaymentRequest` and `PaymentAuthorization` for structured payment flow
-//! - **Error Handling**: Comprehensive error types for all X402 operations
+//! - **Error Handling**: Comprehensive error types for all 402fly operations
 //! - **Solana Integration**: `SolanaPaymentProcessor` for blockchain transactions
 //! - **Serialization**: Base64-encoded JSON for HTTP headers
 //!

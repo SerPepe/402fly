@@ -5,9 +5,9 @@ build-backend = "hatchling.build"
 [project]
 name = "fly402fastapi"
 version = "0.1.1"
-description = "FastAPI middleware and decorators for X402 payment protocol"
+description = "FastAPI middleware and decorators for the 402fly payment protocol"
 authors = [
-    {name = "OpenLibx402 Contributors", email = "hello@openlibx402.org"},
+    {name = "402fly Contributors", email = "hello@402fly.dev"},
 ]
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -18,8 +18,8 @@ dependencies = [
     "pydantic>=2.0.0",
 ]
 keywords = [
-    "openlibx402",
-    "x402",
+    "402fly",
+    "402",
     "fastapi",
     "middleware",
     "payments",
@@ -53,9 +53,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://openlib.xyz"
-Documentation = "https://openlibx402.github.io/docs"
-Repository = "https://github.com/openlibx402/openlibx402"
+Homepage = "https://github.com/SerPepe/402fly"
+Documentation = "https://docs.402fly.dev"
+Repository = "https://github.com/SerPepe/402fly"
 
 [tool.hatch.version]
 path = "fly402fastapi/__init__.py"

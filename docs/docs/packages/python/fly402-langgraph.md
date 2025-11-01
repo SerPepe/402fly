@@ -1,11 +1,11 @@
 # 402fly LangGraph
 
-LangGraph integration for X402 payment protocol.
+LangGraph integration for the 402fly payment protocol.
 
 ## Installation
 
 ```bash
-pip install 402fly-langgraph
+pip install fly402langgraph
 ```
 
 ## Features
@@ -22,7 +22,7 @@ pip install 402fly-langgraph
 
 ```python
 from langgraph.graph import StateGraph, END
-from 402fly_langgraph import payment_node, check_payment_required
+from fly402langgraph import payment_node, check_payment_required
 from solders.keypair import Keypair
 
 class AgentState(TypedDict):
@@ -57,7 +57,7 @@ app = workflow.compile()
 ### Combined Fetch + Payment Node
 
 ```python
-from 402fly_langgraph import fetch_with_payment_node
+from fly402langgraph import fetch_with_payment_node
 
 workflow.add_node("fetch", fetch_with_payment_node)
 workflow.set_entry_point("fetch")
@@ -67,7 +67,7 @@ workflow.add_edge("fetch", "process")
 ### Simple Workflow Helper
 
 ```python
-from 402fly_langgraph import create_simple_payment_workflow
+from fly402langgraph import create_simple_payment_workflow
 
 workflow = create_simple_payment_workflow(
     wallet_keypair=keypair,

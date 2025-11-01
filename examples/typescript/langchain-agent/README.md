@@ -1,7 +1,7 @@
 # LangChain.js Payment Tool Example
 
 ```bash
-git clone https://github.com/402fly/402fly.git
+git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 ```
 
