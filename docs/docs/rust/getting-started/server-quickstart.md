@@ -22,7 +22,7 @@ cd my-x402-server
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-rocket = "0.1"
 rocket = { version = "0.5", features = ["json"] }
 tokio = { version = "1.35", features = ["full"] }
@@ -126,7 +126,7 @@ cd my-x402-server
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-actix = "0.1"
 actix-web = "4.4"
 actix-rt = "2.9"

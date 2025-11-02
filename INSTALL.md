@@ -30,7 +30,7 @@ pip install fly402langchain
 pip install fly402langgraph
 
 # Install all packages
-pip install fly402core 402fly-fastapi 402fly-client 402fly-langchain 402fly-langgraph
+pip install fly402langgraph
 ```
 
 ### Install from Source
@@ -41,11 +41,11 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install packages in development mode
-pip install -e packages/python/402fly-core
-pip install -e packages/python/402fly-fastapi
-pip install -e packages/python/402fly-client
-pip install -e packages/python/402fly-langchain
-pip install -e packages/python/402fly-langgraph
+pip install fly402core
+pip install fly402fastapi
+pip install fly402client
+pip install fly402langchain
+pip install fly402langgraph
 ```
 
 ## Solana Setup
@@ -92,7 +92,7 @@ solana balance YOUR_WALLET_ADDRESS --url devnet
 
 ```bash
 # Install FastAPI dependencies
-pip install fly402core 402fly-fastapi
+pip install fly402fastapi
 pip install fastapi uvicorn
 
 # Create .env file
@@ -107,7 +107,7 @@ EOF
 
 ```bash
 # Install LangChain dependencies
-pip install fly402core 402fly-client 402fly-langchain
+pip install fly402langchain
 pip install langchain openai
 
 # Set OpenAI API key
@@ -121,7 +121,7 @@ python -c "from solders.keypair import Keypair; import json; kp = Keypair(); jso
 
 ```bash
 # Install LangGraph dependencies
-pip install fly402core 402fly-client 402fly-langgraph
+pip install fly402langgraph
 pip install langgraph langchain
 
 # Create wallet
@@ -138,11 +138,11 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install all packages with dev dependencies
-pip install -e "packages/python/402fly-core[dev]"
-pip install -e "packages/python/402fly-fastapi[dev]"
-pip install -e "packages/python/402fly-client[dev]"
-pip install -e "packages/python/402fly-langchain[dev]"
-pip install -e "packages/python/402fly-langgraph[dev]"
+pip install fly402core[dev]"
+pip install fly402fastapi[dev]"
+pip install fly402client[dev]"
+pip install fly402langchain[dev]"
+pip install fly402langgraph[dev]"
 
 # Install development tools
 pip install black ruff mypy pytest pytest-asyncio
@@ -186,7 +186,7 @@ print("✅ 402fly-langgraph installed")
 pip list | grep 402fly
 
 # Reinstall if needed
-pip install --force-reinstall 402fly-core
+pip install fly402core
 ```
 
 ### Solana Connection Issues

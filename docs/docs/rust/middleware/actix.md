@@ -6,7 +6,7 @@ The `402fly-actix` crate provides integration with the Actix Web framework for p
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-actix = "0.1"
 actix-web = "4.4"
 actix-rt = "2.9"

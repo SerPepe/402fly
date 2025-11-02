@@ -4,7 +4,7 @@ The core library provides the fundamental data structures and Solana blockchain 
 
 ## Overview
 
-The `402fly-core` package contains:
+The `fly402core` package contains:
 
 - **Models**: `PaymentRequest`, `PaymentAuthorization`
 - **Errors**: Complete error hierarchy
@@ -14,7 +14,7 @@ The `402fly-core` package contains:
 ## Installation
 
 ```bash
-go get github.com/SerPepe/402fly/packages/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/fly402core
 ```
 
 ## PaymentRequest

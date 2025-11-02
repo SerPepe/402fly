@@ -24,8 +24,8 @@ cd my-x402-client
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
-402fly-client = "0.1"
+fly402core = "0.1"
+fly402client = "0.1"
 tokio = { version = "1.35", features = ["full"] }
 solana-sdk = "2.0"
 ```

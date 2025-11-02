@@ -1,4 +1,4 @@
-# 402fly-core
+# fly402core
 
 Core library for the X402 payment protocol with Solana blockchain integration.
 
@@ -18,7 +18,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-402fly-core = "0.0.1"
+fly402core = "0.0.1"
 ```
 
 ### Create a Payment Request
@@ -62,6 +62,6 @@ MIT License - See LICENSE file for details.
 
 ## Related Packages
 
-- [`402fly-client`](https://crates.io/crates/402fly-client) - HTTP client with automatic payment handling
+- [`fly402client`](https://crates.io/crates/fly402client) - HTTP client with automatic payment handling
 - [`402fly-rocket`](https://crates.io/crates/402fly-rocket) - Rocket web framework integration
 - [`402fly-actix`](https://crates.io/crates/402fly-actix) - Actix Web framework integration

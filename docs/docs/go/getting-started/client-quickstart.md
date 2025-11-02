@@ -15,7 +15,7 @@ go mod init github.com/yourname/x402-client
 ### Step 2: Install Dependencies
 
 ```bash
-go get github.com/SerPepe/402fly/packages/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/fly402client
 go get github.com/gagliardetto/solana-go
 ```
 
@@ -34,7 +34,7 @@ import (
 
     "github.com/gagliardetto/solana-go"
     "github.com/mr-tron/base58"
-    "github.com/SerPepe/402fly/packages/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/fly402client"
 )
 
 func main() {
@@ -103,7 +103,7 @@ import (
     "log"
 
     "github.com/gagliardetto/solana-go"
-    "github.com/SerPepe/402fly/packages/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/fly402client"
 )
 
 func main() {
@@ -185,7 +185,7 @@ resp, err := client.Delete(ctx, "https://api.example.com/data")
 ## Error Handling
 
 ```go
-import "github.com/SerPepe/402fly/packages/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/fly402core"
 
 resp, err := client.Get(ctx, url)
 if err != nil {

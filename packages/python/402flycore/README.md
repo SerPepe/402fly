@@ -1,10 +1,10 @@
-# 402fly-core
+# fly402core
 
-Core Python implementation of the X402 payment protocol for autonomous AI agent payments.
+Core Python implementation of the 402fly payment protocol for autonomous AI agent payments.
 
 ## Overview
 
-The `402fly-core` package provides the fundamental building blocks for implementing the X402 payment protocol. This package handles payment processing on the Solana blockchain, including transaction creation, verification, and error handling.
+The `fly402core` package provides the fundamental building blocks for implementing the 402fly payment protocol. This package handles payment processing on the Solana blockchain, including transaction creation, verification, and error handling.
 
 ## Features
 
@@ -73,12 +73,12 @@ except InsufficientFundsError as e:
 
 This package is typically used as a dependency by higher-level packages like:
 
-- **402fly-client**: HTTP client with automatic payment handling
-- **402fly-fastapi**: FastAPI middleware for payment-required endpoints
-- **402fly-langchain**: LangChain agent integration
-- **402fly-langgraph**: LangGraph workflow integration
+- **fly402client**: HTTP client with automatic payment handling
+- **fly402fastapi**: FastAPI middleware for payment-required endpoints
+- **fly402langchain**: LangChain agent integration
+- **fly402langgraph**: LangGraph workflow integration
 
-For most use cases, you'll want to use one of these higher-level packages rather than using `402fly-core` directly.
+For most use cases, you'll want to use one of these higher-level packages rather than using `fly402core` directly.
 
 ## Documentation
 

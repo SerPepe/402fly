@@ -104,6 +104,6 @@ MIT License - See LICENSE file for details.
 
 ## Related Packages
 
-- [`402fly-core`](https://crates.io/crates/402fly-core) - Core protocol library
-- [`402fly-client`](https://crates.io/crates/402fly-client) - HTTP client library
+- [`fly402core`](https://crates.io/crates/fly402core) - Core protocol library
+- [`fly402client`](https://crates.io/crates/fly402client) - HTTP client library
 - [`402fly-actix`](https://crates.io/crates/402fly-actix) - Actix Web integration

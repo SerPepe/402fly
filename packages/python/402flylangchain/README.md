@@ -1,10 +1,10 @@
-# 402fly-langchain
+# fly402langchain
 
 LangChain integration for the X402 payment protocol - enables AI agents to autonomously pay for API access.
 
 ## Overview
 
-The `402fly-langchain` package provides LangChain tools and utilities that enable AI agents to autonomously make payments to access paid APIs using the X402 protocol. Agents can detect payment requirements, process payments, and retry requests automatically.
+The `fly402langchain` package provides LangChain tools and utilities that enable AI agents to autonomously make payments to access paid APIs using the X402 protocol. Agents can detect payment requirements, process payments, and retry requests automatically.
 
 ## Features
 

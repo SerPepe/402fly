@@ -6,25 +6,25 @@ TypeScript/JavaScript implementation of the X402 payment protocol for autonomous
 
 ### Core Packages
 
-- **[@x402fly/core](./402fly-core)** - Core models, errors, and Solana payment processor
-- **[@x402fly/client](./402fly-client)** - HTTP client with automatic payment handling
+- **[@x402fly/core](./fly402core)** - Core models, errors, and Solana payment processor
+- **[@x402fly/client](./fly402client)** - HTTP client with automatic payment handling
 - **[@x402fly/express](./402fly-express)** - Express.js middleware and utilities
 
 ### AI Agent Integration
 
-- **[@x402fly/langchain](./402fly-langchain)** - LangChain.js tools for autonomous payments
-- **[@x402fly/langgraph](./402fly-langgraph)** - LangGraph.js workflow nodes
+- **[@x402fly/langchain](./fly402langchain)** - LangChain.js tools for autonomous payments
+- **[@x402fly/langgraph](./fly402langgraph)** - LangGraph.js workflow nodes
 
 ## Quick Start
 
 ### 1. Install Dependencies
 
 ```bash
-cd packages/typescript/402fly-core
+cd packages/typescript/fly402core
 npm install
 npm run build
 
-cd ../402fly-client
+cd ../fly402client
 npm install
 npm run build
 
@@ -32,11 +32,11 @@ cd ../402fly-express
 npm install
 npm run build
 
-cd ../402fly-langchain
+cd ../fly402langchain
 npm install
 npm run build
 
-cd ../402fly-langgraph
+cd ../fly402langgraph
 npm install
 npm run build
 ```
@@ -122,7 +122,7 @@ See the [examples](../../examples) directory for complete applications:
 
 ```bash
 # Build individual package
-cd packages/typescript/402fly-core
+cd packages/typescript/fly402core
 npm run build
 
 # Watch mode for development

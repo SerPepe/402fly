@@ -48,10 +48,10 @@ The Go implementation provides:
 
 ```go
 // Core protocol
-import "github.com/SerPepe/402fly/packages/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/fly402core"
 
 // HTTP client
-import "github.com/SerPepe/402fly/packages/go/402fly-client"
+import "github.com/SerPepe/402fly/packages/go/fly402client"
 
 // net/http middleware
 import nethttp "github.com/SerPepe/402fly/packages/go/402fly-nethttp"
@@ -64,10 +64,10 @@ import echox402 "github.com/SerPepe/402fly/packages/go/402fly-echo"
 
 ```bash
 # Core package (required)
-go get github.com/SerPepe/402fly/packages/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/fly402core
 
 # Client (for consuming paid APIs)
-go get github.com/SerPepe/402fly/packages/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/fly402client
 
 # Middleware for your framework
 go get github.com/SerPepe/402fly/packages/go/402fly-nethttp

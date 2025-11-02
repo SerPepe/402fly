@@ -1,4 +1,4 @@
-# 402fly-client
+# fly402client
 
 HTTP client library for the X402 payment protocol with automatic and explicit payment handling.
 
@@ -18,7 +18,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-402fly-client = "0.0.1"
+fly402client = "0.0.1"
 tokio = { version = "1.35", features = ["full"] }
 ```
 
@@ -99,6 +99,6 @@ MIT License - See LICENSE file for details.
 
 ## Related Packages
 
-- [`402fly-core`](https://crates.io/crates/402fly-core) - Core protocol library
+- [`fly402core`](https://crates.io/crates/fly402core) - Core protocol library
 - [`402fly-rocket`](https://crates.io/crates/402fly-rocket) - Rocket server integration
 - [`402fly-actix`](https://crates.io/crates/402fly-actix) - Actix Web server integration

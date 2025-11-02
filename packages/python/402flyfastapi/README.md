@@ -1,10 +1,10 @@
-# 402fly-fastapi
+# fly402fastapi
 
 FastAPI middleware and decorators for adding X402 payment requirements to API endpoints.
 
 ## Overview
 
-The `402fly-fastapi` package makes it easy to add payment requirements to your FastAPI endpoints. Simply decorate endpoints with payment requirements, and the middleware handles payment verification automatically.
+The `fly402fastapi` package makes it easy to add payment requirements to your FastAPI endpoints. Simply decorate endpoints with payment requirements, and the middleware handles payment verification automatically.
 
 ## Features
 

@@ -21,13 +21,13 @@
 ├── packages/
 │   ├── core/                      # Core protocol implementation
 │   │   ├── python/
-│   │   │   └── 402fly-core/
+│   │   │   └── fly402core/
 │   │   └── typescript/
 │   │       └── @x402fly/core
 │   │
 │   ├── server/                    # Server-side libraries
 │   │   ├── python/
-│   │   │   └── 402fly-fastapi/
+│   │   │   └── fly402fastapi/
 │   │   └── typescript/
 │   │       ├── @x402fly/express
 │   │       ├── @x402fly/nextjs
@@ -35,14 +35,14 @@
 │   │
 │   ├── client/                    # Client-side libraries
 │   │   ├── python/
-│   │   │   └── 402fly-client/
+│   │   │   └── fly402client/
 │   │   └── typescript/
 │   │       └── @x402fly/client
 │   │
 │   └── integrations/              # Framework integrations
 │       ├── python/
-│       │   ├── 402fly-langchain/
-│       │   └── 402fly-langgraph/
+│       │   ├── fly402langchain/
+│       │   └── fly402langgraph/
 │       └── typescript/
 │           ├── @x402fly/langchain
 │           └── @x402fly/langgraph
@@ -63,7 +63,7 @@
 
 ## 1. Core Protocol Implementation
 
-### Package: `402fly-core` (Python) / `@x402fly/core` (TypeScript)
+### Package: `fly402core` (Python) / `@x402fly/core` (TypeScript)
 
 #### Purpose
 Core protocol logic for X402 payment flow, independent of any framework.
@@ -337,7 +337,7 @@ export class InvalidPaymentRequestError extends Fly402Error {
 
 ## 2. Server-Side Implementation
 
-### Package: `402fly-fastapi` (Python)
+### Package: `fly402fastapi` (Python)
 
 #### Purpose
 FastAPI middleware for accepting X402 payments on API endpoints.
@@ -527,7 +527,7 @@ def build_402_response(
 
 ## 3. Client-Side Implementation
 
-### Package: `402fly-client` (Python) / `@x402fly/client` (TypeScript)
+### Package: `fly402client` (Python) / `@x402fly/client` (TypeScript)
 
 #### Purpose
 Client libraries for making X402-enabled API calls with automatic payment handling.
@@ -788,7 +788,7 @@ export class Fly402AutoClient {
 
 ## 4. LangChain Integration
 
-### Package: `402fly-langchain` (Python) / `@x402fly/langchain` (TypeScript)
+### Package: `fly402langchain` (Python) / `@x402fly/langchain` (TypeScript)
 
 #### Purpose
 Integrate X402 payments into LangChain agents via Tools and HTTP request middleware.
@@ -999,7 +999,7 @@ def create_x402_agent(
 
 ## 5. LangGraph Integration
 
-### Package: `402fly-langgraph` (Python) / `@x402fly/langgraph` (TypeScript)
+### Package: `fly402langgraph` (Python) / `@x402fly/langgraph` (TypeScript)
 
 #### Purpose
 Integrate X402 payments into LangGraph workflows as nodes and conditional edges.
@@ -1253,7 +1253,7 @@ ERROR_CODES = {
 ### Test Utilities
 
 ```python
-# In 402fly-core
+# In fly402core
 
 class MockSolanaPaymentProcessor(SolanaPaymentProcessor):
     """Mock processor for testing without real blockchain"""
@@ -1516,7 +1516,7 @@ workflow = StateGraph(ResearchState)
 
 workflow.add_node("plan", plan_node)
 workflow.add_node("fetch", fetch_api_node)
-workflow.add_node("payment", payment_node)  # From 402fly-langgraph
+workflow.add_node("payment", payment_node)  # From fly402langgraph
 workflow.add_node("process", process_node)
 
 workflow.set_entry_point("plan")
@@ -1524,7 +1524,7 @@ workflow.add_edge("plan", "fetch")
 
 workflow.add_conditional_edges(
     "fetch",
-    check_payment_required,  # From 402fly-langgraph
+    check_payment_required,  # From fly402langgraph
     {
         "payment_required": "payment",
         "success": "process",
@@ -1554,14 +1554,14 @@ print(result["final_answer"])
 ### Python Packages (PyPI)
 
 ```toml
-# pyproject.toml example for 402fly-core
+# pyproject.toml example for fly402core
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "402fly-core"
+name = "fly402core"
 version = "0.1.1"
 description = "Core implementation of X402 payment protocol"
 authors = [

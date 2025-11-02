@@ -82,11 +82,11 @@ uv run uvicorn main:app --reload
 
 ### Python Packages
 
-- **402fly-core** - Core models, errors, Solana processor
-- **402fly-client** - HTTP clients (Fly402Client, Fly402AutoClient)
-- **402fly-fastapi** - FastAPI decorators and middleware
-- **402fly-langchain** - LangChain integration
-- **402fly-langgraph** - LangGraph workflow nodes
+- **fly402core** - Core models, errors, Solana processor
+- **fly402client** - HTTP clients (Fly402Client, Fly402AutoClient)
+- **fly402fastapi** - FastAPI decorators and middleware
+- **fly402langchain** - LangChain integration
+- **fly402langgraph** - LangGraph workflow nodes
 
 ## 📦 TypeScript Setup (pnpm)
 
@@ -124,7 +124,7 @@ pnpm install
 pnpm run build
 
 # Build specific package
-pnpm --filter @402fly/core run build
+pnpm --filter @x402fly/core run build
 
 # Run tests
 pnpm run test
@@ -161,11 +161,11 @@ make clean
 
 ### TypeScript Packages
 
-- **@402fly/core** - Core models, errors, Solana processor
-- **@402fly/client** - HTTP clients (Fly402Client, Fly402AutoClient)
-- **@402fly/express** - Express.js middleware
-- **@402fly/langchain** - LangChain.js integration
-- **@402fly/langgraph** - LangGraph.js workflow nodes
+- **@x402fly/core** - Core models, errors, Solana processor
+- **@x402fly/client** - HTTP clients (Fly402Client, Fly402AutoClient)
+- **@x402fly/express** - Express.js middleware
+- **@x402fly/langchain** - LangChain.js integration
+- **@x402fly/langgraph** - LangGraph.js workflow nodes
 
 ## 🚀 Quick Start Guide
 
@@ -299,20 +299,20 @@ uv run pytest packages/python/402fly-core
 **TypeScript:**
 ```bash
 pnpm run test
-pnpm --filter @402fly/core run test
+pnpm --filter @x402fly/core run test
 ```
 
 ## 📦 Adding Dependencies
 
 **Python (to a specific package):**
 ```bash
-cd packages/python/402fly-core
+cd packages/python/402flycore
 uv add requests
 ```
 
 **TypeScript (to a specific package):**
 ```bash
-pnpm --filter @402fly/core add axios
+pnpm --filter @x402fly/core add axios
 ```
 
 **TypeScript (to root/shared):**
@@ -390,7 +390,7 @@ async def premium():
 **TypeScript (Express):**
 ```typescript
 import express from 'express';
-import { paymentRequired, initFly402, Fly402Config } from '@402fly/express';
+import { paymentRequired, initFly402, Fly402Config } from '@x402fly/express';
 
 const app = express();
 initFly402(new Fly402Config({...}));

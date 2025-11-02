@@ -1,10 +1,10 @@
-# 402fly-client
+# fly402client
 
 HTTP client library for the X402 payment protocol with automatic payment handling.
 
 ## Overview
 
-The `402fly-client` package provides HTTP client libraries that automatically handle X402 payment requirements. When accessing payment-protected APIs, the client can automatically detect payment requirements, process payments, and retry requests with payment authorization.
+The `fly402client` package provides HTTP client libraries that automatically handle X402 payment requirements. When accessing payment-protected APIs, the client can automatically detect payment requirements, process payments, and retry requests with payment authorization.
 
 ## Features
 

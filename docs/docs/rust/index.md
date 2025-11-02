@@ -49,10 +49,10 @@ The Rust implementation provides:
 ```toml
 [dependencies]
 # Core protocol
-402fly-core = "0.1"
+fly402core = "0.1"
 
 # HTTP client
-402fly-client = "0.1"
+fly402client = "0.1"
 
 # Rocket middleware
 402fly-rocket = "0.1"
@@ -65,10 +65,10 @@ The Rust implementation provides:
 
 ```bash
 # Core package (required)
-cargo add 402fly-core
+cargo add fly402-core
 
 # Client (for consuming paid APIs)
-cargo add 402fly-client
+cargo add fly402-client
 
 # Middleware for your framework
 cargo add 402fly-rocket

@@ -1,10 +1,10 @@
-# 402fly-langgraph
+# fly402langgraph
 
 LangGraph integration for the X402 payment protocol - build workflows that include payment nodes for accessing paid APIs.
 
 ## Overview
 
-The `402fly-langgraph` package provides LangGraph nodes and utilities for building AI workflows that can automatically handle payment requirements. Create workflows that seamlessly integrate payment processing for accessing premium APIs.
+The `fly402langgraph` package provides LangGraph nodes and utilities for building AI workflows that can automatically handle payment requirements. Create workflows that seamlessly integrate payment processing for accessing premium APIs.
 
 ## Features
 

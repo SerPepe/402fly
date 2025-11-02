@@ -2,7 +2,7 @@
 
 Complete API reference for all X402 Go packages.
 
-## Core Package (`402fly-core`)
+## Core Package (`fly402core`)
 
 ### PaymentRequest
 
@@ -170,7 +170,7 @@ func NewInvalidPaymentRequestError(message string) error
 
 ---
 
-## Client Package (`402fly-client`)
+## Client Package (`fly402client`)
 
 ### Fly402Client (Explicit Mode)
 

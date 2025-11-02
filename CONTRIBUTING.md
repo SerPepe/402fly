@@ -49,11 +49,7 @@ git clone https://github.com/YOUR_USERNAME/402fly.git
 cd 402fly
 
 # Install packages in development mode
-pip install -e "packages/python/402fly-core[dev]"
-pip install -e "packages/python/402fly-fastapi[dev]"
-pip install -e "packages/python/402fly-client[dev]"
-pip install -e "packages/python/402fly-langchain[dev]"
-pip install -e "packages/python/402fly-langgraph[dev]"
+pip install fly402core[dev] fly402fastapi[dev] fly402client[dev] fly402langchain[dev] fly402langgraph[dev]
 
 # Install development tools
 pip install black ruff mypy pytest pytest-asyncio

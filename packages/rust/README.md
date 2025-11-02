@@ -6,8 +6,8 @@ This directory contains the Rust implementation of 402fly, providing a comprehen
 
 ```
 packages/rust/
-├── 402fly-core/        # Core types and Solana payment processor
-├── 402fly-client/      # HTTP client with payment handling
+├── fly402core/        # Core types and Solana payment processor
+├── fly402client/      # HTTP client with payment handling
 ├── 402fly-rocket/      # Rocket web framework integration
 └── 402fly-actix/       # Actix Web framework integration
 ```
@@ -41,7 +41,7 @@ cargo test
 Test a specific package:
 
 ```bash
-cargo test -p 402fly-core
+cargo test -p fly402core
 ```
 
 ## 📚 Documentation
@@ -54,7 +54,7 @@ cargo doc --open
 
 ## 📖 Package Details
 
-### 402fly-core
+### fly402core
 
 Core library providing:
 - `PaymentRequest` and `PaymentAuthorization` models
@@ -62,7 +62,7 @@ Core library providing:
 - `SolanaPaymentProcessor` for blockchain operations
 - Serialization utilities
 
-### 402fly-client
+### fly402client
 
 HTTP client library providing:
 - `Fly402Client` - Explicit payment flow control

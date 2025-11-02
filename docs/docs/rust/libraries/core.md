@@ -1,12 +1,12 @@
 # Core Library
 
-The `402fly-core` crate provides the fundamental types, error handling, and Solana payment processing for the X402 protocol.
+The `fly402core` crate provides the fundamental types, error handling, and Solana payment processing for the X402 protocol.
 
 ## Installation
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 ```
 
 ## Overview
@@ -283,7 +283,7 @@ let url = SolanaPaymentProcessor::default_rpc_url("solana-mainnet");
 ```rust
 use fly402core::VERSION;
 
-println!("402fly-core version: {}", VERSION);
+println!("fly402core version: {}", VERSION);
 ```
 
 ## Type Aliases

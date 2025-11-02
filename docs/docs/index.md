@@ -104,22 +104,22 @@ response = agent.run("Get premium market data from the API")
 ## Packages
 
 ### Core
-- **`402fly-core`** - Core protocol implementation
+- **`fly402core`** - Core protocol implementation
 - **`@x402fly/core`** - TypeScript equivalent
 
 ### Server Frameworks
-- **`402fly-fastapi`** - FastAPI middleware (Python)
+- **`fly402fastapi`** - FastAPI middleware (Python)
 - **`@x402fly/express`** - Express.js middleware (TypeScript)
 - **`@x402fly/nextjs`** - Next.js API routes (TypeScript)
 - **`@x402fly/hono`** - Hono middleware (TypeScript)
 
 ### Client Libraries
-- **`402fly-client`** - HTTP client with payment support (Python)
+- **`fly402client`** - HTTP client with payment support (Python)
 - **`@x402fly/client`** - TypeScript client
 
 ### AI Agent Integrations
-- **`402fly-langchain`** - LangChain Tool & Middleware (Python)
-- **`402fly-langgraph`** - LangGraph nodes (Python)
+- **`fly402langchain`** - LangChain Tool & Middleware (Python)
+- **`fly402langgraph`** - LangGraph nodes (Python)
 - **`@x402fly/langchain`** - TypeScript LangChain integration
 - **`@x402fly/langgraph`** - TypeScript LangGraph integration
 
@@ -156,7 +156,7 @@ response = agent.run("Get premium market data from the API")
 └───────┼─────────────┼─────────────┼──────────────────────┘
         │             │             │
 ┌───────┴─────────────┴─────────────┴──────────────────────┐
-│              402fly-core / @x402fly/core              │
+│              fly402core / @x402fly/core              │
 │  ┌──────────────┐  ┌──────────────┐  ┌───────────────┐  │
 │  │   Payment    │  │    Solana    │  │     Error     │  │
 │  │    Models    │  │  Processor   │  │   Handling    │  │
@@ -210,8 +210,8 @@ response = agent.run("Get premium market data from the API")
 
 ### Python
 ```bash
-pip install fly402core 402fly-fastapi 402fly-client
-pip install fly402langchain 402fly-langgraph
+pip install fly402client
+pip install fly402langgraph
 ```
 
 ### TypeScript
@@ -287,7 +287,7 @@ class AgentState(TypedDict):
 workflow = StateGraph(AgentState)
 
 workflow.add_node("fetch", fetch_api_node)
-workflow.add_node("pay", payment_node)  # From 402fly-langgraph
+workflow.add_node("pay", payment_node)  # From fly402langgraph
 workflow.add_node("process", process_node)
 
 workflow.set_entry_point("fetch")
@@ -395,7 +395,7 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install development dependencies
-pip install -e "packages/python/402fly-core[dev]"
+pip install fly402core[dev]"
 
 # Run tests
 pytest

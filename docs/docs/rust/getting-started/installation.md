@@ -14,7 +14,7 @@ This guide covers installing the 402fly Rust packages for your project.
 
 ```bash
 # Add core library
-cargo add 402fly-core
+cargo add fly402-core
 
 # Add framework integration
 cargo add 402fly-rocket
@@ -30,8 +30,8 @@ cargo add serde --features derive
 
 ```bash
 # Add core and client libraries
-cargo add 402fly-core
-cargo add 402fly-client
+cargo add fly402-core
+cargo add fly402-client
 
 # Add required dependencies
 cargo add tokio --features full
@@ -49,7 +49,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-rocket = "0.1"
 rocket = { version = "0.5", features = ["json"] }
 tokio = { version = "1.35", features = ["full"] }
@@ -66,7 +66,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-actix = "0.1"
 actix-web = "4.4"
 actix-rt = "2.9"
@@ -84,8 +84,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-402fly-core = "0.1"
-402fly-client = "0.1"
+fly402core = "0.1"
+fly402client = "0.1"
 tokio = { version = "1.35", features = ["full"] }
 solana-sdk = "2.0"
 reqwest = "0.12"
@@ -117,8 +117,8 @@ The Rust packages are organized as a Cargo workspace:
 ```
 packages/rust/
 ├── Cargo.toml              # Workspace configuration
-├── 402fly-core/       # Core library
-├── 402fly-client/     # Client library
+├── fly402core/       # Core library
+├── fly402client/     # Client library
 ├── 402fly-rocket/     # Rocket integration
 └── 402fly-actix/      # Actix Web integration
 ```
@@ -135,10 +135,10 @@ cargo build
 cargo test
 
 # Build specific package
-cargo build -p 402fly-core
+cargo build -p fly402core
 
 # Test specific package
-cargo test -p 402fly-client
+cargo test -p fly402client
 ```
 
 ## Setting Up Solana

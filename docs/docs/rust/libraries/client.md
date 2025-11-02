@@ -1,13 +1,13 @@
 # Client Library
 
-The `402fly-client` crate provides HTTP clients for consuming X402-protected APIs with automatic or explicit payment handling.
+The `fly402client` crate provides HTTP clients for consuming X402-protected APIs with automatic or explicit payment handling.
 
 ## Installation
 
 ```toml
 [dependencies]
-402fly-client = "0.1"
-402fly-core = "0.1"
+fly402client = "0.1"
+fly402core = "0.1"
 tokio = { version = "1.35", features = ["full"] }
 solana-sdk = "2.0"
 ```

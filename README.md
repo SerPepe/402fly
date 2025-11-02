@@ -40,7 +40,7 @@ All implementations provide both server and client libraries with comprehensive 
 
 ```python
 from fastapi import FastAPI
-from fly402fastapi import payment_required
+from fly402fastapi import payment_required, Fly402Config, init_fly402
 
 app = FastAPI()
 
@@ -160,30 +160,31 @@ See **[SETUP.md](./SETUP.md)** for detailed setup instructions.
 402fly/
 ├── packages/
 │   ├── python/                     # Python packages (uv monorepo)
-│   │   ├── 402fly-core/          # Core protocol
-│   │   ├── 402fly-fastapi/       # FastAPI middleware
-│   │   ├── 402fly-client/        # HTTP client
-│   │   ├── 402fly-langchain/     # LangChain integration
-│   │   └── 402fly-langgraph/     # LangGraph integration
+│   │   ├── 402flycore/          # Core protocol (PyPI: fly402core)
+│   │   ├── 402flyfastapi/       # FastAPI middleware (PyPI: fly402fastapi)
+│   │   ├── 402flyclient/        # HTTP client (PyPI: fly402client)
+│   │   ├── 402flylangchain/     # LangChain integration (PyPI: fly402langchain)
+│   │   └── 402flylanggraph/     # LangGraph integration (PyPI: fly402langgraph)
 │   │
 │   ├── typescript/                 # TypeScript packages (pnpm monorepo)
-│   │   ├── 402fly-core/          # Core protocol (TS)
-│   │   ├── 402fly-express/       # Express.js middleware
-│   │   ├── 402fly-client/        # HTTP client (TS)
-│   │   ├── 402fly-langchain/     # LangChain.js integration
-│   │   └── 402fly-langgraph/     # LangGraph.js integration
+│   │   ├── fly402-core/          # Core protocol (npm: @x402fly/core)
+│   │   ├── fly402-express/       # Express.js middleware (npm: @x402fly/express)
+│   │   ├── fly402-client/        # HTTP client (npm: @x402fly/client)
+│   │   ├── fly402-nextjs/        # Next.js integration (npm: @x402fly/nextjs)
+│   │   ├── fly402-langchain/     # LangChain.js integration (npm: @x402fly/langchain)
+│   │   └── fly402-langgraph/     # LangGraph.js integration (npm: @x402fly/langgraph)
 │   │
 │   ├── go/                         # Go packages
-│   │   ├── 402fly-core/          # Core protocol (Go)
-│   │   ├── 402fly-client/        # HTTP client (Go)
-│   │   ├── 402fly-nethttp/       # net/http middleware
-│   │   └── 402fly-echo/          # Echo framework integration
+│   │   ├── fly402-core/          # Core protocol (Go)
+│   │   ├── fly402-client/        # HTTP client (Go)
+│   │   ├── fly402-nethttp/       # net/http middleware (Go)
+│   │   └── fly402-echo/          # Echo framework integration (Go)
 │   │
 │   └── rust/                       # Rust packages (Cargo workspace)
-│       ├── 402fly-core/          # Core protocol (Rust)
-│       ├── 402fly-client/        # HTTP client (Rust)
-│       ├── 402fly-rocket/        # Rocket framework integration
-│       └── 402fly-actix/         # Actix Web integration
+│       ├── fly402-core/          # Core protocol (crates.io: fly402-core)
+│       ├── fly402-client/        # HTTP client (crates.io: fly402-client)
+│       ├── fly402-rocket/        # Rocket framework integration (crates.io: fly402-rocket)
+│       └── fly402-actix/         # Actix Web integration (crates.io: fly402-actix)
 │
 ├── examples/
 │   ├── python/
@@ -420,9 +421,7 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install development dependencies
-pip install -e "packages/python/402flycore[dev]"
-pip install -e "packages/python/402flyfastapi[dev]"
-pip install -e "packages/python/402flyclient[dev]"
+pip install fly402core[dev] fly402client[dev] fly402fastapi[dev]
 
 # Run tests
 pytest packages/python/*/tests

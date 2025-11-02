@@ -4,8 +4,8 @@
 
 ```bash
 # Python
-pip install fly402core 402fly-fastapi 402fly-client
-pip install fly402langchain 402fly-langgraph
+pip install fly402client
+pip install fly402langgraph
 
 # TypeScript
 npm install @x402fly/core @x402fly/fastapi @x402fly/client
@@ -262,7 +262,7 @@ keypair = Keypair()
 workflow = StateGraph(AgentState)
 
 workflow.add_node("fetch_api", fetch_api_node)
-workflow.add_node("make_payment", payment_node)  # From 402fly-langgraph
+workflow.add_node("make_payment", payment_node)  # From fly402langgraph
 workflow.add_node("process", process_response_node)
 
 workflow.set_entry_point("fetch_api")
@@ -270,7 +270,7 @@ workflow.set_entry_point("fetch_api")
 # Conditional edge based on payment
 workflow.add_conditional_edges(
     "fetch_api",
-    check_payment_required,  # From 402fly-langgraph
+    check_payment_required,  # From fly402langgraph
     {
         "payment_required": "make_payment",
         "success": "process",
@@ -533,7 +533,7 @@ data3 = await client.fetch("https://api3.example.com/data")
 
 ```bash
 # 1. Install packages
-pip install fly402core 402fly-fastapi 402fly-client
+pip install fly402client
 
 # 2. Create wallet
 python -c "from solders.keypair import Keypair; import json; kp = Keypair(); \

@@ -2,7 +2,7 @@
 
 Complete API reference for all Rust packages.
 
-## 402fly-core
+## fly402core
 
 ### PaymentRequest
 
@@ -155,7 +155,7 @@ pub const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 ---
 
-## 402fly-client
+## fly402client
 
 ### Fly402Client
 

@@ -16,11 +16,11 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Install all packages
-pip install -e packages/python/402fly-core
-pip install -e packages/python/402fly-fastapi
-pip install -e packages/python/402fly-client
-pip install -e packages/python/402fly-langchain
-pip install -e packages/python/402fly-langgraph
+pip install fly402core
+pip install fly402fastapi
+pip install fly402client
+pip install fly402langchain
+pip install fly402langgraph
 ```
 
 ## Step 2: Create a Wallet
@@ -244,7 +244,7 @@ solana airdrop 1 YOUR_ADDRESS --url devnet
 pip list | grep 402fly
 
 # Reinstall if needed
-pip install --force-reinstall -e packages/python/402fly-core
+pip install fly402core
 ```
 
 ### Server Won't Start

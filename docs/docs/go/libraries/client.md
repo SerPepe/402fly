@@ -4,7 +4,7 @@ HTTP client with automatic and explicit payment handling for accessing X402-prot
 
 ## Overview
 
-The `402fly-client` package provides two client types:
+The `fly402client` package provides two client types:
 
 - **Fly402Client**: Explicit, manual payment control
 - **Fly402AutoClient**: Automatic payment handling
@@ -12,7 +12,7 @@ The `402fly-client` package provides two client types:
 ## Installation
 
 ```bash
-go get github.com/SerPepe/402fly/packages/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/fly402client
 ```
 
 ## Fly402Client (Explicit Mode)
@@ -359,7 +359,7 @@ if errors.Is(err, context.DeadlineExceeded) {
 ## Error Handling
 
 ```go
-import "github.com/SerPepe/402fly/packages/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/fly402core"
 
 resp, err := client.Get(ctx, url, nil)
 if err != nil {

@@ -344,7 +344,7 @@ workflow.addEdge('incrementRetry', 'fetch');
 
 ## Documentation
 
-For complete API documentation and guides, visit [402fly.github.io](https://402fly.github.io/docs/packages/typescript/402fly-langgraph/)
+For complete API documentation and guides, visit [402fly.github.io](https://402fly.github.io/docs/packages/typescript/fly402langgraph/)
 
 ## Testing
 

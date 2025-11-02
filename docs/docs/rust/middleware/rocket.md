@@ -6,7 +6,7 @@ The `402fly-rocket` crate provides integration with the Rocket web framework for
 
 ```toml
 [dependencies]
-402fly-core = "0.1"
+fly402core = "0.1"
 402fly-rocket = "0.1"
 rocket = { version = "0.5", features = ["json"] }
 ```

@@ -325,8 +325,8 @@ See the [Next.js example](../../examples/typescript/nextjs-app) for a complete w
 
 ## Related Packages
 
-- [@x402fly/core](../402fly-core) - Core X402 protocol implementation
-- [@x402fly/client](../402fly-client) - Client library for making payments
+- [@x402fly/core](../fly402core) - Core X402 protocol implementation
+- [@x402fly/client](../fly402client) - Client library for making payments
 - [@x402fly/express](../402fly-express) - Express.js middleware
 
 ## License

@@ -16,10 +16,10 @@ Install the packages you need:
 
 ```bash
 # Core protocol (required)
-go get github.com/SerPepe/402fly/packages/go/402fly-core
+go get github.com/SerPepe/402fly/packages/go/fly402core
 
 # Client for consuming APIs
-go get github.com/SerPepe/402fly/packages/go/402fly-client
+go get github.com/SerPepe/402fly/packages/go/fly402client
 
 # Middleware for your framework
 go get github.com/SerPepe/402fly/packages/go/402fly-nethttp
@@ -35,7 +35,7 @@ git clone https://github.com/SerPepe/402fly.git
 cd 402fly
 
 # Navigate to a package
-cd packages/go/402fly-core
+cd packages/go/fly402core
 
 # Install dependencies
 go mod tidy
@@ -50,17 +50,17 @@ go test ./...
 ### Verify with Go
 
 ```bash
-go list -m github.com/SerPepe/402fly/packages/go/402fly-core
+go list -m github.com/SerPepe/402fly/packages/go/fly402core
 ```
 
 Output should show:
 ```
-github.com/SerPepe/402fly/packages/go/402fly-core v0.1.0
+github.com/SerPepe/402fly/packages/go/fly402core v0.1.0
 ```
 
 ### Verify with pkg.go.dev
 
-Visit: https://pkg.go.dev/github.com/SerPepe/402fly/packages/go/402fly-core
+Visit: https://pkg.go.dev/github.com/SerPepe/402fly/packages/go/fly402core
 
 ## Import Statements
 
@@ -70,8 +70,8 @@ Once installed, you can import in your code:
 package main
 
 import (
-    "github.com/SerPepe/402fly/packages/go/402fly-core"
-    "github.com/SerPepe/402fly/packages/go/402fly-client"
+    "github.com/SerPepe/402fly/packages/go/fly402core"
+    "github.com/SerPepe/402fly/packages/go/fly402client"
 )
 ```
 
@@ -149,14 +149,14 @@ To test on Solana devnet:
 ### Module not found error
 
 ```
-go: github.com/SerPepe/402fly/packages/go/402fly-core@latest:
+go: github.com/SerPepe/402fly/packages/go/fly402core@latest:
 reading go.sum: no matching version found
 ```
 
 **Solution**: Clear module cache and retry:
 ```bash
 go clean -modcache
-go get github.com/SerPepe/402fly/packages/go/402fly-core@latest
+go get github.com/SerPepe/402fly/packages/go/fly402core@latest
 ```
 
 ### Version mismatch
@@ -168,10 +168,10 @@ different modules with the same import path
 **Solution**: Ensure you're using the correct import path:
 ```bash
 # Wrong (old path)
-import "github.com/SerPepe/402fly/go/402fly-core"
+import "github.com/SerPepe/402fly/go/fly402core"
 
 # Correct (simplified path)
-import "github.com/SerPepe/402fly/packages/go/402fly-core"
+import "github.com/SerPepe/402fly/packages/go/fly402core"
 ```
 
 ### Missing Go version
